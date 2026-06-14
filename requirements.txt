@@ -1,0 +1,16 @@
+openai
+langchain
+langchain-community
+langchain-chroma
+chromadb
+sentence-transformers
+transformers
+huggingface_hub
+pandas
+numpy
+pypdf
+python-dotenv
+pydantic
+scikit-learn
+rapidfuzz
+pytest
