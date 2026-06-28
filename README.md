@@ -118,13 +118,14 @@ pip install -r requirements.txt
 
 ---
 
-## 6. Download the Local Model
+## 6. Download the Local Models
 
 ```bash
 ollama pull qwen3:1.7b-q8_0
+ollama pull nomic-embed-text
 ```
 
-Verify that the model has been installed:
+Verify that the models has been installed:
 
 ```bash
 ollama list
