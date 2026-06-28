@@ -1,16 +1,35 @@
-openai
-langchain
-langchain-community
-langchain-chroma
-chromadb
-sentence-transformers
-transformers
-huggingface_hub
-pandas
-numpy
-pypdf
-python-dotenv
-pydantic
-scikit-learn
-rapidfuzz
-pytest
+# Python 3.12.10 compatible
+# Updated: June 2026
+
+# OpenAI
+openai>=2.44.0
+
+# LangChain ecosystem
+langchain-core>=1.4.8
+langchain-chroma>=1.1.0
+langchain-openai>=1.3.3
+langgraph>=1.2.6
+
+# Vector DB
+chromadb>=1.0.0,<2.0.0       
+
+# Embeddings & ML
+sentence-transformers>=5.5.0
+transformers>=5.12.1
+huggingface_hub>=1.21.0
+
+# Data
+pandas>=2.2.0
+numpy>=2.0.0
+
+# Document parsing
+pypdf>=5.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.7.0
+scikit-learn>=1.5.0
+rapidfuzz>=3.9.0
+pytest>=8.0.0
+tiktoken>=0.9.0
+httpx>=0.28.0
