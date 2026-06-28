@@ -158,14 +158,6 @@ macOS/Linux
 cp .env.example .env
 ```
 
-The `.env` file should contain:
-
-```text
-OLLAMA_BASE_URL=http://localhost:11434/v1
-OLLAMA_MODEL=qwen3:1.7b
-OPENAI_API_KEY=dummy
-```
-
 ---
 
 # Test installation

@@ -1,1 +1,0 @@
-BASELINE_PROMPT = """Analyze the SaaS contract and return structured JSON."""
