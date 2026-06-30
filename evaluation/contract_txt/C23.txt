@@ -1,0 +1,31 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0165
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Quantum Ledger Advisors, LLC, 2 Embarcadero Center, San Francisco, CA (“Customer”).
+2. EFFECTIVE DATE
+February 1, 2025 (the “Effective Date”).
+3. SERVICES
+RevLens grants Customer a hosted subscription to the RevLens Portfolio Management Platform (the “Platform”),
+including standard updates and standard support, for the Subscription Term. The Platform is provided solely as
+a hosted service.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+5.1 Usage-Based Fees. There is no fixed or minimum subscription fee under this Order Form. Customer pays
+solely on the basis of actual usage, at $0.02 per processed account transaction. There is no committed volume
+and no minimum charge.
+5.2 Billing. RevLens meters usage and invoices Customer monthly, in arrears, for actual transactions
+processed during the month. Invoices are due net thirty (30) days. Customer’s total fees over the Subscription
+Term will vary with, and are determined entirely by, actual usage.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Quantum Ledger Advisors, LLC — By: _____________________ Date: __________

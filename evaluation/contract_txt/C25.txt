@@ -1,0 +1,30 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0203
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Marlin Bay Capital, LLC, 701 Brickell Avenue, Miami, FL (“Customer”).
+2. EFFECTIVE DATE
+March 15, 2025 (the “Effective Date”).
+3. SERVICES
+RevLens grants Customer a hosted subscription to the RevLens Portfolio Management Platform (the “Platform”),
+including standard updates and standard support, for the Subscription Term. The subscription includes a base
+allotment of up to three thousand (3,000) processed account transactions per calendar month. The Platform is
+provided solely as a hosted service.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date of March 15, 2025.
+5. FEES & PAYMENT
+5.1 Base Subscription Fee. $36,000 per year, billed quarterly in advance in installments of $9,000 each.
+5.2 Usage Fees. Transactions in excess of the monthly base allotment are billed at $0.08 per transaction.
+RevLens meters usage and reconciles overage on a quarterly basis, invoicing the cumulative overage for the
+quarter at quarter-end. Invoices are due net thirty (30) days.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Marlin Bay Capital, LLC — By: _____________________ Date: __________

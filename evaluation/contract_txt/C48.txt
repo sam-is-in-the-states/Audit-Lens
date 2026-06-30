@@ -1,0 +1,40 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0318
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Castlerock Wealth Partners, LLC, 1801 California Street, Denver, CO (“Customer”).
+2. EFFECTIVE DATE
+July 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription & Implementation. A hosted subscription to the Platform together with a customized
+implementation tailored to Customer’s environment, on which production access depends. The Implementation
+is scoped specifically to Customer’s data, systems, and requirements and is not offered by RevLens on a
+standalone basis. Customer’s production access to the Platform will be provisioned upon Customer’s
+written acceptance of the completed Implementation.
+3.2 License to RevLens Quantitative Library. RevLens grants Customer a license to use the RevLens
+Quantitative Analytics Library, RevLens’s proprietary intellectual property, within the Platform during the term, in
+consideration of the royalty in Section 5.3.
+4. SUBSCRIPTION TERM
+Twenty-four (24) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Subscription ($30,000/yr × 2) $60,000
+Implementation (one-time) $8,000
+Bundle discount ($5,000)
+Total fixed fees $63,000
+5.1 The Total fixed fees of $63,000 reflect a $5,000 discount applied to the package as a whole, with no portion
+attributed to a specific component. Subscription is billed annually in advance ($30,000/yr); implementation and
+the first annual fee are billed on the Effective Date.
+5.3 Library Royalty. Customer will pay a royalty of $0.18 for each analytics run executed against the licensed
+Library, metered and invoiced monthly in arrears.
+RENEWAL
+Following the twenty-four (24) month term, the subscription renews for successive twelve (12) month terms at
+RevLens’s then-current list pricing unless either party gives notice at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Castlerock Wealth Partners, LLC — By: _____________________ Date: __________

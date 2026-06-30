@@ -1,0 +1,37 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0219
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Stonebridge Investment Group, LLC, 333 South Grand Avenue, Los Angeles, CA (“Customer”).
+2. EFFECTIVE DATE
+July 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”) for up
+to fifty (50) authorized users, including standard updates and standard support, for the Subscription Term. The
+Platform is provided solely as a hosted service.
+3.2 Account Setup. RevLens will perform account setup and configuration (the “Setup”) tailored to Customer’s
+environment. The Implementation is scoped specifically to Customer’s data, systems, and requirements and is
+not offered by RevLens on a standalone basis. Customer’s production access to the Platform will be
+provisioned upon Customer’s written acceptance of the completed Implementation.
+3.3 Setup Fee on Renewal. The one-time Setup fee is nonrefundable. The Setup fee will not be charged again
+upon any renewal of this subscription; renewing customers pay only the then-current subscription fee.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription (annual) $20,000
+Account Setup (one-time) $5,000
+Total $25,000
+The Total is payable in advance, in full, within thirty (30) days of the Effective Date.
+RENEWAL
+This subscription renews automatically for successive twelve (12) month terms at RevLens’s then-current
+subscription list pricing, with no further Setup fee, unless either party gives notice at least thirty (30) days before
+term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Stonebridge Investment Group, LLC — By: _____________________ Date: __________

@@ -1,0 +1,37 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0173
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Greenfield Capital Partners, LLC, 150 North Riverside Plaza, Chicago, IL (“Customer”).
+2. EFFECTIVE DATE
+May 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”) for up
+to fifty-five (55) authorized users, including standard updates and standard support, for the Subscription Term.
+The Platform is provided solely as a hosted service.
+3.2 Onboarding Engagement. RevLens will deliver a defined, one-time onboarding engagement (the
+“Onboarding”) following its standard methodology, comprising a standard historical-data conversion and
+standard custodial-feed setup, delivered and accepted prior to go-live. The Onboarding has standalone value, is
+of a type available from independent implementation firms, and is not required for Customer’s subscription
+access.
+4. SUBSCRIPTION TERM
+Thirty-six (36) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription ($18,000/yr × 3) $54,000
+Onboarding Engagement (one-time) $6,000
+Total contract value $60,000
+The subscription fee of $18,000 per contract year is billed annually in advance, the first year on the Effective
+Date and each subsequent year on its anniversary. The Onboarding fee of $6,000 is billed on the Effective Date.
+Invoices are due net thirty (30) days.
+RENEWAL
+Following the thirty-six (36) month term, the subscription renews for successive twelve (12) month terms at
+RevLens’s then-current list pricing unless either party gives notice at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Greenfield Capital Partners, LLC — By: _____________________ Date: __________

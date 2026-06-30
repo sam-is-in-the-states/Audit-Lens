@@ -1,0 +1,36 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0258
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Oakmont Wealth Strategies, LLC, 400 Capitol Mall, Sacramento, CA (“Customer”).
+2. EFFECTIVE DATE
+March 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”) for up
+to forty-five (45) authorized users, including standard updates and standard support, for the Subscription Term.
+The Platform is provided solely as a hosted service.
+3.2 Standard Setup Package. RevLens offers an optional Standard Setup Package (the “Setup”) consisting of
+a fixed, standardized checklist of account provisioning, template loading, and initial configuration. The Setup is
+the same for all customers electing it. The Platform is fully accessible and operational without the Setup, and
+Customer may instead perform the configuration itself or engage a RevLens-certified third-party implementation
+partner. The Setup, if elected, is completed within approximately fifteen (15) business days of the Effective Date.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription (annual) $18,000
+Standard Setup Package (one-time) $2,000
+Total $20,000
+The Total is payable in advance, in full, within thirty (30) days of the Effective Date.
+RENEWAL
+The subscription renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end. The
+Standard Setup Package is provided once and is not included in renewal terms.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Oakmont Wealth Strategies, LLC — By: _____________________ Date: __________

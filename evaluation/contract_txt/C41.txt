@@ -1,0 +1,37 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0288
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Granite Peak Advisors, LLC, 1400 Sixteenth Street, Denver, CO (“Customer”).
+2. EFFECTIVE DATE
+March 1, 2025 (the “Effective Date”).
+3. SERVICES
+RevLens grants Customer a hosted subscription to the RevLens Portfolio Management Platform (the “Platform”)
+for up to fifty (50) authorized users, including standard updates and standard support. The Platform is provided
+solely as a hosted service. RevLens will provision Customer’s access on the Effective Date.
+4. SUBSCRIPTION TERM
+This Order Form commences on the Effective Date and continues for the Initial Subscription Term, after which it
+renews in accordance with Section 6. The Subscription Term is as set forth in the applicable Order Form
+schedule.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription $18,000
+Total $18,000
+The Total of $18,000 is payable in advance, in full, upon execution of this Order Form. Fees are non-refundable
+except as expressly provided in the MSA.
+6. RENEWAL
+At the end of each Subscription Term, this Order Form renews automatically for a further term of equal length at
+RevLens’s then-current list pricing, unless either party gives written notice of non-renewal at least thirty (30)
+days before the end of the then-current Subscription Term.
+7. SERVICE LEVELS
+RevLens will use commercially reasonable efforts to make the Platform available 99.9% of the time, measured
+monthly, excluding scheduled maintenance.
+8. TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice. Upon
+termination, Customer’s access to the Platform ceases.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Granite Peak Advisors, LLC — By: _____________________ Date: __________

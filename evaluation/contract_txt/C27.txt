@@ -1,0 +1,29 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0211
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Lighthouse Point Advisors, LLC, 250 Vesey Street, New York, NY (“Customer”).
+2. EFFECTIVE DATE
+May 1, 2025 (the “Effective Date”).
+3. SERVICES
+RevLens grants Customer a hosted subscription to the RevLens Portfolio Management Platform (the “Platform”),
+including standard updates and standard support, for the Subscription Term. The Platform is provided solely as
+a hosted service.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+5.1 Monthly Minimum. Customer will pay a monthly minimum of $500, billed in arrears, regardless of usage.
+5.2 Usage. Actual usage is charged at $0.03 per processed account transaction. For each month, Customer
+pays the greater of the monthly minimum or actual metered usage for that month. RevLens invoices monthly, in
+arrears. Invoices are due net thirty (30) days. Monthly usage is expected to fluctuate over the term.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Lighthouse Point Advisors, LLC — By: _____________________ Date: __________

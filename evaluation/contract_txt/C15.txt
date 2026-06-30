@@ -1,0 +1,38 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0356
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Crestview Asset Management, LLC, 2425 East Camelback Road, Phoenix, AZ (“Customer”).
+2. EFFECTIVE DATE
+October 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”) for up
+to thirty (30) authorized users, including standard updates and standard support, for the Subscription Term. The
+Platform is provided solely as a hosted service.
+3.2 Data Migration. RevLens will perform a data migration (the “Implementation”) converting and reconciling
+Customer’s historical positions, lots, and transaction history into the Platform and validating the migrated data
+against Customer’s books. The migrated data set is a prerequisite to Customer operating its accounts on the
+Platform. The Implementation is scoped specifically to Customer’s data, systems, and requirements and is not
+offered by RevLens on a standalone basis. Customer’s production access to the Platform will be
+provisioned upon Customer’s written acceptance of the completed Implementation.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription (annual) $15,000
+Data Migration (one-time) $4,500
+Total $19,500
+The Total is payable in advance, in full, within thirty (30) days of the Effective Date. The migration fee is
+non-refundable.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives notice at least thirty (30) days before term end. The Data Migration is provided
+once and is not repeated on renewal.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Crestview Asset Management, LLC — By: _____________________ Date: __________
