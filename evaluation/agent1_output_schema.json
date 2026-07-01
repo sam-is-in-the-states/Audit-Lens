@@ -1,0 +1,76 @@
+{
+  "_README": "Agent 1 OUTPUT CONTRACT. Agent 1 extracts FACTS only — never ASC 606 judgments. Each field shows its data type. This schema follows Agent 1's existing output structure; fields marked [NEW] are the gaps to add so Agent 2 has the facts it needs. Convention: null = not stated in contract; false = explicitly absent.",
+
+  "contract_id": "string",
+  "provider_name": "string",
+  "customer_name": "string",
+
+  "subscription_term_months": "integer | null",
+  "start_date": "string (YYYY-MM-DD) | null",
+  "effective_date": "string (YYYY-MM-DD) | null",
+  "end_date": "string (YYYY-MM-DD) | null",
+  "hosted_service": "boolean",
+  "authorized_users": "integer | null",
+  "services_summary": "string | null",
+
+  "implementation_services": "boolean",
+  "implementation_required_for_platform": "boolean | null",
+  "implementation_standardized_or_optional": "boolean | null   [NEW] needed for KB2_3 distinct exception",
+
+  "fees": [
+    {
+      "name": "string  (fee label as written; must be the actual fee name, not contract prose)",
+      "fee_type": "string (subscription | implementation | support | other) | null   [NEW] helps Agent 2 map fees to POs",
+      "amount": { "amount": "number", "currency": "string" },
+      "billing_frequency": "string (annual | quarterly | monthly | one_time) | null",
+      "payment_timing": "string (in_advance | in_arrears) | null"
+    }
+  ],
+
+  "usage_fee": {
+    "unit_name": "string | null",
+    "included_units": "number | null",
+    "overage_rate": { "amount": "number", "currency": "string" },
+    "minimum_or_base_fee": "number | null   [NEW] committed floor, needed for KB2_5",
+    "is_ip_license_usage": "boolean | null   [NEW] usage of RevLens IP, needed for KB2_7 royalty",
+    "reconciliation_frequency": "string | null"
+  },
+
+  "discount": {
+    "_README": "[NEW BLOCK] Agent 1 does not currently extract discounts. Needed for KB1_14 / KB2_8.",
+    "discount_present": "boolean",
+    "discount_amount": "number | null   (sum of list prices - total consideration)",
+    "list_prices": "object {component_name: number} | null"
+  },
+
+  "renewal_terms": {
+    "auto_renewal": "boolean | null",
+    "renewal_term_months": "integer | null",
+    "notice_days": "integer | null",
+    "renewal_price": { "amount": "number", "currency": "string" },
+    "renewal_pricing_basis": "string | null",
+    "standard_or_list_price": "number | null   [NEW] comparable price, needed for KB1_15/KB2_10 material right"
+  },
+
+  "termination_terms": {
+    "termination_for_breach": "boolean | null",
+    "notice_days": "integer | null",
+    "convenience_termination": "boolean | null",
+    "missing_terms": ["string"]
+  },
+
+  "ambiguous_clauses": ["string  (verbatim unclear/missing terms)"],
+  "source_file": "string",
+
+  "_out_of_scope_for_agent1": {
+    "_README": "These are Agent 2 JUDGMENTS (ASC 606 conclusions), NOT facts. Agent 1 must NOT emit them.",
+    "onboarding_distinct": "KB1_3 distinct test — Agent 2",
+    "discount_type": "KB1_14 / KB2_8 classification (pro-rata / directed / residual) — Agent 2",
+    "material_right": "KB1_15 evaluation — Agent 2",
+    "usage_model": "KB2_4-7 classification label — Agent 2",
+    "num_POs / po_list": "Step 2 identification — Agent 2",
+    "transaction_price": "Step 3 determination — Agent 2",
+    "recognition_method / recognition_period_months": "Step 5 determination — Agent 2",
+    "monthly_revenue / opening_deferred": "schedule calculation — Agent 4"
+  }
+}
