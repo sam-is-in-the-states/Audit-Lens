@@ -1,0 +1,38 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0341
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Beacon Hill Advisors, LLC, 100 Beacon Street, Boston, MA (“Customer”).
+2. EFFECTIVE DATE
+June 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”) for up
+to sixty (60) authorized users, including standard updates and standard support, for the Subscription Term. The
+Platform is provided solely as a hosted service.
+3.2 Onboarding Engagement. RevLens will deliver a defined, one-time onboarding engagement (the
+“Onboarding”) consisting of a standard historical-data conversion and a standard custodial-feed connection,
+delivered and accepted by Customer prior to subscription go-live. The Onboarding follows RevLens’s standard
+methodology, has value to Customer independent of the ongoing subscription, and is of a type also offered by
+independent implementation firms. Customer’s subscription access does not depend on RevLens performing
+the Onboarding.
+4. SUBSCRIPTION TERM
+Twenty-four (24) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription ($30,000/yr × 2) $60,000
+Onboarding Engagement (one-time) $5,000
+Total contract value $65,000
+The subscription fee of $30,000 per contract year is billed annually in advance, the first year on the Effective
+Date and the second on its anniversary. The Onboarding fee of $5,000 is billed on the Effective Date. Invoices
+are due net thirty (30) days.
+RENEWAL
+Following the twenty-four (24) month term, the subscription renews for successive twelve (12) month terms at
+RevLens’s then-current list pricing unless either party gives notice at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Beacon Hill Advisors, LLC — By: _____________________ Date: __________

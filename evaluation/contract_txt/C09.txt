@@ -1,0 +1,31 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0177
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Pinnacle Global Asset Management, LLC, One Bryant Park, New York, NY (“Customer”).
+2. EFFECTIVE DATE
+May 1, 2025 (the “Effective Date”).
+3. SERVICES
+RevLens grants Customer a hosted, enterprise-tier subscription to the RevLens Portfolio Management Platform
+(the “Platform”) for up to five hundred (500) authorized users, including standard updates and standard support,
+for the Subscription Term. The Platform is provided solely as a hosted service.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription (annual, enterprise tier) $120,000
+Total $120,000
+The Total of $120,000 is payable in advance, in full, within thirty (30) days of the Effective Date. Fees are
+non-refundable except as expressly set out in the MSA.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before the end of the
+then-current term.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Pinnacle Global Asset Management, LLC — By: _____________________ Date: __________

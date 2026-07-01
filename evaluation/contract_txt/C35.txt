@@ -1,0 +1,39 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0312
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Atlas Summit Advisors, LLC, 1700 Lincoln Street, Denver, CO (“Customer”).
+2. EFFECTIVE DATE
+July 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription & Implementation. A hosted subscription to the RevLens Portfolio Management Platform (the
+“Platform”) together with a customized implementation tailored to Customer’s environment, on which Customer’s
+production access depends. The subscription and implementation are delivered as a combined offering with a
+standalone selling price of $80,000.
+3.2 Premium Support. A distinct Premium Support service, regularly sold on its own, with a standalone selling
+price of $15,000 per year.
+3.3 Advisory Consulting. A distinct advisory consulting engagement delivered by RevLens consultants over
+the term based on hours worked, with a standalone selling price of $30,000. Effort is expected to be
+concentrated in the first half of the term.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Standalone Price
+Subscription &amp; Implementation $80,000
+Premium Support $15,000
+Advisory Consulting $30,000
+Combined standalone price $125,000
+Total payable (bundled) $100,000
+The bundled Total of $100,000 is payable in advance within thirty (30) days of the Effective Date. No portion of
+the pricing reduction is attributed to any particular component.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Atlas Summit Advisors, LLC — By: _____________________ Date: __________

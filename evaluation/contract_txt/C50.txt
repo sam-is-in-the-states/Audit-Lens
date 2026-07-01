@@ -1,0 +1,35 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0391
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Slateharbor Capital, LLC, 1000 Second Avenue, Seattle, WA (“Customer”).
+2. EFFECTIVE DATE
+November 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the Platform, including standard updates and standard support, for
+the Subscription Term.
+3.2 Implementation Services. RevLens will perform implementation comprising data migration, custodial-feed
+configuration, and compliance-rule build-out tailored to Customer. The Implementation is scoped specifically to
+Customer’s data, systems, and requirements and is not offered by RevLens on a standalone basis. Customer’s
+production access to the Platform will be provisioned upon Customer’s written acceptance of the
+completed Implementation.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+5.1 Combined Subscription & Implementation. The combined subscription and implementation fee is
+$22,000 (comprising a $18,000 subscription and a $4,000 implementation), equating to $1,833 per month, with a
+monthly minimum of that amount billed in arrears.
+5.2 Usage Fees. Processed account transactions above the included monthly allotment are charged at $0.025
+per transaction. For each month, Customer pays the greater of the monthly minimum or actual metered usage.
+RevLens invoices monthly, in arrears; monthly usage is expected to fluctuate over the term.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Slateharbor Capital, LLC — By: _____________________ Date: __________

@@ -1,0 +1,43 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0114
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., a Delaware corporation, 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Brightwater Asset Management, LLC, a registered investment adviser, 411 Lakeshore Drive,
+Chicago, IL (“Customer”).
+2. EFFECTIVE DATE
+January 1, 2025 (the “Effective Date”).
+3. SERVICES
+RevLens grants Customer a non-exclusive, non-transferable right to access and use the RevLens Portfolio
+Management Platform (the “Platform”) on a hosted, subscription basis. The subscription includes:
+(a) access to the Platform for up to twenty-five (25) named authorized users;
+(b) all standard updates, enhancements, and new releases made generally available to subscribers during
+the Subscription Term; and
+(c) standard support via email and the RevLens help center during normal business hours.
+The Platform is delivered solely as a hosted service. Customer receives no right to obtain, install, or run any
+copy of the underlying software on its own systems or those of a third party.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date and ending December 31, 2025 (the “Subscription
+Term”).
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription (annual) $9,600
+Total $9,600
+The Total is payable in advance, in full, within thirty (30) days of the Effective Date. Fees are non-refundable
+except as expressly set out in the MSA.
+6. ACCESS & AVAILABILITY
+RevLens will provision Customer’s Platform access on the Effective Date. RevLens will use commercially
+reasonable efforts to make the Platform available 99.9% of the time, measured monthly, excluding scheduled
+maintenance.
+7. RENEWAL
+Unless either party gives written notice of non-renewal at least thirty (30) days before the end of the then-current
+Subscription Term, this Order Form will automatically renew for successive twelve (12) month terms at
+RevLens’s then-current list pricing.
+8. TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice. Upon
+termination, Customer’s access to the Platform ceases.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Brightwater Asset Management, LLC — By: _____________________ Date: __________

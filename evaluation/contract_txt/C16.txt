@@ -1,0 +1,39 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0192
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Windsor Financial Partners, LLC, 1700 Pacific Avenue, Dallas, TX (“Customer”).
+2. EFFECTIVE DATE
+April 15, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”) for up
+to seventy (70) authorized users, including standard updates and standard support, for the Subscription Term.
+The Platform is provided solely as a hosted service.
+3.2 Implementation Services. The Implementation comprises both standard configuration steps (account
+provisioning and template loading) and a custom integration of the Platform with Customer’s in-house portfolio
+accounting system and proprietary data warehouse. The custom integration is required for the Platform to
+operate within Customer’s environment, and the standard and custom elements are delivered as a single
+combined engagement. The Implementation is scoped specifically to Customer’s data, systems, and
+requirements and is not offered by RevLens on a standalone basis. Customer’s production access to the
+Platform will be provisioned upon Customer’s written acceptance of the completed Implementation.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date of April 15, 2025.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription (annual) $36,000
+Implementation Services (one-time) $8,000
+Total $44,000
+The subscription fee is billed quarterly in advance in installments of $9,000 each. The Implementation fee of
+$8,000 is billed on the Effective Date. Invoices are due net thirty (30) days.
+RENEWAL
+The subscription renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives notice at least thirty (30) days before term end. Implementation Services are
+provided once and are not repeated on renewal.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Windsor Financial Partners, LLC — By: _____________________ Date: __________

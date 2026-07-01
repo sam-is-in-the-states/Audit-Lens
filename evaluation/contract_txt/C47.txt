@@ -1,0 +1,37 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0335
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Northwind Investment Group, LLC, 225 Franklin Street, Boston, MA (“Customer”).
+2. EFFECTIVE DATE
+May 15, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the Platform, including standard updates and standard support, for
+the Subscription Term.
+3.2 Onboarding Engagement. A defined, one-time onboarding engagement delivered before go-live. The
+Onboarding follows RevLens’s standard methodology, has standalone value, is of a type also offered by
+independent implementation firms, and is not required for Customer’s subscription access.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date of May 15, 2025.
+5. FEES & PAYMENT
+5.1 Minimum Annual Commitment. Customer commits to a minimum subscription fee of $36,000 ($3,000 per
+month), payable in advance, which entitles Customer to a base monthly transaction allotment and is payable in
+full regardless of actual usage.
+5.2 Onboarding Fee. $5,000, billed on the Effective Date.
+5.3 Usage Above Commitment. Transactions in excess of the included monthly allotment are billed at $0.12
+per transaction, metered and invoiced monthly in arrears.
+Item Amount
+Subscription minimum commitment (annual) $36,000
+Onboarding Engagement (one-time) $5,000
+Total fixed fees $41,000
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Northwind Investment Group, LLC — By: _____________________ Date: __________

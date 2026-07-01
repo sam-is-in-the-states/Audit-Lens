@@ -1,0 +1,33 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0329
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Sequoia Crest Wealth, LLC, 1900 Avenue of the Stars, Los Angeles, CA (“Customer”).
+2. EFFECTIVE DATE
+June 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”),
+including standard updates and standard support, for the Subscription Term. The Platform is provided solely as
+a hosted service.
+3.2 License to RevLens Quantitative Library. RevLens grants Customer a license to use the RevLens
+Quantitative Analytics Library (the “Library”), RevLens’s proprietary intellectual property comprising risk models
+and factor analytics, for use within the Platform during the Subscription Term.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+5.1 Base Subscription Fee. $18,000 per year, payable in advance, in full, within thirty (30) days of the Effective
+Date.
+5.2 Library Royalty. In consideration of the license granted in Section 3.2, Customer will pay RevLens a royalty
+of $0.15 for each analytics run executed against the Library. RevLens meters Library usage and invoices the
+royalty monthly, in arrears. Invoices are due net thirty (30) days.
+RENEWAL
+This Order Form renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before term end.
+TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Sequoia Crest Wealth, LLC — By: _____________________ Date: __________

@@ -1,0 +1,44 @@
+REVLENS, INC.
+SUBSCRIPTION ORDER FORM & SERVICE TERMS
+Order Form No. RL-2025-0307
+This Order Form is entered into under and incorporates the RevLens Master Subscription Agreement (“MSA”) between the
+parties.
+1. PARTIES
+Provider: RevLens, Inc., 200 Congress Street, Boston, MA (“RevLens”).
+Customer: Harborview Investment Management, LLC, 60 Harbor Plaza, Stamford, CT (“Customer”).
+2. EFFECTIVE DATE
+March 1, 2025 (the “Effective Date”).
+3. SERVICES
+3.1 Subscription. A hosted subscription to the RevLens Portfolio Management Platform (the “Platform”) for up
+to seventy-five (75) authorized users, including standard updates and standard support, for the Subscription
+Term. The Platform is provided solely as a hosted service. The subscription includes a base allotment of up to
+two thousand (2,000) processed account transactions per calendar month.
+3.2 Implementation Services. RevLens will perform implementation services (the “Implementation”) to prepare
+the Platform for Customer’s production use, comprising migration of Customer’s historical portfolio and account
+data, configuration of Customer’s custodial feeds and book-of-record integration, and build-out of Customer’s
+firm-specific compliance rules and reporting templates. The Implementation is scoped specifically to Customer’s
+data and operating environment and is not offered by RevLens on a standalone basis. Customer’s production
+access to the Platform will be provisioned upon Customer’s written acceptance of the completed
+Implementation.
+4. SUBSCRIPTION TERM
+Twelve (12) months, commencing on the Effective Date.
+5. FEES & PAYMENT
+Item Amount
+Platform Subscription (annual) $24,000
+Implementation Services (one-time) $6,000
+Total fixed fees $30,000
+5.1 Fixed Fees. The Total fixed fees of $30,000 are payable in advance, in full, within thirty (30) days of the
+Effective Date. The Implementation fee is non-refundable.
+5.2 Usage Fees. For each processed account transaction in excess of the monthly base allotment, Customer
+will pay an overage fee of $0.06 per transaction. Usage is metered by the Platform; RevLens will calculate
+actual metered usage at the end of each calendar month and invoice Customer monthly, in arrears. Overage
+invoices are due net thirty (30) days. No credit is given for unused base allotment.
+6. RENEWAL
+The subscription renews automatically for successive twelve (12) month terms at RevLens’s then-current list
+pricing unless either party gives written notice of non-renewal at least thirty (30) days before the end of the
+then-current term. Implementation Services are provided once and are not repeated on renewal.
+7. TERMINATION
+Either party may terminate for the other’s uncured material breach on thirty (30) days’ written notice.
+Agreed and accepted:
+RevLens, Inc. — By: _____________________ Date: __________
+Harborview Investment Management, LLC — By: _____________________ Date: __________
