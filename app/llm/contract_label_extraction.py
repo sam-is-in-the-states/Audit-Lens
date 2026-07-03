@@ -121,11 +121,30 @@ class FeeItem(BaseModel):
     notes: str | None = None
 
 
+class DiscountTerms(BaseModel):
+    has_discount: bool | None = None
+    discount_type: Literal["percentage", "fixed_amount", "waiver", "unknown"] = "unknown"
+    percentage: float | None = Field(default=None, ge=0, le=100)
+    amount: MoneyAmount | None = None
+    applies_to: str | None = None
+    duration: str | None = None
+    notes: str | None = None
+
+
 class UsageFee(BaseModel):
     included_units: int | None = Field(default=None, ge=0)
     unit_name: str | None = None
     overage_rate: MoneyAmount | None = None
     reconciliation_frequency: Literal["monthly", "quarterly", "annual", "unknown"] = "unknown"
+
+
+class OnboardingTerms(BaseModel):
+    required: bool | None = None
+    fee: MoneyAmount | None = None
+    billing_frequency: Literal["one_time", "monthly", "annual", "unknown"] = "unknown"
+    required_for_platform: bool | None = None
+    timeline: str | None = None
+    notes: str | None = None
 
 
 class RenewalTerms(BaseModel):
@@ -159,7 +178,9 @@ class ExtractedContract(BaseModel):
     implementation_required_for_platform: bool | None = None
 
     fees: list[FeeItem] = Field(default_factory=list)
+    discount_terms: DiscountTerms = Field(default_factory=DiscountTerms)
     usage_fee: UsageFee | None = None
+    onboarding_terms: OnboardingTerms = Field(default_factory=OnboardingTerms)
     renewal_terms: RenewalTerms = Field(default_factory=RenewalTerms)
     termination_terms: TerminationTerms = Field(default_factory=TerminationTerms)
 
@@ -244,7 +265,9 @@ def build_rule_based_candidate(raw: dict[str, Any]) -> dict[str, Any]:
         implementation_required = bool(re.search(r"required for the Platform to operate", text, re.I))
 
     fees = extract_fees(text, raw.get("tables", []))
+    discount_terms = extract_discount_terms(text)
     usage_fee = extract_usage_fee(text)
+    onboarding_terms = extract_onboarding_terms(text, fees)
     renewal_terms = extract_renewal_terms(text)
     termination_terms = extract_termination_terms(text)
     ambiguous = extract_ambiguous_clauses(text)
@@ -263,7 +286,9 @@ def build_rule_based_candidate(raw: dict[str, Any]) -> dict[str, Any]:
         "implementation_services": implementation_services,
         "implementation_required_for_platform": implementation_required,
         "fees": fees,
+        "discount_terms": discount_terms,
         "usage_fee": usage_fee,
+        "onboarding_terms": onboarding_terms,
         "renewal_terms": renewal_terms,
         "termination_terms": termination_terms,
         "ambiguous_clauses": ambiguous,
@@ -321,6 +346,61 @@ def extract_fees(text: str, tables: list[dict[str, Any]]) -> list[dict[str, Any]
     return fees
 
 
+def extract_discount_terms(text: str) -> dict[str, Any]:
+    """Extract discount terms such as percentage discounts, fixed discounts, and waived fees."""
+    has_discount = bool(re.search(r"discount|reduction|reduced by|waiv(?:e|ed|er)|credit", text, re.I))
+    if not has_discount:
+        return {"has_discount": False}
+
+    pct_raw = search1(r"(\d+(?:\.\d+)?)\s*%\s*(?:discount|reduction|off)", text, flags=re.I)
+    amount = money_from_text(search1(r"(?:discount|credit|reduced by|reduction of)\s*(\$[\d,]+(?:\.\d+)?)", text, flags=re.I) or "")
+
+    discount_type = "unknown"
+    if pct_raw is not None:
+        discount_type = "percentage"
+    elif amount is not None:
+        discount_type = "fixed_amount"
+    elif re.search(r"waiv(?:e|ed|er)", text, re.I):
+        discount_type = "waiver"
+
+    applies_to = search1(r"(?:discount|reduction|credit|waiver).*?(?:applies to|against|for)\s+([^.;\n]+)", text, flags=re.I | re.S)
+    duration = search1(r"(?:for|during)\s+the\s+([^.;\n]*(?:initial term|first year|first twelve|first 12|pilot period)[^.;\n]*)", text, flags=re.I)
+
+    return {
+        "has_discount": True,
+        "discount_type": discount_type,
+        "percentage": float(pct_raw) if pct_raw is not None else None,
+        "amount": amount,
+        "applies_to": applies_to,
+        "duration": duration,
+        "notes": first_sentence_matching(text, r"discount|reduction|reduced by|waiv(?:e|ed|er)|credit"),
+    }
+
+
+def extract_onboarding_terms(text: str, fees: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+    """Extract onboarding / implementation setup terms."""
+    required = bool(re.search(r"onboarding|required onboarding|implementation services|required for the Platform to operate", text, re.I))
+    fee = None
+
+    # Prefer a fee item already extracted from a table/fee section.
+    for item in fees or []:
+        if re.search(r"onboarding|implementation|setup", item.get("name", ""), re.I):
+            fee = item.get("amount")
+            break
+
+    if fee is None:
+        fee = money_from_text(search1(r"(?:onboarding|implementation|setup)\s+(?:fee|services)?[^$]{0,80}(\$[\d,]+(?:\.\d+)?)", text, flags=re.I | re.S) or "")
+
+    return {
+        "required": required if required else None,
+        "fee": fee,
+        "billing_frequency": "one_time" if fee else "unknown",
+        "required_for_platform": bool(re.search(r"required for the Platform to operate", text, re.I)) if required else None,
+        "timeline": search1(r"(?:onboarding|implementation)[^.;\n]{0,120}(?:within|during|over)\s+([^.;\n]+)", text, flags=re.I),
+        "notes": first_sentence_matching(text, r"onboarding|implementation services|setup"),
+    }
+
+
 def extract_usage_fee(text: str) -> dict[str, Any] | None:
     if not re.search(r"Usage Fees|overage|processed account transactions", text, re.I):
         return None
@@ -341,7 +421,7 @@ def extract_renewal_terms(text: str) -> dict[str, Any]:
         "auto_renewal": bool(re.search(r"renews automatically|automatically renew", renewal_text, re.I)) if renewal_text else None,
         "renewal_term_months": 12 if re.search(r"twelve\s*\(12\)\s*month", renewal_text, re.I) else None,
         "notice_days": search_int(r"at least ([\w-]+|\d+)\s*\(?\d*\)?\s+days", renewal_text),
-        "renewal_price": money_from_text(search1(r"fixed price of (\$[\d,]+)|priced at (\$[\d,]+)", renewal_text, flags=re.I) or ""),
+        "renewal_price": money_from_text(search1(r"(?:fixed price of|priced at|renewal price(?: is| of)?|renewal fee(?: is| of)?)\s*(\$[\d,]+(?:\.\d+)?)", renewal_text, flags=re.I) or ""),
         "renewal_pricing_basis": "then-current list pricing" if re.search(r"then-current list pricing", renewal_text, re.I) else None,
     }
 
@@ -376,6 +456,14 @@ def extract_ambiguous_clauses(text: str) -> list[str]:
         for m in re.finditer(pattern, text, flags=re.I | re.S):
             clauses.append(normalize_text(m.group(0)))
     return clauses
+
+
+def first_sentence_matching(text: str, pattern: str) -> str | None:
+    for sentence in re.split(r"(?<=[.!?])\s+|\n+", text):
+        sentence = normalize_text(sentence)
+        if sentence and re.search(pattern, sentence, re.I):
+            return sentence[:500]
+    return None
 
 
 def search1(pattern: str, text: str, flags: int = 0) -> str | None:
