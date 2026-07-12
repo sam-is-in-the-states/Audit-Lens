@@ -4,16 +4,20 @@
     "contract_id": "C01",
     "expected_kb3_ids": [],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_3",
+      "KB3_7",
+      "KB3_9"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_3",
+      "KB3_7",
+      "KB3_9"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -26,22 +30,23 @@
       "KB3_11"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+    "matched_kb3_ids": [
       "KB3_11"
     ],
+    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 1.0,
+    "precision": 0.25,
+    "f1": 0.4
   },
   {
     "source_file": "C03.txt",
@@ -50,18 +55,20 @@
       "KB3_12"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
       "KB3_12"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -74,18 +81,20 @@
       "KB3_13"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
       "KB3_13"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -96,16 +105,18 @@
     "contract_id": "C05",
     "expected_kb3_ids": [],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -116,16 +127,18 @@
     "contract_id": "C06",
     "expected_kb3_ids": [],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -138,22 +151,25 @@
       "KB3_13"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_13",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+    "matched_kb3_ids": [
       "KB3_13"
     ],
+    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 1.0,
+    "precision": 0.2,
+    "f1": 0.33333333333333337
   },
   {
     "source_file": "C08.txt",
@@ -163,39 +179,43 @@
       "KB3_12"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
       "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [
+      "KB3_11"
+    ],
+    "missing_kb3_ids": [
       "KB3_12"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 0.5,
+    "precision": 0.25,
+    "f1": 0.3333333333333333
   },
   {
     "source_file": "C09.txt",
     "contract_id": "C09",
     "expected_kb3_ids": [],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -208,21 +228,24 @@
       "KB3_1"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "matched_kb3_ids": [
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
       "KB3_1"
     ],
-    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 1.0,
-    "precision": 0.3333333333333333,
-    "f1": 0.5
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
   },
   {
     "source_file": "C11.txt",
@@ -232,20 +255,26 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10",
-      "KB3_18"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
     "matched_kb3_ids": [
       "KB3_1"
     ],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_18"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
     "recall": 1.0,
-    "precision": 0.3333333333333333,
-    "f1": 0.5
+    "precision": 0.16666666666666666,
+    "f1": 0.2857142857142857
   },
   {
     "source_file": "C12.txt",
@@ -255,22 +284,30 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10",
+      "KB3_11",
+      "KB3_15",
       "KB3_16",
-      "KB3_18"
+      "KB3_17",
+      "KB3_2",
+      "KB3_3",
+      "KB3_7"
     ],
     "matched_kb3_ids": [
       "KB3_1"
     ],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10",
+      "KB3_11",
+      "KB3_15",
       "KB3_16",
-      "KB3_18"
+      "KB3_17",
+      "KB3_2",
+      "KB3_3",
+      "KB3_7"
     ],
     "recall": 1.0,
-    "precision": 0.25,
-    "f1": 0.4
+    "precision": 0.125,
+    "f1": 0.2222222222222222
   },
   {
     "source_file": "C13.txt",
@@ -280,19 +317,27 @@
       "KB3_2"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10"
+      "KB3_1",
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+    "matched_kb3_ids": [
       "KB3_1",
       "KB3_2"
     ],
+    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "f1": 0.5
   },
   {
     "source_file": "C14.txt",
@@ -303,22 +348,28 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10",
+      "KB3_11",
+      "KB3_13",
       "KB3_16",
-      "KB3_9"
+      "KB3_17",
+      "KB3_2"
     ],
     "matched_kb3_ids": [
-      "KB3_1",
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [
       "KB3_9"
     ],
-    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_13",
+      "KB3_16",
+      "KB3_17",
+      "KB3_2"
     ],
-    "recall": 1.0,
-    "precision": 0.5,
-    "f1": 0.6666666666666666
+    "recall": 0.5,
+    "precision": 0.16666666666666666,
+    "f1": 0.25
   },
   {
     "source_file": "C15.txt",
@@ -327,21 +378,24 @@
       "KB3_1"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "matched_kb3_ids": [
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
       "KB3_1"
     ],
-    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 1.0,
-    "precision": 0.3333333333333333,
-    "f1": 0.5
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
   },
   {
     "source_file": "C16.txt",
@@ -351,18 +405,26 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_18"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
     "matched_kb3_ids": [
       "KB3_1"
     ],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_18"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
     "recall": 1.0,
-    "precision": 0.5,
-    "f1": 0.6666666666666666
+    "precision": 0.16666666666666666,
+    "f1": 0.2857142857142857
   },
   {
     "source_file": "C17.txt",
@@ -372,18 +434,26 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
     "matched_kb3_ids": [
       "KB3_1"
     ],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
     "recall": 1.0,
-    "precision": 0.5,
-    "f1": 0.6666666666666666
+    "precision": 0.16666666666666666,
+    "f1": 0.2857142857142857
   },
   {
     "source_file": "C18.txt",
@@ -394,17 +464,28 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
     "matched_kb3_ids": [
-      "KB3_1",
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [
       "KB3_10"
     ],
-    "missing_kb3_ids": [],
-    "unexpected_kb3_ids": [],
-    "recall": 1.0,
-    "precision": 1.0,
-    "f1": 1.0
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
+    ],
+    "recall": 0.5,
+    "precision": 0.16666666666666666,
+    "f1": 0.25
   },
   {
     "source_file": "C19.txt",
@@ -415,20 +496,29 @@
       "KB3_12"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
       "KB3_1",
       "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1",
+      "KB3_11"
+    ],
+    "missing_kb3_ids": [
       "KB3_12"
     ],
     "unexpected_kb3_ids": [
-      "KB3_10"
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 0.6666666666666666,
+    "precision": 0.3333333333333333,
+    "f1": 0.4444444444444444
   },
   {
     "source_file": "C20.txt",
@@ -438,20 +528,24 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_2"
     ],
     "matched_kb3_ids": [
       "KB3_1"
     ],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_2"
     ],
     "recall": 1.0,
-    "precision": 0.3333333333333333,
-    "f1": 0.5
+    "precision": 0.2,
+    "f1": 0.33333333333333337
   },
   {
     "source_file": "C21.txt",
@@ -460,20 +554,27 @@
       "KB3_3"
     ],
     "retrieved_kb3_ids": [
+      "KB3_11",
       "KB3_16",
-      "KB3_18"
+      "KB3_17",
+      "KB3_18",
+      "KB3_3",
+      "KB3_7"
     ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+    "matched_kb3_ids": [
       "KB3_3"
     ],
+    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
+      "KB3_11",
       "KB3_16",
-      "KB3_18"
+      "KB3_17",
+      "KB3_18",
+      "KB3_7"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 1.0,
+    "precision": 0.16666666666666666,
+    "f1": 0.2857142857142857
   },
   {
     "source_file": "C22.txt",
@@ -483,23 +584,31 @@
       "KB3_4"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
       "KB3_3",
+      "KB3_7"
+    ],
+    "matched_kb3_ids": [
+      "KB3_3"
+    ],
+    "missing_kb3_ids": [
       "KB3_4"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_7"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 0.5,
+    "precision": 0.14285714285714285,
+    "f1": 0.22222222222222224
   },
   {
     "source_file": "C23.txt",
@@ -509,23 +618,27 @@
       "KB3_5"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_3"
     ],
-    "matched_kb3_ids": [],
+    "matched_kb3_ids": [
+      "KB3_3"
+    ],
     "missing_kb3_ids": [
-      "KB3_3",
       "KB3_5"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 0.5,
+    "precision": 0.2,
+    "f1": 0.28571428571428575
   },
   {
     "source_file": "C24.txt",
@@ -534,22 +647,27 @@
       "KB3_6"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_3",
       "KB3_6"
     ],
-    "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+    "matched_kb3_ids": [
+      "KB3_6"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_3"
+    ],
+    "recall": 1.0,
+    "precision": 0.16666666666666666,
+    "f1": 0.2857142857142857
   },
   {
     "source_file": "C25.txt",
@@ -559,9 +677,11 @@
       "KB3_3"
     ],
     "retrieved_kb3_ids": [
-      "KB3_3",
-      "KB3_5",
-      "KB3_9}"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_3"
     ],
     "matched_kb3_ids": [
       "KB3_3"
@@ -570,12 +690,14 @@
       "KB3_12"
     ],
     "unexpected_kb3_ids": [
-      "KB3_5",
-      "KB3_9}"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 0.5,
-    "precision": 0.3333333333333333,
-    "f1": 0.4
+    "precision": 0.2,
+    "f1": 0.28571428571428575
   },
   {
     "source_file": "C26.txt",
@@ -584,18 +706,25 @@
       "KB3_3"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
       "KB3_3"
     ],
-    "unexpected_kb3_ids": [
-      "KB3_1"
+    "matched_kb3_ids": [
+      "KB3_3"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
+    ],
+    "recall": 1.0,
+    "precision": 0.2,
+    "f1": 0.33333333333333337
   },
   {
     "source_file": "C27.txt",
@@ -605,9 +734,11 @@
       "KB3_5"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_3"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
@@ -615,9 +746,11 @@
       "KB3_5"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_3"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -630,18 +763,20 @@
       "KB3_6"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
       "KB3_6"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -654,18 +789,25 @@
       "KB3_3"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
       "KB3_3"
     ],
-    "unexpected_kb3_ids": [
-      "KB3_1"
+    "matched_kb3_ids": [
+      "KB3_3"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
+    ],
+    "recall": 1.0,
+    "precision": 0.2,
+    "f1": 0.33333333333333337
   },
   {
     "source_file": "C30.txt",
@@ -675,19 +817,27 @@
       "KB3_5"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_3"
     ],
-    "matched_kb3_ids": [],
+    "matched_kb3_ids": [
+      "KB3_3"
+    ],
     "missing_kb3_ids": [
-      "KB3_3",
       "KB3_5"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 0.5,
+    "precision": 0.2,
+    "f1": 0.28571428571428575
   },
   {
     "source_file": "C31.txt",
@@ -696,18 +846,24 @@
       "KB3_7"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_3",
+      "KB3_4"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
       "KB3_7"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_10",
-      "KB3_16"
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_3",
+      "KB3_4"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -720,22 +876,27 @@
       "KB3_7"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10",
+      "KB3_11",
+      "KB3_15",
       "KB3_16",
-      "KB3_18"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+      "KB3_17",
+      "KB3_3",
       "KB3_7"
     ],
-    "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_16",
-      "KB3_18"
+    "matched_kb3_ids": [
+      "KB3_7"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_3"
+    ],
+    "recall": 1.0,
+    "precision": 0.16666666666666666,
+    "f1": 0.2857142857142857
   },
   {
     "source_file": "C33.txt",
@@ -744,25 +905,24 @@
       "KB3_10"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10",
+      "KB3_11",
       "KB3_16",
-      "KB3_18",
-      "KB3_8",
-      "KB3_9"
+      "KB3_17",
+      "KB3_7"
     ],
-    "matched_kb3_ids": [
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
       "KB3_10"
     ],
-    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
+      "KB3_11",
       "KB3_16",
-      "KB3_18",
-      "KB3_8",
-      "KB3_9"
+      "KB3_17",
+      "KB3_7"
     ],
-    "recall": 1.0,
-    "precision": 0.2,
-    "f1": 0.33333333333333337
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
   },
   {
     "source_file": "C34.txt",
@@ -771,25 +931,24 @@
       "KB3_10"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10",
-      "KB3_15",
+      "KB3_11",
       "KB3_16",
-      "KB3_18",
-      "KB3_9"
+      "KB3_17",
+      "KB3_18"
     ],
-    "matched_kb3_ids": [
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
       "KB3_10"
     ],
-    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_15",
+      "KB3_11",
       "KB3_16",
-      "KB3_18",
-      "KB3_9"
+      "KB3_17",
+      "KB3_18"
     ],
-    "recall": 1.0,
-    "precision": 0.2,
-    "f1": 0.33333333333333337
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
   },
   {
     "source_file": "C35.txt",
@@ -799,17 +958,32 @@
       "KB3_8",
       "KB3_9"
     ],
-    "retrieved_kb3_ids": [],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_11",
+      "KB3_16",
+      "KB3_2",
+      "KB3_3",
       "KB3_7",
-      "KB3_8",
       "KB3_9"
     ],
-    "unexpected_kb3_ids": [],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "matched_kb3_ids": [
+      "KB3_7",
+      "KB3_9"
+    ],
+    "missing_kb3_ids": [
+      "KB3_8"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_11",
+      "KB3_16",
+      "KB3_2",
+      "KB3_3"
+    ],
+    "recall": 0.6666666666666666,
+    "precision": 0.2857142857142857,
+    "f1": 0.4
   },
   {
     "source_file": "C36.txt",
@@ -818,18 +992,29 @@
       "KB3_7"
     ],
     "retrieved_kb3_ids": [
-      "KB3_9"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+      "KB3_11",
+      "KB3_13",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_3",
       "KB3_7"
     ],
-    "unexpected_kb3_ids": [
-      "KB3_9"
+    "matched_kb3_ids": [
+      "KB3_7"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_13",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_3"
+    ],
+    "recall": 1.0,
+    "precision": 0.14285714285714285,
+    "f1": 0.25
   },
   {
     "source_file": "C37.txt",
@@ -838,8 +1023,9 @@
       "KB3_8"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10",
+      "KB3_11",
       "KB3_16",
+      "KB3_17",
       "KB3_18"
     ],
     "matched_kb3_ids": [],
@@ -847,8 +1033,9 @@
       "KB3_8"
     ],
     "unexpected_kb3_ids": [
-      "KB3_10",
+      "KB3_11",
       "KB3_16",
+      "KB3_17",
       "KB3_18"
     ],
     "recall": 0.0,
@@ -861,12 +1048,28 @@
     "expected_kb3_ids": [
       "KB3_14"
     ],
-    "retrieved_kb3_ids": [],
+    "retrieved_kb3_ids": [
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_3",
+      "KB3_7",
+      "KB3_9"
+    ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
       "KB3_14"
     ],
-    "unexpected_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_3",
+      "KB3_7",
+      "KB3_9"
+    ],
     "recall": 0.0,
     "precision": 0.0,
     "f1": 0.0
@@ -881,25 +1084,29 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10",
+      "KB3_11",
       "KB3_16",
-      "KB3_2"
+      "KB3_17",
+      "KB3_2",
+      "KB3_7"
     ],
     "matched_kb3_ids": [
-      "KB3_10"
+      "KB3_7"
     ],
     "missing_kb3_ids": [
-      "KB3_7",
+      "KB3_10",
       "KB3_9"
     ],
     "unexpected_kb3_ids": [
       "KB3_1",
+      "KB3_11",
       "KB3_16",
+      "KB3_17",
       "KB3_2"
     ],
     "recall": 0.3333333333333333,
-    "precision": 0.25,
-    "f1": 0.28571428571428575
+    "precision": 0.16666666666666666,
+    "f1": 0.2222222222222222
   },
   {
     "source_file": "C40.txt",
@@ -909,21 +1116,27 @@
       "KB3_7"
     ],
     "retrieved_kb3_ids": [
+      "KB3_11",
       "KB3_16",
-      "KB3_18"
-    ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
-      "KB3_12",
+      "KB3_17",
+      "KB3_18",
       "KB3_7"
     ],
+    "matched_kb3_ids": [
+      "KB3_7"
+    ],
+    "missing_kb3_ids": [
+      "KB3_12"
+    ],
     "unexpected_kb3_ids": [
+      "KB3_11",
       "KB3_16",
+      "KB3_17",
       "KB3_18"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 0.5,
+    "precision": 0.2,
+    "f1": 0.28571428571428575
   },
   {
     "source_file": "C41.txt",
@@ -932,25 +1145,23 @@
       "KB3_16"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10",
-      "KB3_15",
+      "KB3_11",
       "KB3_16",
-      "KB3_18",
-      "KB3_9"
+      "KB3_17",
+      "KB3_18"
     ],
     "matched_kb3_ids": [
       "KB3_16"
     ],
     "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_15",
-      "KB3_18",
-      "KB3_9"
+      "KB3_11",
+      "KB3_17",
+      "KB3_18"
     ],
     "recall": 1.0,
-    "precision": 0.2,
-    "f1": 0.33333333333333337
+    "precision": 0.25,
+    "f1": 0.4
   },
   {
     "source_file": "C42.txt",
@@ -959,20 +1170,23 @@
       "KB3_15"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1",
-      "KB3_16"
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17"
     ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+    "matched_kb3_ids": [
       "KB3_15"
     ],
+    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
-      "KB3_1",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 1.0,
+    "precision": 0.25,
+    "f1": 0.4
   },
   {
     "source_file": "C43.txt",
@@ -982,19 +1196,26 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
-    "matched_kb3_ids": [],
-    "missing_kb3_ids": [
+    "matched_kb3_ids": [
       "KB3_17"
     ],
+    "missing_kb3_ids": [],
     "unexpected_kb3_ids": [
       "KB3_1",
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_18",
+      "KB3_2"
     ],
-    "recall": 0.0,
-    "precision": 0.0,
-    "f1": 0.0
+    "recall": 1.0,
+    "precision": 0.16666666666666666,
+    "f1": 0.2857142857142857
   },
   {
     "source_file": "C44.txt",
@@ -1003,22 +1224,22 @@
       "KB3_5"
     ],
     "retrieved_kb3_ids": [
-      "KB3_10",
-      "KB3_15",
+      "KB3_11",
       "KB3_16",
+      "KB3_17",
       "KB3_18",
-      "KB3_9"
+      "KB3_3"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
       "KB3_5"
     ],
     "unexpected_kb3_ids": [
-      "KB3_10",
-      "KB3_15",
+      "KB3_11",
       "KB3_16",
+      "KB3_17",
       "KB3_18",
-      "KB3_9"
+      "KB3_3"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -1031,14 +1252,18 @@
       "KB3_18"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17"
     ],
     "matched_kb3_ids": [],
     "missing_kb3_ids": [
       "KB3_18"
     ],
     "unexpected_kb3_ids": [
-      "KB3_1"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17"
     ],
     "recall": 0.0,
     "precision": 0.0,
@@ -1052,18 +1277,31 @@
       "KB3_3"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1"
+      "KB3_1",
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2",
+      "KB3_3",
+      "KB3_7"
     ],
     "matched_kb3_ids": [
-      "KB3_1"
-    ],
-    "missing_kb3_ids": [
+      "KB3_1",
       "KB3_3"
     ],
-    "unexpected_kb3_ids": [],
-    "recall": 0.5,
-    "precision": 1.0,
-    "f1": 0.6666666666666666
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2",
+      "KB3_7"
+    ],
+    "recall": 1.0,
+    "precision": 0.25,
+    "f1": 0.4
   },
   {
     "source_file": "C47.txt",
@@ -1075,20 +1313,29 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2",
+      "KB3_3"
     ],
     "matched_kb3_ids": [
-      "KB3_1"
+      "KB3_1",
+      "KB3_3"
     ],
     "missing_kb3_ids": [
-      "KB3_3",
       "KB3_4"
     ],
     "unexpected_kb3_ids": [
-      "KB3_10"
+      "KB3_11",
+      "KB3_16",
+      "KB3_17",
+      "KB3_18",
+      "KB3_2"
     ],
-    "recall": 0.3333333333333333,
-    "precision": 0.5,
+    "recall": 0.6666666666666666,
+    "precision": 0.2857142857142857,
     "f1": 0.4
   },
   {
@@ -1101,21 +1348,32 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_16"
-    ],
-    "matched_kb3_ids": [
-      "KB3_1"
-    ],
-    "missing_kb3_ids": [
+      "KB3_11",
+      "KB3_13",
+      "KB3_16",
+      "KB3_17",
+      "KB3_2",
+      "KB3_3",
       "KB3_6",
       "KB3_7"
     ],
-    "unexpected_kb3_ids": [
-      "KB3_16"
+    "matched_kb3_ids": [
+      "KB3_1",
+      "KB3_6",
+      "KB3_7"
     ],
-    "recall": 0.3333333333333333,
-    "precision": 0.5,
-    "f1": 0.4
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_13",
+      "KB3_16",
+      "KB3_17",
+      "KB3_2",
+      "KB3_3"
+    ],
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "f1": 0.5
   },
   {
     "source_file": "C49.txt",
@@ -1128,22 +1386,32 @@
     ],
     "retrieved_kb3_ids": [
       "KB3_1",
-      "KB3_16"
+      "KB3_11",
+      "KB3_16",
+      "KB3_2",
+      "KB3_3",
+      "KB3_4",
+      "KB3_7",
+      "KB3_9"
     ],
     "matched_kb3_ids": [
-      "KB3_1"
-    ],
-    "missing_kb3_ids": [
-      "KB3_10",
+      "KB3_1",
       "KB3_3",
       "KB3_9"
     ],
-    "unexpected_kb3_ids": [
-      "KB3_16"
+    "missing_kb3_ids": [
+      "KB3_10"
     ],
-    "recall": 0.25,
-    "precision": 0.5,
-    "f1": 0.3333333333333333
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_16",
+      "KB3_2",
+      "KB3_4",
+      "KB3_7"
+    ],
+    "recall": 0.75,
+    "precision": 0.375,
+    "f1": 0.5
   },
   {
     "source_file": "C50.txt",
@@ -1154,18 +1422,32 @@
       "KB3_5"
     ],
     "retrieved_kb3_ids": [
-      "KB3_1"
+      "KB3_1",
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_2",
+      "KB3_3",
+      "KB3_7"
     ],
     "matched_kb3_ids": [
-      "KB3_1"
+      "KB3_1",
+      "KB3_3"
     ],
     "missing_kb3_ids": [
-      "KB3_3",
       "KB3_5"
     ],
-    "unexpected_kb3_ids": [],
-    "recall": 0.3333333333333333,
-    "precision": 1.0,
-    "f1": 0.5
+    "unexpected_kb3_ids": [
+      "KB3_11",
+      "KB3_15",
+      "KB3_16",
+      "KB3_17",
+      "KB3_2",
+      "KB3_7"
+    ],
+    "recall": 0.6666666666666666,
+    "precision": 0.25,
+    "f1": 0.36363636363636365
   }
 ]

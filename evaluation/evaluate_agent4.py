@@ -43,6 +43,7 @@ def run_all() -> list[dict[str, Any]]:
     for i, path in enumerate(txt_paths, start=1):
         txt = path.read_text(encoding="utf-8")
         out = agent.run_on_raw_text(txt, source_file=path.name)
+        audit_findings = out.get("audit_findings", [])
 
         # Determine expected KB3 ids from Ground Truth by contract id
         # Extract contract id from filename (C01 etc.)
@@ -55,7 +56,7 @@ def run_all() -> list[dict[str, Any]]:
         else:
             expected_kb3 = set()
 
-        retrieved_kb3 = set(out.get("kb3_selected_ids", []))
+        retrieved_kb3 = set(out.get("predicted_kb3_ids", []))
 
         metrics = calculate_metrics(expected_kb3, retrieved_kb3)
 
@@ -70,6 +71,7 @@ def run_all() -> list[dict[str, Any]]:
             "recall": metrics["recall_at_k"],
             "precision": metrics["precision_at_k"],
             "f1": metrics["f1_at_k"],
+            "audit_findings": audit_findings,
         }
 
         results.append(result)
@@ -80,6 +82,12 @@ def run_all() -> list[dict[str, Any]]:
             f"expected={len(expected_kb3)} retrieved={len(retrieved_kb3)} "
             f"matched={len(metrics['matched_kb_ids'])} "
             f"recall={metrics['recall_at_k']:.3f} precision={metrics['precision_at_k']:.3f}"
+        )
+        print(
+            f"  expected_ids={sorted(expected_kb3)} "
+            f"retrieved_ids={sorted(retrieved_kb3)} "
+            f"missing={sorted(metrics['missing_kb_ids'])} "
+            f"unexpected={sorted(metrics['unexpected_kb_ids'])}"
         )
 
     # Save JSON
@@ -107,6 +115,32 @@ def run_all() -> list[dict[str, Any]]:
     df = pd.DataFrame(rows)
     csv_path = RESULTS_DIR / "audit_agent_summary.csv"
     df.to_csv(csv_path, index=False)
+
+    # Write per-contract reasoning CSV: mapping KB3_ID -> LLM explanation
+    reasoning_rows = []
+    for r in results:
+        findings = r.get("audit_findings", [])
+        reasoning = {f.get("kb3_id"): f.get("llm_explanation") for f in findings}
+        reasoning_rows.append(
+            {
+                "source_file": r["source_file"],
+                "contract_id": r["contract_id"],
+                "expected_kb3_ids": "; ".join(r["expected_kb3_ids"]),
+                "retrieved_kb3_ids": "; ".join(r["retrieved_kb3_ids"]),
+                "reasoning_json": json.dumps(reasoning, ensure_ascii=False),
+            }
+        )
+
+    import csv
+
+    reasoning_path = RESULTS_DIR / "audit_agent_reasoning.csv"
+    with reasoning_path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=["source_file", "contract_id", "expected_kb3_ids", "retrieved_kb3_ids", "reasoning_json"])
+        writer.writeheader()
+        for row in reasoning_rows:
+            writer.writerow(row)
+
+    print(f"Wrote reasoning CSV -> {reasoning_path}")
 
     print(f"Wrote {json_path} and {csv_path}")
     return results
