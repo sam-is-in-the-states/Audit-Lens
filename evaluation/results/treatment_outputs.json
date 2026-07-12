@@ -1,0 +1,673 @@
+[
+  {
+    "contract_id": "RL-2025-0288",
+    "source_file": "C41_GranitePeak.pdf",
+    "billing_used": "annual_upfront",
+    "characterization": {
+      "onboarding_distinct": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "usage_model": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "discount_type": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "material_right": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
+      }
+    },
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 18000.0,
+      "recognition_method": "UNDETERMINED",
+      "recognition_period_months": null
+    },
+    "schedule": {
+      "monthly_revenue": 0.0,
+      "opening_deferred": 0.0,
+      "monthly_schedule": []
+    }
+  },
+  {
+    "contract_id": "RL-2025-0181",
+    "source_file": "C42_Driftwood.pdf",
+    "billing_used": "annual_upfront",
+    "characterization": {
+      "onboarding_distinct": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "usage_model": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "discount_type": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "material_right": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
+      }
+    },
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 24000.0,
+      "recognition_method": "UNDETERMINED",
+      "recognition_period_months": 12
+    },
+    "schedule": {
+      "monthly_revenue": 2000.0,
+      "opening_deferred": 24000.0,
+      "monthly_schedule": [
+        {
+          "month": 1,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-05-01",
+          "period_end": "2025-05-31"
+        },
+        {
+          "month": 2,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-06-01",
+          "period_end": "2025-06-30"
+        },
+        {
+          "month": 3,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-07-01",
+          "period_end": "2025-07-31"
+        },
+        {
+          "month": 4,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-08-01",
+          "period_end": "2025-08-31"
+        },
+        {
+          "month": 5,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-09-01",
+          "period_end": "2025-09-30"
+        },
+        {
+          "month": 6,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-10-01",
+          "period_end": "2025-10-31"
+        },
+        {
+          "month": 7,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-11-01",
+          "period_end": "2025-11-30"
+        },
+        {
+          "month": 8,
+          "revenue_recognized": 2000.0,
+          "period_start": "2025-12-01",
+          "period_end": "2025-12-31"
+        },
+        {
+          "month": 9,
+          "revenue_recognized": 2000.0,
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        {
+          "month": 10,
+          "revenue_recognized": 2000.0,
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        {
+          "month": 11,
+          "revenue_recognized": 2000.0,
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        {
+          "month": 12,
+          "revenue_recognized": 2000.0,
+          "period_start": "2026-04-01",
+          "period_end": "2026-04-30"
+        }
+      ]
+    }
+  },
+  {
+    "contract_id": "RL-2025-0172",
+    "source_file": "C43_Foxglove.pdf",
+    "billing_used": "annual_upfront",
+    "characterization": {
+      "onboarding_distinct": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "usage_model": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "discount_type": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "material_right": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
+      }
+    },
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 20000.0,
+      "recognition_method": "UNDETERMINED",
+      "recognition_period_months": 12
+    },
+    "schedule": {
+      "monthly_revenue": 1666.6666666666667,
+      "opening_deferred": 20000.0,
+      "monthly_schedule": [
+        {
+          "month": 1,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-02-15",
+          "period_end": "2025-03-14"
+        },
+        {
+          "month": 2,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-03-15",
+          "period_end": "2025-04-14"
+        },
+        {
+          "month": 3,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-04-15",
+          "period_end": "2025-05-14"
+        },
+        {
+          "month": 4,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-05-15",
+          "period_end": "2025-06-14"
+        },
+        {
+          "month": 5,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-06-15",
+          "period_end": "2025-07-14"
+        },
+        {
+          "month": 6,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-07-15",
+          "period_end": "2025-08-14"
+        },
+        {
+          "month": 7,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-08-15",
+          "period_end": "2025-09-14"
+        },
+        {
+          "month": 8,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-09-15",
+          "period_end": "2025-10-14"
+        },
+        {
+          "month": 9,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-10-15",
+          "period_end": "2025-11-14"
+        },
+        {
+          "month": 10,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-11-15",
+          "period_end": "2025-12-14"
+        },
+        {
+          "month": 11,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-12-15",
+          "period_end": "2026-01-14"
+        },
+        {
+          "month": 12,
+          "revenue_recognized": 1666.67,
+          "period_start": "2026-01-15",
+          "period_end": "2026-02-14"
+        }
+      ]
+    }
+  },
+  {
+    "contract_id": "RL-2025-0238",
+    "source_file": "C44_CascadePoint.pdf",
+    "billing_used": "annual_upfront",
+    "characterization": {
+      "onboarding_distinct": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "usage_model": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "discount_type": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "material_right": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
+      }
+    },
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 12000.0,
+      "recognition_method": "UNDETERMINED",
+      "recognition_period_months": 12
+    },
+    "schedule": {
+      "monthly_revenue": 1000.0,
+      "opening_deferred": 12000.0,
+      "monthly_schedule": [
+        {
+          "month": 1,
+          "revenue_recognized": 1000.0,
+          "period_start": "2025-07-01",
+          "period_end": "2025-07-31"
+        },
+        {
+          "month": 2,
+          "revenue_recognized": 1000.0,
+          "period_start": "2025-08-01",
+          "period_end": "2025-08-31"
+        },
+        {
+          "month": 3,
+          "revenue_recognized": 1000.0,
+          "period_start": "2025-09-01",
+          "period_end": "2025-09-30"
+        },
+        {
+          "month": 4,
+          "revenue_recognized": 1000.0,
+          "period_start": "2025-10-01",
+          "period_end": "2025-10-31"
+        },
+        {
+          "month": 5,
+          "revenue_recognized": 1000.0,
+          "period_start": "2025-11-01",
+          "period_end": "2025-11-30"
+        },
+        {
+          "month": 6,
+          "revenue_recognized": 1000.0,
+          "period_start": "2025-12-01",
+          "period_end": "2025-12-31"
+        },
+        {
+          "month": 7,
+          "revenue_recognized": 1000.0,
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        {
+          "month": 8,
+          "revenue_recognized": 1000.0,
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        {
+          "month": 9,
+          "revenue_recognized": 1000.0,
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        {
+          "month": 10,
+          "revenue_recognized": 1000.0,
+          "period_start": "2026-04-01",
+          "period_end": "2026-04-30"
+        },
+        {
+          "month": 11,
+          "revenue_recognized": 1000.0,
+          "period_start": "2026-05-01",
+          "period_end": "2026-05-31"
+        },
+        {
+          "month": 12,
+          "revenue_recognized": 1000.0,
+          "period_start": "2026-06-01",
+          "period_end": "2026-06-30"
+        }
+      ]
+    }
+  },
+  {
+    "contract_id": "RL-2025-0179",
+    "source_file": "C45_Birchmere.pdf",
+    "billing_used": "annual_upfront",
+    "characterization": {
+      "onboarding_distinct": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "usage_model": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "discount_type": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "material_right": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
+      }
+    },
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 20000.0,
+      "recognition_method": "UNDETERMINED",
+      "recognition_period_months": 12
+    },
+    "schedule": {
+      "monthly_revenue": 1666.6666666666667,
+      "opening_deferred": 20000.0,
+      "monthly_schedule": [
+        {
+          "month": 1,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-04-01",
+          "period_end": "2025-04-30"
+        },
+        {
+          "month": 2,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-05-01",
+          "period_end": "2025-05-31"
+        },
+        {
+          "month": 3,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-06-01",
+          "period_end": "2025-06-30"
+        },
+        {
+          "month": 4,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-07-01",
+          "period_end": "2025-07-31"
+        },
+        {
+          "month": 5,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-08-01",
+          "period_end": "2025-08-31"
+        },
+        {
+          "month": 6,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-09-01",
+          "period_end": "2025-09-30"
+        },
+        {
+          "month": 7,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-10-01",
+          "period_end": "2025-10-31"
+        },
+        {
+          "month": 8,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-11-01",
+          "period_end": "2025-11-30"
+        },
+        {
+          "month": 9,
+          "revenue_recognized": 1666.67,
+          "period_start": "2025-12-01",
+          "period_end": "2025-12-31"
+        },
+        {
+          "month": 10,
+          "revenue_recognized": 1666.67,
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        {
+          "month": 11,
+          "revenue_recognized": 1666.67,
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        {
+          "month": 12,
+          "revenue_recognized": 1666.67,
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        }
+      ]
+    }
+  },
+  {
+    "contract_id": "RL-2025-0307",
+    "source_file": "C46_Harborview.pdf",
+    "billing_used": "annual_upfront",
+    "characterization": {
+      "onboarding_distinct": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "usage_model": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "discount_type": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "material_right": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
+      }
+    },
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 30000.0,
+      "recognition_method": "UNDETERMINED",
+      "recognition_period_months": 12
+    },
+    "schedule": {
+      "monthly_revenue": 2500.0,
+      "opening_deferred": 30000.0,
+      "monthly_schedule": [
+        {
+          "month": 1,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-03-01",
+          "period_end": "2025-03-31"
+        },
+        {
+          "month": 2,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-04-01",
+          "period_end": "2025-04-30"
+        },
+        {
+          "month": 3,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-05-01",
+          "period_end": "2025-05-31"
+        },
+        {
+          "month": 4,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-06-01",
+          "period_end": "2025-06-30"
+        },
+        {
+          "month": 5,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-07-01",
+          "period_end": "2025-07-31"
+        },
+        {
+          "month": 6,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-08-01",
+          "period_end": "2025-08-31"
+        },
+        {
+          "month": 7,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-09-01",
+          "period_end": "2025-09-30"
+        },
+        {
+          "month": 8,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-10-01",
+          "period_end": "2025-10-31"
+        },
+        {
+          "month": 9,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-11-01",
+          "period_end": "2025-11-30"
+        },
+        {
+          "month": 10,
+          "revenue_recognized": 2500.0,
+          "period_start": "2025-12-01",
+          "period_end": "2025-12-31"
+        },
+        {
+          "month": 11,
+          "revenue_recognized": 2500.0,
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        {
+          "month": 12,
+          "revenue_recognized": 2500.0,
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        }
+      ]
+    }
+  }
+]
