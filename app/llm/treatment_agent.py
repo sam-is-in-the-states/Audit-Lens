@@ -2,7 +2,7 @@
 Agent 3 - Treatment Agent.
 
 Takes the facts from Agent 1 and the policy retrieved by Agent 2, and produces:
-  - four ASC 606 characterization judgments (LLM),
+  - ASC 606 characterization judgments (LLM),
   - the resulting revenue treatment: performance obligations, transaction price,
     recognition method (deterministic rules),
   - a straight-line monthly revenue schedule and opening deferred balance
@@ -96,7 +96,7 @@ def _policy_context(agent2_output):
 
 
 def characterize(facts, agent2_output):
-    """Ask the LLM for the four characterization judgments, grounded in the policy.
+    """Ask the LLM for the six characterization judgments, grounded in the policy.
 
     Returns a dict of judgment objects, each shaped
     {"reasoning": ..., "kb_basis": [...], "conclusion": ...}.
@@ -110,19 +110,22 @@ def characterize(facts, agent2_output):
     ]
     raw = get_llm_response(messages, response_format="json_object")
 
-    # Fallback shape if the model returns invalid or incomplete JSON.
+    # Fallback shape if the model returns invalid or incomplete JSON. contract_valid
+    # defaults to TRUE so a missing/garbled response never zeroes out a real contract.
     defaults = {
         "onboarding_distinct": {"reasoning": "", "kb_basis": [], "conclusion": "UNDETERMINED"},
         "usage_model":         {"reasoning": "", "kb_basis": [], "conclusion": "none"},
         "discount_type":       {"reasoning": "", "kb_basis": [], "conclusion": "none"},
         "material_right":      {"reasoning": "", "kb_basis": [], "conclusion": "UNDETERMINED"},
+        "contract_valid":      {"reasoning": "", "kb_basis": [], "conclusion": "TRUE"},
+        "additional_distinct_services": {"reasoning": "", "kb_basis": [], "conclusion": []},
     }
     try:
         parsed = json.loads(raw)
     except (json.JSONDecodeError, TypeError):
         return defaults
 
-    # Keep only the four keys we asked for; fall back per-field if one is missing.
+    # Keep only the keys we asked for; fall back per-field if one is missing.
     return {field: parsed.get(field, default) for field, default in defaults.items()}
 
 
@@ -156,13 +159,21 @@ def _fixed_consideration(facts):
 def derive_treatment(facts, judgments):
     """Turn the judgment conclusions into POs, transaction price, and method.
 
-    TODO(draft): two cases are not modeled yet and will be wrong on purpose until
-    we add support (the eval will surface them):
-      - invalid / undetermined contracts where ground truth is num_POs = 0
-        (needs a contract-validity judgment, KB2_15 - not one of our four).
-      - multi-service bundles with separately priced support / consulting that
-        form their own POs (e.g. C35), which our two levers below cannot produce.
+    TODO(draft): multi-service bundles with separately priced support / consulting
+    that form their own POs (e.g. C35) are not modeled and will be wrong until added.
     """
+    # ASC 606 Step 1: with no valid contract there is nothing to recognize yet. Only a
+    # definite FALSE triggers this - UNDETERMINED/TRUE keep the normal treatment so an
+    # unclear validity call never zeroes out an otherwise valid contract.
+    if _conclusion(judgments, "contract_valid") == "FALSE":
+        return {
+            "num_POs": 1,
+            "po_list": ["core_subscription"],
+            "transaction_price": 0,
+            "recognition_method": "UNDETERMINED",
+            "recognition_period_months": facts.get("subscription_term_months"),
+        }
+
     onboarding_distinct = _conclusion(judgments, "onboarding_distinct")
     material_right = _conclusion(judgments, "material_right")
     usage_model = _conclusion(judgments, "usage_model")
@@ -174,6 +185,16 @@ def derive_treatment(facts, judgments):
         po_list.append("onboarding(distinct)")
     if material_right == "TRUE":
         po_list.append("material_right(renewal)")
+    # Extra separately-priced services the model judged distinct (KB2_1/KB1_3) each add
+    # their own PO. Skip anything that echoes the subscription or onboarding so those
+    # already-counted obligations are not double counted.
+    extra = _conclusion(judgments, "additional_distinct_services") or []
+    if isinstance(extra, str):
+        extra = [extra]
+    for service in extra:
+        name = str(service).strip().lower()
+        if name and not any(k in name for k in ("subscription", "onboard", "implementation", "setup", "core")):
+            po_list.append(f"{name}(distinct)")
     # Usage is variable consideration inside the subscription, not its own PO.
 
     # Transaction price = fixed consideration only.

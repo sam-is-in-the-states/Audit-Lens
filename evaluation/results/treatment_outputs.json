@@ -5,36 +5,34 @@
     "billing_used": "annual_upfront",
     "characterization": {
       "onboarding_distinct": {
-        "reasoning": "KB2_2: Onboarding fees are not recognized when billed or when the work is completed; they are recognized over the subscription term together with the subscription. The contract has no onboarding fee, so it is not a distinct performance obligation. KB1_4: A good or service that is not distinct is combined with other promises until a distinct bundle is identified. The default is non-distinct, and there is no onboarding fee.",
-        "kb_basis": [
-          "KB2_2",
-          "KB1_4"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
       },
       "usage_model": {
-        "reasoning": "KB1_10: Usage-based amounts are recognized as the related usage occurs, without estimating the total variable consideration over the remaining term. The contract has a fixed annual subscription fee, so it is not usage-based. KB1_1: The contract is for a single performance obligation, and the fee is for a fixed subscription, not usage-based.",
-        "kb_basis": [
-          "KB1_10",
-          "KB1_1"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "discount_type": {
-        "reasoning": "KB1_15: A material right exists if the renewal is significantly discounted. The renewal is at the provider's standard or then-current list price, not discounted. KB1_18: A renewal at the provider's standard price is generally not a material right.",
-        "kb_basis": [
-          "KB1_15",
-          "KB1_18"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "material_right": {
-        "reasoning": "KB1_15: A material right exists if the renewal is significantly discounted. The renewal is at the provider's standard or then-current list price, not discounted. KB1_18: A renewal at the provider's standard price is generally not a material right.",
-        "kb_basis": [
-          "KB1_15",
-          "KB1_18"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
       }
     },
     "treatment": {
@@ -58,33 +56,34 @@
     "billing_used": "annual_upfront",
     "characterization": {
       "onboarding_distinct": {
-        "reasoning": "KB2_2 states onboarding fees are not recognized when billed or completed, so the service is non-distinct. The contract has no onboarding fee, leading to 'FALSE'",
-        "kb_basis": [
-          "KB2_2"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
       },
       "usage_model": {
-        "reasoning": "KB1_1 and KB2_11 indicate subscription revenue is recognized ratably (straight-line) over the term. The annual fee and continuous access support this, classifying it as 'PURE_USAGE'",
-        "kb_basis": [
-          "KB1_1",
-          "KB2_11"
-        ],
-        "conclusion": "PURE_USAGE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "discount_type": {
-        "reasoning": "KB1_17 states if collectibility is conditional, a contract asset is recognized. The contract has no discounts, so 'NONE'",
-        "kb_basis": [
-          "KB1_17"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "material_right": {
-        "reasoning": "KB2_10 specifies material rights require a price significantly below standard. The renewal is at standard price, so 'FALSE'",
-        "kb_basis": [
-          "KB2_10"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
       }
     },
     "treatment": {
@@ -93,7 +92,7 @@
         "core_subscription"
       ],
       "transaction_price": 24000.0,
-      "recognition_method": "over_time_ratable",
+      "recognition_method": "UNDETERMINED",
       "recognition_period_months": 12
     },
     "schedule": {
@@ -181,33 +180,34 @@
     "billing_used": "annual_upfront",
     "characterization": {
       "onboarding_distinct": {
-        "reasoning": "KB2_10: RevLens treats onboarding services as non-distinct by default. The contract does not indicate they are distinct, so the default applies. KB2_1: Onboarding fees are not recognized when billed or when the platform access depends on them. Conclusion: FALSE",
-        "kb_basis": [
-          "KB2_10",
-          "KB2_1"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
       },
       "usage_model": {
-        "reasoning": "KB1_12: Usage-based fees are not mentioned. The fee is for a subscription without usage-based elements. Conclusion: NONE",
-        "kb_basis": [
-          "KB1_12"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "discount_type": {
-        "reasoning": "KB1_15: No discount terms are mentioned. The fee is for a standard annual subscription. Conclusion: NONE",
-        "kb_basis": [
-          "KB1_15"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "material_right": {
-        "reasoning": "KB1_18: A renewal at the standard price is not a material right. The contract's renewal is at the standard price, so it's not a material right. Conclusion: FALSE",
-        "kb_basis": [
-          "KB1_18"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
       }
     },
     "treatment": {
@@ -216,7 +216,7 @@
         "core_subscription"
       ],
       "transaction_price": 20000.0,
-      "recognition_method": "over_time_ratable",
+      "recognition_method": "UNDETERMINED",
       "recognition_period_months": 12
     },
     "schedule": {
@@ -304,36 +304,34 @@
     "billing_used": "annual_upfront",
     "characterization": {
       "onboarding_distinct": {
-        "reasoning": "KB2_2 (onboarding_default_non_distinct related) and KB1_3 (distinct_test): The contract has no onboarding or implementation fee, so the default is non-distinct. The absence of onboarding fees confirms the service is non-distinct.",
-        "kb_basis": [
-          "KB2_2",
-          "KB1_3"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
       },
       "usage_model": {
-        "reasoning": "KB1_4 (separately_identifiable_factors) and KB2_4 (usage/overage right-to-invoice): The contract has no usage-based fees, so the usage model is 'none'. The absence of usage fees confirms the model is 'none'.",
-        "kb_basis": [
-          "KB1_4",
-          "KB2_4"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "discount_type": {
-        "reasoning": "KB1_14 (allocating a discount) and KB2_10 (material rights): The contract has no discounts, so the discount type is 'none'. The absence of discounts confirms the model is 'none'.",
-        "kb_basis": [
-          "KB1_14",
-          "KB2_10"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "material_right": {
-        "reasoning": "KB1_15 (material right) and KB2_10 (material rights): The renewal is at the standard price, not below comparable prices. A standard renewal is not considered a material right.",
-        "kb_basis": [
-          "KB1_15",
-          "KB2_10"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
       }
     },
     "treatment": {
@@ -342,7 +340,7 @@
         "core_subscription"
       ],
       "transaction_price": 12000.0,
-      "recognition_method": "over_time_ratable",
+      "recognition_method": "UNDETERMINED",
       "recognition_period_months": 12
     },
     "schedule": {
@@ -430,36 +428,34 @@
     "billing_used": "annual_upfront",
     "characterization": {
       "onboarding_distinct": {
-        "reasoning": "KB1_3 (distinct_test) and KB2_2 (onboarding_default_non_distinct): The contract has no onboarding or implementation fee, so the default is non-distinct. The service is not separately identifiable, and the default applies.",
-        "kb_basis": [
-          "KB1_3",
-          "KB2_2"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
       },
       "usage_model": {
-        "reasoning": "KB1_4 (separately_identifiable_factors) and KB2_16 (free_promotional_periods): The contract has a fixed subscription fee, and there's no usage-based pricing. The fee is for a standard subscription, so it's considered 'none' as there are no usage-based fees.",
-        "kb_basis": [
-          "KB1_4",
-          "KB2_16"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "discount_type": {
-        "reasoning": "KB1_14 (allocating a discount) and KB2_8 (pro-rata default vs directed): The contract has no discounts mentioned, so it's 'none' as there are no discount terms.",
-        "kb_basis": [
-          "KB1_14",
-          "KB2_8"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "material_right": {
-        "reasoning": "KB1_18 (contract_modifications) and KB2_16 (free_promotional_periods): The contract has no renewal or future-purchase options, so there's no material right.",
-        "kb_basis": [
-          "KB1_18",
-          "KB2_16"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
       }
     },
     "treatment": {
@@ -468,7 +464,7 @@
         "core_subscription"
       ],
       "transaction_price": 20000.0,
-      "recognition_method": "over_time_ratable",
+      "recognition_method": "UNDETERMINED",
       "recognition_period_months": 12
     },
     "schedule": {
@@ -556,35 +552,34 @@
     "billing_used": "annual_upfront",
     "characterization": {
       "onboarding_distinct": {
-        "reasoning": "RevLens treats implementation services as non-distinct by default. The contract's onboarding fees are not recognized when billed, indicating the services are not distinct. The default applies unless there's evidence to override it.",
-        "kb_basis": [
-          "KB1_2",
-          "KB2_3"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
       },
       "usage_model": {
-        "reasoning": "The contract's fee is part of the subscription, not a separate usage-based fee. There's no mention of a usage fee or overage-based charge.",
-        "kb_basis": [
-          "KB1_18"
-        ],
-        "conclusion": "NONE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "discount_type": {
-        "reasoning": "The discount term specifies a no-credit-for-unused-base-allotment policy, which is a fixed prorata discount applied to all performance obligations based on their relative standalone selling prices.",
-        "kb_basis": [
-          "KB1_18",
-          "KB2_8"
-        ],
-        "conclusion": "FIXED_PRORATA"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "none"
       },
       "material_right": {
-        "reasoning": "The renewal term is at the provider's standard price, which is not a material right. A discount below comparable prices would be, but this is not the case here.",
-        "kb_basis": [
-          "KB1_2",
-          "KB2_3"
-        ],
-        "conclusion": "FALSE"
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "UNDETERMINED"
+      },
+      "contract_valid": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "",
+        "kb_basis": [],
+        "conclusion": []
       }
     },
     "treatment": {
@@ -593,7 +588,7 @@
         "core_subscription"
       ],
       "transaction_price": 30000.0,
-      "recognition_method": "over_time_ratable",
+      "recognition_method": "UNDETERMINED",
       "recognition_period_months": 12
     },
     "schedule": {

@@ -46,7 +46,7 @@ NUM_REL_TOL = 0.005
 _EMPTY = {"", "n/a", "na", "none", "null", "nil"}
 
 
-# ── generation: run Agent 3 and save the outputs Agent 4 will use ────────────
+# generation: run Agent 3 and save the outputs Agent 4 will use 
 
 def generate_outputs(limit=None):
     from app.llm.treatment_agent import run as run_agent3
@@ -71,7 +71,7 @@ def generate_outputs(limit=None):
     return outputs
 
 
-# ── flatten one Agent 3 output into the fields we compare to ground truth ────
+# flatten one Agent 3 output into the fields we compare to ground truth
 
 def flatten(out):
     ch = out.get("characterization") or {}
@@ -96,7 +96,7 @@ def flatten(out):
     }
 
 
-# ── comparison helpers ───────────────────────────────────────────────────────
+# comparison helpers 
 
 def _to_float(v):
     if isinstance(v, bool):
@@ -121,6 +121,16 @@ def _is_empty(v):
 
 def compare(field, predicted, truth):
     """True / False if scoreable, or None to skip (no ground truth to compare)."""
+    if field == "num_POs":
+        # exact integer match: being off by one PO is a real error, not "close enough"
+        t = _to_float(truth)
+        if t is None:
+            return None
+        p = _to_float(predicted)
+        if p is None:
+            return False
+        return round(p) == round(t)
+
     if field in NUMERIC_FIELDS:
         t = _to_float(truth)
         if t is None:
@@ -179,7 +189,7 @@ def binary_metrics(detail, field, positive="true"):
     }
 
 
-# ── evaluation ───────────────────────────────────────────────────────────────
+# evaluation
 
 def evaluate(outputs):
     gt = load_ground_truth()
