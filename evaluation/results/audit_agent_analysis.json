@@ -1,0 +1,337 @@
+{
+  "top_false_positives": [
+    [
+      "KB3_16",
+      {
+        "expected_count": 1,
+        "predicted_count": 50,
+        "TP": 1,
+        "FP": 49,
+        "FN": 0
+      }
+    ],
+    [
+      "KB3_11",
+      {
+        "expected_count": 3,
+        "predicted_count": 50,
+        "TP": 3,
+        "FP": 47,
+        "FN": 0
+      }
+    ],
+    [
+      "KB3_17",
+      {
+        "expected_count": 1,
+        "predicted_count": 47,
+        "TP": 1,
+        "FP": 46,
+        "FN": 0
+      }
+    ],
+    [
+      "KB3_18",
+      {
+        "expected_count": 1,
+        "predicted_count": 34,
+        "TP": 0,
+        "FP": 34,
+        "FN": 1
+      }
+    ],
+    [
+      "KB3_2",
+      {
+        "expected_count": 1,
+        "predicted_count": 17,
+        "TP": 1,
+        "FP": 16,
+        "FN": 0
+      }
+    ],
+    [
+      "KB3_3",
+      {
+        "expected_count": 11,
+        "predicted_count": 22,
+        "TP": 11,
+        "FP": 11,
+        "FN": 0
+      }
+    ],
+    [
+      "KB3_7",
+      {
+        "expected_count": 7,
+        "predicted_count": 15,
+        "TP": 6,
+        "FP": 9,
+        "FN": 1
+      }
+    ],
+    [
+      "KB3_15",
+      {
+        "expected_count": 1,
+        "predicted_count": 8,
+        "TP": 1,
+        "FP": 7,
+        "FN": 0
+      }
+    ],
+    [
+      "KB3_1",
+      {
+        "expected_count": 16,
+        "predicted_count": 17,
+        "TP": 14,
+        "FP": 3,
+        "FN": 2
+      }
+    ],
+    [
+      "KB3_13",
+      {
+        "expected_count": 2,
+        "predicted_count": 4,
+        "TP": 1,
+        "FP": 3,
+        "FN": 1
+      }
+    ]
+  ],
+  "top_false_negatives": [
+    [
+      "KB3_10",
+      {
+        "expected_count": 5,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 5
+      }
+    ],
+    [
+      "KB3_12",
+      {
+        "expected_count": 5,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 5
+      }
+    ],
+    [
+      "KB3_5",
+      {
+        "expected_count": 5,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 5
+      }
+    ],
+    [
+      "KB3_4",
+      {
+        "expected_count": 3,
+        "predicted_count": 2,
+        "TP": 0,
+        "FP": 2,
+        "FN": 3
+      }
+    ],
+    [
+      "KB3_1",
+      {
+        "expected_count": 16,
+        "predicted_count": 17,
+        "TP": 14,
+        "FP": 3,
+        "FN": 2
+      }
+    ],
+    [
+      "KB3_8",
+      {
+        "expected_count": 2,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 2
+      }
+    ],
+    [
+      "KB3_9",
+      {
+        "expected_count": 4,
+        "predicted_count": 4,
+        "TP": 2,
+        "FP": 2,
+        "FN": 2
+      }
+    ],
+    [
+      "KB3_13",
+      {
+        "expected_count": 2,
+        "predicted_count": 4,
+        "TP": 1,
+        "FP": 3,
+        "FN": 1
+      }
+    ],
+    [
+      "KB3_14",
+      {
+        "expected_count": 1,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1
+      }
+    ],
+    [
+      "KB3_18",
+      {
+        "expected_count": 1,
+        "predicted_count": 34,
+        "TP": 0,
+        "FP": 34,
+        "FN": 1
+      }
+    ]
+  ],
+  "summary": {
+    "total_contracts": 50,
+    "per_id": {
+      "KB3_1": {
+        "expected_count": 16,
+        "predicted_count": 17,
+        "TP": 14,
+        "FP": 3,
+        "FN": 2
+      },
+      "KB3_10": {
+        "expected_count": 5,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 5
+      },
+      "KB3_11": {
+        "expected_count": 3,
+        "predicted_count": 50,
+        "TP": 3,
+        "FP": 47,
+        "FN": 0
+      },
+      "KB3_12": {
+        "expected_count": 5,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 5
+      },
+      "KB3_13": {
+        "expected_count": 2,
+        "predicted_count": 4,
+        "TP": 1,
+        "FP": 3,
+        "FN": 1
+      },
+      "KB3_14": {
+        "expected_count": 1,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1
+      },
+      "KB3_15": {
+        "expected_count": 1,
+        "predicted_count": 8,
+        "TP": 1,
+        "FP": 7,
+        "FN": 0
+      },
+      "KB3_16": {
+        "expected_count": 1,
+        "predicted_count": 50,
+        "TP": 1,
+        "FP": 49,
+        "FN": 0
+      },
+      "KB3_17": {
+        "expected_count": 1,
+        "predicted_count": 47,
+        "TP": 1,
+        "FP": 46,
+        "FN": 0
+      },
+      "KB3_18": {
+        "expected_count": 1,
+        "predicted_count": 34,
+        "TP": 0,
+        "FP": 34,
+        "FN": 1
+      },
+      "KB3_2": {
+        "expected_count": 1,
+        "predicted_count": 17,
+        "TP": 1,
+        "FP": 16,
+        "FN": 0
+      },
+      "KB3_3": {
+        "expected_count": 11,
+        "predicted_count": 22,
+        "TP": 11,
+        "FP": 11,
+        "FN": 0
+      },
+      "KB3_4": {
+        "expected_count": 3,
+        "predicted_count": 2,
+        "TP": 0,
+        "FP": 2,
+        "FN": 3
+      },
+      "KB3_5": {
+        "expected_count": 5,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 5
+      },
+      "KB3_6": {
+        "expected_count": 3,
+        "predicted_count": 2,
+        "TP": 2,
+        "FP": 0,
+        "FN": 1
+      },
+      "KB3_7": {
+        "expected_count": 7,
+        "predicted_count": 15,
+        "TP": 6,
+        "FP": 9,
+        "FN": 1
+      },
+      "KB3_8": {
+        "expected_count": 2,
+        "predicted_count": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 2
+      },
+      "KB3_9": {
+        "expected_count": 4,
+        "predicted_count": 4,
+        "TP": 2,
+        "FP": 2,
+        "FN": 2
+      }
+    }
+  }
+}
