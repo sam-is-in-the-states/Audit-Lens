@@ -1,0 +1,1171 @@
+[
+  {
+    "source_file": "C01.txt",
+    "contract_id": "C01",
+    "expected_kb3_ids": [],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C02.txt",
+    "contract_id": "C02",
+    "expected_kb3_ids": [
+      "KB3_11"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_11"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C03.txt",
+    "contract_id": "C03",
+    "expected_kb3_ids": [
+      "KB3_12"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_12"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C04.txt",
+    "contract_id": "C04",
+    "expected_kb3_ids": [
+      "KB3_13"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_13"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C05.txt",
+    "contract_id": "C05",
+    "expected_kb3_ids": [],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C06.txt",
+    "contract_id": "C06",
+    "expected_kb3_ids": [],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C07.txt",
+    "contract_id": "C07",
+    "expected_kb3_ids": [
+      "KB3_13"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_13"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C08.txt",
+    "contract_id": "C08",
+    "expected_kb3_ids": [
+      "KB3_11",
+      "KB3_12"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_11",
+      "KB3_12"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C09.txt",
+    "contract_id": "C09",
+    "expected_kb3_ids": [],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C10.txt",
+    "contract_id": "C10",
+    "expected_kb3_ids": [
+      "KB3_1"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "f1": 0.5
+  },
+  {
+    "source_file": "C11.txt",
+    "contract_id": "C11",
+    "expected_kb3_ids": [
+      "KB3_1"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_18"
+    ],
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "f1": 0.5
+  },
+  {
+    "source_file": "C12.txt",
+    "contract_id": "C12",
+    "expected_kb3_ids": [
+      "KB3_1"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_16",
+      "KB3_18"
+    ],
+    "recall": 1.0,
+    "precision": 0.25,
+    "f1": 0.4
+  },
+  {
+    "source_file": "C13.txt",
+    "contract_id": "C13",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_2"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_1",
+      "KB3_2"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_10"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C14.txt",
+    "contract_id": "C14",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_9"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16",
+      "KB3_9"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1",
+      "KB3_9"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 1.0,
+    "precision": 0.5,
+    "f1": 0.6666666666666666
+  },
+  {
+    "source_file": "C15.txt",
+    "contract_id": "C15",
+    "expected_kb3_ids": [
+      "KB3_1"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "f1": 0.5
+  },
+  {
+    "source_file": "C16.txt",
+    "contract_id": "C16",
+    "expected_kb3_ids": [
+      "KB3_1"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_18"
+    ],
+    "recall": 1.0,
+    "precision": 0.5,
+    "f1": 0.6666666666666666
+  },
+  {
+    "source_file": "C17.txt",
+    "contract_id": "C17",
+    "expected_kb3_ids": [
+      "KB3_1"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10"
+    ],
+    "recall": 1.0,
+    "precision": 0.5,
+    "f1": 0.6666666666666666
+  },
+  {
+    "source_file": "C18.txt",
+    "contract_id": "C18",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_10"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1",
+      "KB3_10"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [],
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0
+  },
+  {
+    "source_file": "C19.txt",
+    "contract_id": "C19",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_11",
+      "KB3_12"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_1",
+      "KB3_11",
+      "KB3_12"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_10"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C20.txt",
+    "contract_id": "C20",
+    "expected_kb3_ids": [
+      "KB3_1"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "f1": 0.5
+  },
+  {
+    "source_file": "C21.txt",
+    "contract_id": "C21",
+    "expected_kb3_ids": [
+      "KB3_3"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_16",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_3"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_16",
+      "KB3_18"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C22.txt",
+    "contract_id": "C22",
+    "expected_kb3_ids": [
+      "KB3_3",
+      "KB3_4"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_3",
+      "KB3_4"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C23.txt",
+    "contract_id": "C23",
+    "expected_kb3_ids": [
+      "KB3_3",
+      "KB3_5"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_3",
+      "KB3_5"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C24.txt",
+    "contract_id": "C24",
+    "expected_kb3_ids": [
+      "KB3_6"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_6"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C25.txt",
+    "contract_id": "C25",
+    "expected_kb3_ids": [
+      "KB3_12",
+      "KB3_3"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_3",
+      "KB3_5",
+      "KB3_9}"
+    ],
+    "matched_kb3_ids": [
+      "KB3_3"
+    ],
+    "missing_kb3_ids": [
+      "KB3_12"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_5",
+      "KB3_9}"
+    ],
+    "recall": 0.5,
+    "precision": 0.3333333333333333,
+    "f1": 0.4
+  },
+  {
+    "source_file": "C26.txt",
+    "contract_id": "C26",
+    "expected_kb3_ids": [
+      "KB3_3"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_3"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C27.txt",
+    "contract_id": "C27",
+    "expected_kb3_ids": [
+      "KB3_4",
+      "KB3_5"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_4",
+      "KB3_5"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C28.txt",
+    "contract_id": "C28",
+    "expected_kb3_ids": [
+      "KB3_6"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_6"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C29.txt",
+    "contract_id": "C29",
+    "expected_kb3_ids": [
+      "KB3_3"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_3"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C30.txt",
+    "contract_id": "C30",
+    "expected_kb3_ids": [
+      "KB3_3",
+      "KB3_5"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_3",
+      "KB3_5"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C31.txt",
+    "contract_id": "C31",
+    "expected_kb3_ids": [
+      "KB3_7"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_7"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C32.txt",
+    "contract_id": "C32",
+    "expected_kb3_ids": [
+      "KB3_7"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10",
+      "KB3_16",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_7"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_16",
+      "KB3_18"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C33.txt",
+    "contract_id": "C33",
+    "expected_kb3_ids": [
+      "KB3_10"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10",
+      "KB3_16",
+      "KB3_18",
+      "KB3_8",
+      "KB3_9"
+    ],
+    "matched_kb3_ids": [
+      "KB3_10"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_16",
+      "KB3_18",
+      "KB3_8",
+      "KB3_9"
+    ],
+    "recall": 1.0,
+    "precision": 0.2,
+    "f1": 0.33333333333333337
+  },
+  {
+    "source_file": "C34.txt",
+    "contract_id": "C34",
+    "expected_kb3_ids": [
+      "KB3_10"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10",
+      "KB3_15",
+      "KB3_16",
+      "KB3_18",
+      "KB3_9"
+    ],
+    "matched_kb3_ids": [
+      "KB3_10"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_15",
+      "KB3_16",
+      "KB3_18",
+      "KB3_9"
+    ],
+    "recall": 1.0,
+    "precision": 0.2,
+    "f1": 0.33333333333333337
+  },
+  {
+    "source_file": "C35.txt",
+    "contract_id": "C35",
+    "expected_kb3_ids": [
+      "KB3_7",
+      "KB3_8",
+      "KB3_9"
+    ],
+    "retrieved_kb3_ids": [],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_7",
+      "KB3_8",
+      "KB3_9"
+    ],
+    "unexpected_kb3_ids": [],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C36.txt",
+    "contract_id": "C36",
+    "expected_kb3_ids": [
+      "KB3_7"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_9"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_7"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_9"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C37.txt",
+    "contract_id": "C37",
+    "expected_kb3_ids": [
+      "KB3_8"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10",
+      "KB3_16",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_8"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_16",
+      "KB3_18"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C38.txt",
+    "contract_id": "C38",
+    "expected_kb3_ids": [
+      "KB3_14"
+    ],
+    "retrieved_kb3_ids": [],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_14"
+    ],
+    "unexpected_kb3_ids": [],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C39.txt",
+    "contract_id": "C39",
+    "expected_kb3_ids": [
+      "KB3_10",
+      "KB3_7",
+      "KB3_9"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_16",
+      "KB3_2"
+    ],
+    "matched_kb3_ids": [
+      "KB3_10"
+    ],
+    "missing_kb3_ids": [
+      "KB3_7",
+      "KB3_9"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_16",
+      "KB3_2"
+    ],
+    "recall": 0.3333333333333333,
+    "precision": 0.25,
+    "f1": 0.28571428571428575
+  },
+  {
+    "source_file": "C40.txt",
+    "contract_id": "C40",
+    "expected_kb3_ids": [
+      "KB3_12",
+      "KB3_7"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_16",
+      "KB3_18"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_12",
+      "KB3_7"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_16",
+      "KB3_18"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C41.txt",
+    "contract_id": "C41",
+    "expected_kb3_ids": [
+      "KB3_16"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10",
+      "KB3_15",
+      "KB3_16",
+      "KB3_18",
+      "KB3_9"
+    ],
+    "matched_kb3_ids": [
+      "KB3_16"
+    ],
+    "missing_kb3_ids": [],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_15",
+      "KB3_18",
+      "KB3_9"
+    ],
+    "recall": 1.0,
+    "precision": 0.2,
+    "f1": 0.33333333333333337
+  },
+  {
+    "source_file": "C42.txt",
+    "contract_id": "C42",
+    "expected_kb3_ids": [
+      "KB3_15"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_15"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_16"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C43.txt",
+    "contract_id": "C43",
+    "expected_kb3_ids": [
+      "KB3_17"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_17"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1",
+      "KB3_10"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C44.txt",
+    "contract_id": "C44",
+    "expected_kb3_ids": [
+      "KB3_5"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_10",
+      "KB3_15",
+      "KB3_16",
+      "KB3_18",
+      "KB3_9"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_5"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_10",
+      "KB3_15",
+      "KB3_16",
+      "KB3_18",
+      "KB3_9"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C45.txt",
+    "contract_id": "C45",
+    "expected_kb3_ids": [
+      "KB3_18"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1"
+    ],
+    "matched_kb3_ids": [],
+    "missing_kb3_ids": [
+      "KB3_18"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_1"
+    ],
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0.0
+  },
+  {
+    "source_file": "C46.txt",
+    "contract_id": "C46",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_3"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [
+      "KB3_3"
+    ],
+    "unexpected_kb3_ids": [],
+    "recall": 0.5,
+    "precision": 1.0,
+    "f1": 0.6666666666666666
+  },
+  {
+    "source_file": "C47.txt",
+    "contract_id": "C47",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_3",
+      "KB3_4"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_10"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [
+      "KB3_3",
+      "KB3_4"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_10"
+    ],
+    "recall": 0.3333333333333333,
+    "precision": 0.5,
+    "f1": 0.4
+  },
+  {
+    "source_file": "C48.txt",
+    "contract_id": "C48",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_6",
+      "KB3_7"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [
+      "KB3_6",
+      "KB3_7"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_16"
+    ],
+    "recall": 0.3333333333333333,
+    "precision": 0.5,
+    "f1": 0.4
+  },
+  {
+    "source_file": "C49.txt",
+    "contract_id": "C49",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_3",
+      "KB3_9"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1",
+      "KB3_16"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [
+      "KB3_10",
+      "KB3_3",
+      "KB3_9"
+    ],
+    "unexpected_kb3_ids": [
+      "KB3_16"
+    ],
+    "recall": 0.25,
+    "precision": 0.5,
+    "f1": 0.3333333333333333
+  },
+  {
+    "source_file": "C50.txt",
+    "contract_id": "C50",
+    "expected_kb3_ids": [
+      "KB3_1",
+      "KB3_3",
+      "KB3_5"
+    ],
+    "retrieved_kb3_ids": [
+      "KB3_1"
+    ],
+    "matched_kb3_ids": [
+      "KB3_1"
+    ],
+    "missing_kb3_ids": [
+      "KB3_3",
+      "KB3_5"
+    ],
+    "unexpected_kb3_ids": [],
+    "recall": 0.3333333333333333,
+    "precision": 1.0,
+    "f1": 0.5
+  }
+]
