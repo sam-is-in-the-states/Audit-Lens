@@ -421,14 +421,25 @@ class AuditAgent:
                 "risk": kb.get("risk"),
             })
 
-        system = "You are a compliance reviewer. For each KB3 checklist item provided, decide whether it applies to the contract. Return a single JSON object mapping KB3 id to {applies, explanation, confidence}. Applies must be one of TRUE, FALSE, or UNDETERMINED. Confidence is a number 0-1."
+        system = (
+            "You are a compliance reviewer. For each KB3 checklist item provided, decide whether it applies to the contract. "
+            "Return ONLY a single JSON object and nothing else. The JSON must map each KB3 id (e.g., KB3_1) to an object with keys: 'applies' (TRUE/FALSE/UNDETERMINED), 'explanation' (short string), and 'confidence' (number between 0 and 1). "
+            "Do NOT include any surrounding markdown, commentary, or extra keys. If you cannot determine, use 'UNDETERMINED' and provide a brief explanation."
+        )
 
-        prompt = {
+        user_lines = []
+        user_lines.append("Respond with a single JSON object exactly matching the schema below.\n")
+        user_lines.append("Schema example:\n")
+        user_lines.append(
+            '{"KB3_1": {"applies": "TRUE", "explanation": "Onboarding fee present", "confidence": 0.85}, "KB3_2": {"applies": "FALSE", "explanation": "No large onboarding fee", "confidence": 0.75}}\n'
+        )
+        user_lines.append("Now evaluate the following KB3 items and contract facts. Output ONLY the JSON mapping described above.\n")
+        payload = {
             "kb3_items": kb_items,
             "contract_facts": {
                 "services_summary": agent1.get("services_summary"),
                 "subscription_term_months": agent1.get("subscription_term_months"),
-                "start_date": agent1.get("start_date"),
+                "start_date": str(agent1.get("start_date")),
                 "fees": agent1.get("fees"),
                 "characterization": agent3.get("characterization"),
                 "treatment": agent3.get("treatment"),
@@ -438,7 +449,7 @@ class AuditAgent:
 
         messages = [
             {"role": "system", "content": system},
-            {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)}
+            {"role": "user", "content": "\n".join(user_lines) + json.dumps(payload, ensure_ascii=False)}
         ]
 
         resp = get_llm_response(messages, max_tokens=2000, response_format="json_object", temperature=0.0)
