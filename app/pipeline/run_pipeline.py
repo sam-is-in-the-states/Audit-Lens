@@ -12,6 +12,7 @@ from app.llm.contract_label_extraction import (
 from app.llm.policy_retrieval import PolicyRetrievalAgent
 from app.llm.treatment_agent import run as run_agent3
 from app.llm.audit_agent import AuditAgent
+from app.llm.evaluation_agent import EvaluationAgent
 
 
 class EndToEndPipeline:
@@ -34,6 +35,7 @@ class EndToEndPipeline:
             chunk_overlap=chunk_overlap,
             kb_quotas=kb_quotas,
         )
+        self.agent5 = EvaluationAgent()
 
     def run_contract(self, contract_path: str) -> dict[str, Any]:
         path = Path(contract_path)
@@ -63,6 +65,7 @@ class EndToEndPipeline:
 
         agent3_output = run_agent3(facts, agent2_output)
         agent4_output = self.agent4.run(facts, agent2_output, agent3_output, raw_text=raw_text)
+        agent5_output = self.agent5.run(agent3_output, agent4_output, facts)
 
         return {
             "source_file": path.name,
@@ -71,6 +74,7 @@ class EndToEndPipeline:
             "agent2_output": agent2_output,
             "agent3_output": agent3_output,
             "agent4_output": agent4_output,
+            "agent5_output": agent5_output,
         }
 
 
