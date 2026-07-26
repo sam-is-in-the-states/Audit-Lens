@@ -1,11 +1,16 @@
 import json
+import os
 import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from openai import OpenAI
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+from dotenv import load_dotenv
+load_dotenv()
 
 # Project paths
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -13,6 +18,11 @@ KB_DIR = PROJECT_ROOT / "documents" / "knowledge_base"
 
 # Default retrieval hyperparameters
 DEFAULT_TOP_K = 20
+DEFAULT_CANDIDATE_TOP_K = 30
+DEFAULT_MIN_RESULTS = 14
+DEFAULT_SCORE_THRESHOLD = 0.45
+DEFAULT_RETRIEVAL_WEIGHT = 0.40
+DEFAULT_LLM_WEIGHT = 0.60
 DEFAULT_CHUNK_SIZE = 500
 DEFAULT_CHUNK_OVERLAP = 75
 
@@ -28,23 +38,68 @@ class PolicyRetrievalAgent:
         self,
         kb_dir: Path = KB_DIR,
         top_k: int = DEFAULT_TOP_K,
+        candidate_top_k: int = DEFAULT_CANDIDATE_TOP_K,
+        min_results: int = DEFAULT_MIN_RESULTS,
+        score_threshold: float = DEFAULT_SCORE_THRESHOLD,
+        retrieval_weight: float = DEFAULT_RETRIEVAL_WEIGHT,
+        llm_weight: float = DEFAULT_LLM_WEIGHT,
         chunk_size: int = DEFAULT_CHUNK_SIZE,
         chunk_overlap: int = DEFAULT_CHUNK_OVERLAP,
         ngram_range: tuple[int, int] = (1, 2),
         max_features: int = 10000,
         kb_quotas: dict[str, int] | None = None,
+        use_llm: bool = True,
+        llm_model: str | None = None,
+        llm_temperature: float = 0,
+        llm_client: OpenAI | None = None,
+        llm_fail_open: bool = True,
     ):
         self.kb_dir = Path(kb_dir)
         self.top_k = top_k
+        self.candidate_top_k = candidate_top_k
+        self.min_results = min_results
+        self.score_threshold = score_threshold
+        self.retrieval_weight = retrieval_weight
+        self.llm_weight = llm_weight
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         self.ngram_range = ngram_range
         self.max_features = max_features
         self.kb_quotas = kb_quotas or DEFAULT_KB_QUOTAS.copy()
 
+        # LLM refinement settings. Retrieval remains the grounding stage;
+        # the LLM may only choose among retrieved policy document IDs.
+        self.use_llm = use_llm
+        self.llm_model = (
+            llm_model
+            or os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+        )
+        self.llm_temperature = llm_temperature
+        self.llm_fail_open = llm_fail_open
+        self.llm_client = (
+            llm_client
+            if llm_client is not None
+            else (OpenAI() if self.use_llm else None)
+        )
+
         # Validate retrieval hyperparameters
         if self.top_k < 1:
             raise ValueError("top_k must be at least 1.")
+
+        if self.candidate_top_k < self.top_k:
+            raise ValueError("candidate_top_k must be >= top_k.")
+
+        if self.min_results < 1 or self.min_results > self.top_k:
+            raise ValueError("min_results must be between 1 and top_k.")
+
+        if not 0.0 <= self.score_threshold <= 1.0:
+            raise ValueError("score_threshold must be between 0 and 1.")
+
+        if self.retrieval_weight < 0 or self.llm_weight < 0:
+            raise ValueError("reranking weights cannot be negative.")
+
+        if self.retrieval_weight + self.llm_weight <= 0:
+            raise ValueError("reranking weights must sum to > 0.")
 
         if self.chunk_size < 1:
             raise ValueError("chunk_size must be at least 1.")
@@ -515,116 +570,393 @@ class PolicyRetrievalAgent:
             reverse=True,
         )
 
-    # Retrieve unique policy documents using multiple issue-specific queries
-    def retrieve(
+    # Retrieve a KB-balanced candidate pool for LLM reranking
+    def retrieve_candidates(
         self,
-        queries: str | list[str],
-        top_k: int | None = None,
+        queries: list[str],
+        candidate_top_k: int | None = None,
     ) -> list[dict[str, Any]]:
-        if isinstance(queries, str):
-            query_list = [queries]
-        else:
-            query_list = [
-                query
-                for query in queries
-                if query and query.strip()
-            ]
-
-        if not query_list:
-            raise ValueError("At least one retrieval query is required.")
-
-        k = top_k if top_k is not None else self.top_k
-
-        # Aggregate evidence across multiple targeted queries.
-        # A document keeps its strongest chunk score for each query, and those
-        # scores are summed across queries.
-        doc_scores: dict[str, float] = defaultdict(float)
-        best_chunk_by_doc: dict[str, dict[str, Any]] = {}
-        best_score_by_doc: dict[str, float] = defaultdict(float)
-
-        for query in query_list:
-            per_query_best: dict[str, tuple[int, float]] = {}
-
-            for chunk_index, score in self._score_chunks(query):
-                chunk = self.chunks[chunk_index]
-                doc_id = chunk["doc_id"]
-
-                if doc_id not in per_query_best:
-                    per_query_best[doc_id] = (
-                        chunk_index,
-                        float(score),
-                    )
-
-            for doc_id, (
-                chunk_index,
-                score,
-            ) in per_query_best.items():
-                doc_scores[doc_id] += score
-
-                if score > best_score_by_doc[doc_id]:
-                    best_score_by_doc[doc_id] = score
-                    best_chunk_by_doc[doc_id] = self.chunks[
-                        chunk_index
-                    ].copy()
-
-        ranked_doc_ids = sorted(
-            doc_scores,
-            key=doc_scores.get,
-            reverse=True,
+        k = (
+            candidate_top_k
+            if candidate_top_k is not None
+            else self.candidate_top_k
         )
 
-        # Apply per-KB quotas when that KB exists
         selected: list[dict[str, Any]] = []
-        selected_ids: set[str] = set()
-        counts_by_kb: dict[str, int] = defaultdict(int)
 
-        for doc_id in ranked_doc_ids:
-            chunk = best_chunk_by_doc[doc_id]
-            kb_prefix = chunk.get("kb_prefix")
+        for kb_prefix in ("KB1", "KB2", "KB3"):
+            kb_indices = [
+                i
+                for i, chunk in enumerate(self.chunks)
+                if str(chunk.get("kb_prefix", "")).upper() == kb_prefix
+            ]
 
-            quota = self.kb_quotas.get(
-                kb_prefix,
-                k,
-            )
-
-            if counts_by_kb[kb_prefix] >= quota:
+            if not kb_indices:
                 continue
 
-            result = chunk.copy()
-            result["score"] = float(doc_scores[doc_id])
-            result["best_single_query_score"] = float(
-                best_score_by_doc[doc_id]
-            )
-            result["rank"] = len(selected) + 1
+            doc_scores: dict[str, float] = defaultdict(float)
+            best_chunk_by_doc: dict[str, dict[str, Any]] = {}
+            best_score_by_doc: dict[str, float] = defaultdict(float)
 
-            selected.append(result)
-            selected_ids.add(doc_id)
-            counts_by_kb[kb_prefix] += 1
+            for query in queries:
+                query_vector = self.vectorizer.transform([query])
+                scores = cosine_similarity(
+                    query_vector,
+                    self.matrix[kb_indices],
+                ).flatten()
 
-            if len(selected) >= k:
-                break
+                per_query_best: dict[str, tuple[int, float]] = {}
 
-        # Fill any remaining slots from the global ranking while preserving
-        # one result per policy document.
-        if len(selected) < k:
-            for doc_id in ranked_doc_ids:
-                if doc_id in selected_ids:
-                    continue
+                for local_i, score in sorted(
+                    enumerate(scores),
+                    key=lambda item: item[1],
+                    reverse=True,
+                ):
+                    global_i = kb_indices[local_i]
+                    chunk = self.chunks[global_i]
+                    doc_id = chunk["doc_id"]
 
+                    if doc_id not in per_query_best:
+                        per_query_best[doc_id] = (
+                            global_i,
+                            float(score),
+                        )
+
+                for doc_id, (global_i, score) in per_query_best.items():
+                    doc_scores[doc_id] += score
+
+                    if score > best_score_by_doc[doc_id]:
+                        best_score_by_doc[doc_id] = score
+                        best_chunk_by_doc[doc_id] = self.chunks[
+                            global_i
+                        ].copy()
+
+            quota = self.kb_quotas.get(kb_prefix, k)
+            ranked_ids = sorted(
+                doc_scores,
+                key=doc_scores.get,
+                reverse=True,
+            )[:quota]
+
+            for kb_rank, doc_id in enumerate(ranked_ids, start=1):
                 chunk = best_chunk_by_doc[doc_id].copy()
                 chunk["score"] = float(doc_scores[doc_id])
                 chunk["best_single_query_score"] = float(
                     best_score_by_doc[doc_id]
                 )
-                chunk["rank"] = len(selected) + 1
-
+                chunk["kb_candidate_rank"] = kb_rank
                 selected.append(chunk)
-                selected_ids.add(doc_id)
 
-                if len(selected) >= k:
-                    break
+        # Keep the balanced pool capped at candidate_top_k.
+        selected.sort(
+            key=lambda c: float(c.get("score", 0.0)),
+            reverse=True,
+        )
+        selected = selected[:k]
+
+        for rank, chunk in enumerate(selected, start=1):
+            chunk["candidate_rank"] = rank
 
         return selected
+
+    # Score every retrieved policy with the LLM; optimize for recall
+    def refine_with_llm(
+        self,
+        contract: dict[str, Any],
+        retrieved_chunks: list[dict[str, Any]],
+    ) -> dict[str, Any]:
+        candidates = [
+            {
+                "doc_id": str(chunk.get("doc_id", "")).strip().upper(),
+                "kb_prefix": chunk.get("kb_prefix"),
+                "title": chunk.get("title"),
+                "chunk_id": chunk.get("chunk_id"),
+                "retrieval_score": chunk.get("score"),
+                "text": chunk.get("text", ""),
+            }
+            for chunk in retrieved_chunks
+            if str(chunk.get("doc_id", "")).strip()
+        ]
+
+        allowed_ids = {c["doc_id"] for c in candidates}
+
+        if not candidates:
+            return {
+                "policy_scores": [],
+                "reasoning": "No candidates retrieved.",
+                "model": self.llm_model,
+                "used_llm": False,
+                "error": None,
+                "usage": None,
+            }
+
+        if not self.use_llm:
+            return {
+                "policy_scores": [
+                    {
+                        "doc_id": c["doc_id"],
+                        "relevance": 0.5,
+                        "reason": "LLM disabled.",
+                    }
+                    for c in candidates
+                ],
+                "reasoning": "LLM disabled.",
+                "model": None,
+                "used_llm": False,
+                "error": None,
+                "usage": None,
+            }
+
+        system_prompt = """
+You are Agent 2, a policy retrieval agent.
+
+Score EVERY retrieved policy candidate from 0.0 to 1.0 for how useful it may
+be to a downstream accounting analysis agent.
+
+Optimize for HIGH RECALL. A false negative is more harmful than a false
+positive because a downstream agent cannot use a policy that Agent 2 removes.
+
+Rules:
+- Only use doc_id values supplied in candidate_policy_chunks.
+- Never invent or rename policy IDs.
+- If a policy could reasonably matter for ASC 606 analysis, company revenue
+  policy, schedule calculation, or risk flagging, give it a moderate-to-high
+  score.
+- When uncertain, retain it with a moderate score.
+- Give very low scores only when clearly unrelated.
+- Do not make the final accounting conclusion.
+- Return valid JSON only.
+
+Schema:
+{
+  "policy_scores": [
+    {
+      "doc_id": "KB1_1",
+      "relevance": 0.85,
+      "reason": "Brief reason"
+    }
+  ],
+  "reasoning": "Brief overall explanation"
+}
+""".strip()
+
+        payload = {
+            "contract": contract,
+            "candidate_policy_chunks": candidates,
+        }
+
+        try:
+            response = self.llm_client.chat.completions.create(
+                model=self.llm_model,
+                temperature=self.llm_temperature,
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {
+                        "role": "user",
+                        "content": json.dumps(
+                            payload,
+                            ensure_ascii=False,
+                            default=str,
+                        ),
+                    },
+                ],
+            )
+
+            parsed = json.loads(
+                response.choices[0].message.content or "{}"
+            )
+
+            score_map: dict[str, dict[str, Any]] = {}
+
+            for item in parsed.get("policy_scores", []):
+                if not isinstance(item, dict):
+                    continue
+
+                doc_id = str(item.get("doc_id", "")).strip().upper()
+
+                if doc_id not in allowed_ids:
+                    continue
+
+                try:
+                    relevance = float(item.get("relevance", 0.5))
+                except (TypeError, ValueError):
+                    relevance = 0.5
+
+                score_map[doc_id] = {
+                    "doc_id": doc_id,
+                    "relevance": max(0.0, min(1.0, relevance)),
+                    "reason": str(item.get("reason", "")).strip(),
+                }
+
+            policy_scores = [
+                score_map.get(
+                    c["doc_id"],
+                    {
+                        "doc_id": c["doc_id"],
+                        "relevance": 0.5,
+                        "reason": (
+                            "LLM omitted candidate; neutral score used."
+                        ),
+                    },
+                )
+                for c in candidates
+            ]
+
+            usage = getattr(response, "usage", None)
+
+            return {
+                "policy_scores": policy_scores,
+                "reasoning": str(
+                    parsed.get("reasoning", "")
+                ).strip(),
+                "model": self.llm_model,
+                "used_llm": True,
+                "error": None,
+                "usage": {
+                    "input_tokens": (
+                        getattr(usage, "prompt_tokens", None)
+                        if usage is not None
+                        else None
+                    ),
+                    "output_tokens": (
+                        getattr(usage, "completion_tokens", None)
+                        if usage is not None
+                        else None
+                    ),
+                    "total_tokens": (
+                        getattr(usage, "total_tokens", None)
+                        if usage is not None
+                        else None
+                    ),
+                },
+            }
+
+        except Exception as exc:
+            if not self.llm_fail_open:
+                raise
+
+            return {
+                "policy_scores": [
+                    {
+                        "doc_id": c["doc_id"],
+                        "relevance": 0.5,
+                        "reason": "LLM failed; neutral score used.",
+                    }
+                    for c in candidates
+                ],
+                "reasoning": "LLM failed; neutral scores used.",
+                "model": self.llm_model,
+                "used_llm": False,
+                "error": f"{type(exc).__name__}: {exc}",
+                "usage": None,
+            }
+
+    # Combine retrieval + LLM scores and dynamically choose final count
+    def rerank_candidates(
+        self,
+        retrieved_chunks: list[dict[str, Any]],
+        llm_refinement: dict[str, Any],
+        final_top_k: int | None = None,
+        retrieval_weight: float | None = None,
+        llm_weight: float | None = None,
+    ) -> list[dict[str, Any]]:
+        max_results = (
+            final_top_k
+            if final_top_k is not None
+            else self.top_k
+        )
+
+        retrieval_weight = (
+            self.retrieval_weight
+            if retrieval_weight is None
+            else retrieval_weight
+        )
+        llm_weight = (
+            self.llm_weight
+            if llm_weight is None
+            else llm_weight
+        )
+        total_weight = retrieval_weight + llm_weight
+        retrieval_weight /= total_weight
+        llm_weight /= total_weight
+
+        relevance = {
+            str(item.get("doc_id", "")).strip().upper(): float(
+                item.get("relevance", 0.5)
+            )
+            for item in llm_refinement.get("policy_scores", [])
+        }
+
+        # Normalize retrieval scores within each KB family.
+        by_kb: dict[str, list[float]] = defaultdict(list)
+
+        for chunk in retrieved_chunks:
+            by_kb[str(chunk.get("kb_prefix", ""))].append(
+                float(chunk.get("score", 0.0))
+            )
+
+        reranked: list[dict[str, Any]] = []
+
+        for chunk in retrieved_chunks:
+            result = chunk.copy()
+            kb = str(chunk.get("kb_prefix", ""))
+            raw = float(chunk.get("score", 0.0))
+            values = by_kb[kb]
+            low, high = min(values), max(values)
+
+            normalized = (
+                (raw - low) / (high - low)
+                if high > low
+                else 1.0
+            )
+
+            doc_id = str(
+                chunk.get("doc_id", "")
+            ).strip().upper()
+
+            llm_score = relevance.get(doc_id, 0.5)
+
+            final_score = (
+                retrieval_weight * normalized
+                + llm_weight * llm_score
+            )
+
+            result["normalized_retrieval_score"] = float(normalized)
+            result["llm_relevance_score"] = float(llm_score)
+            result["final_score"] = float(final_score)
+            reranked.append(result)
+
+        reranked.sort(
+            key=lambda c: float(c.get("final_score", 0.0)),
+            reverse=True,
+        )
+
+        # Do NOT force exactly max_results.
+        # Keep every strong policy, but:
+        #   minimum = self.min_results
+        #   maximum = max_results
+        strong_count = sum(
+            float(chunk.get("final_score", 0.0))
+            >= self.score_threshold
+            for chunk in reranked
+        )
+
+        target_count = max(
+            self.min_results,
+            min(strong_count, max_results),
+        )
+
+        final = reranked[:target_count]
+
+        for rank, chunk in enumerate(final, start=1):
+            chunk["rank"] = rank
+            chunk["passed_score_threshold"] = (
+                float(chunk.get("final_score", 0.0))
+                >= self.score_threshold
+            )
+
+        return final
 
     # Format retrieved document IDs like the Ground Truth columns
     def format_kb_chunk_response(
@@ -666,38 +998,65 @@ class PolicyRetrievalAgent:
         self,
         agent1_output: dict[str, Any],
         top_k: int | None = None,
+        candidate_top_k: int | None = None,
     ) -> dict[str, Any]:
         queries = self.build_policy_queries(agent1_output)
 
-        retrieved_chunks = self.retrieve(
+        candidate_chunks = self.retrieve_candidates(
             queries=queries,
-            top_k=top_k,
+            candidate_top_k=candidate_top_k,
         )
 
-        kb_chunk_responses = self.build_kb_chunk_responses(
-            retrieved_chunks
+        candidate_responses = self.build_kb_chunk_responses(
+            candidate_chunks
         )
 
-        effective_top_k = (
-            top_k
-            if top_k is not None
-            else self.top_k
+        llm_refinement = self.refine_with_llm(
+            contract=agent1_output,
+            retrieved_chunks=candidate_chunks,
         )
+
+        final_chunks = self.rerank_candidates(
+            retrieved_chunks=candidate_chunks,
+            llm_refinement=llm_refinement,
+            final_top_k=top_k,
+        )
+
+        final_responses = self.build_kb_chunk_responses(final_chunks)
 
         return {
             "agent": (
-                "Agent 2 - Accounting Standards "
-                "Policy Retrieval"
+                "Agent 2 - KB-Balanced Retrieval + "
+                "LLM Relevance Reranking"
             ),
             "queries": queries,
-            "top_k": effective_top_k,
-            "KB1 Chunks": kb_chunk_responses["KB1 Chunks"],
-            "KB2 Chunks": kb_chunk_responses["KB2 Chunks"],
-            "KB3 Chunks": kb_chunk_responses["KB3 Chunks"],
-            "retrieved_policy_chunks": retrieved_chunks,
+            "top_k": top_k if top_k is not None else self.top_k,
+            "candidate_top_k": (
+                candidate_top_k
+                if candidate_top_k is not None
+                else self.candidate_top_k
+            ),
+            "min_results": self.min_results,
+            "score_threshold": self.score_threshold,
+            "retrieval_weight": self.retrieval_weight,
+            "llm_weight": self.llm_weight,
+            "final_result_count": len(final_chunks),
+
+            "KB1 Chunks": final_responses["KB1 Chunks"],
+            "KB2 Chunks": final_responses["KB2 Chunks"],
+            "KB3 Chunks": final_responses["KB3 Chunks"],
+            "retrieved_policy_chunks": final_chunks,
+
+            "candidate_KB1 Chunks": candidate_responses["KB1 Chunks"],
+            "candidate_KB2 Chunks": candidate_responses["KB2 Chunks"],
+            "candidate_KB3 Chunks": candidate_responses["KB3 Chunks"],
+            "candidate_policy_chunks": candidate_chunks,
+
+            "llm_refinement": llm_refinement,
+
             "policy_prompt": self.build_policy_prompt(
                 contract=agent1_output,
-                retrieved_chunks=retrieved_chunks,
+                retrieved_chunks=final_chunks,
             ),
         }
 
@@ -797,6 +1156,7 @@ def main() -> None:
             "KB2": 7,
             "KB3": 5,
         },
+        use_llm=True,
     )
 
     output = agent.run(sample_contract)
@@ -807,7 +1167,7 @@ def main() -> None:
     print(f"KB2 Chunks: {output['KB2 Chunks']}")
     print(f"KB3 Chunks: {output['KB3 Chunks']}")
 
-    print("\nRanked Retrieval Results")
+    print("\nLLM-Selected Retrieval Results")
     print("------------------------")
 
     for chunk in output["retrieved_policy_chunks"]:

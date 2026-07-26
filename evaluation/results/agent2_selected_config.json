@@ -1,0 +1,21 @@
+{
+  "selection_basis": "Highest tuning-set F1 among configurations with recall >= 0.65; falls back to best F1 if none meet floor.",
+  "selected_config": {
+    "threshold": 0.6,
+    "min_results": 16,
+    "max_results": 22,
+    "retrieval_weight": 0.0,
+    "llm_weight": 1.0,
+    "recall": 0.6567379705423777,
+    "precision": 0.4137342149543934,
+    "f1": 0.495519176497224,
+    "avg_result_count": 16.58823529411765,
+    "kb1_recall": 0.7392390289449112,
+    "kb2_recall": 0.6348039215686274,
+    "kb3_recall": 0.4068627450980392,
+    "exact_match": 0.0,
+    "any_match": 1.0
+  },
+  "tune_contracts": 34,
+  "holdout_contracts": 16
+}
