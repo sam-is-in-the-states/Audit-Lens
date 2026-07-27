@@ -86,7 +86,7 @@ def map_to_gt_fields(record):
     vo = record.get("validated_output") or record.get("candidate_output") or {}
     fees = vo.get("fees") or []
     usage = vo.get("usage_fee") or {}
-    discount = vo.get("discount") or {}
+    discount = vo.get("discount_terms") or {}
 
     sub_amt, onb_amt = _pick_fees(fees)
 
@@ -97,8 +97,8 @@ def map_to_gt_fields(record):
         "annual_subscription": sub_amt,
         "onboarding_fee":      onb_amt,
         "usage_rate":          _amount(usage.get("overage_rate")) if usage else None,
-        # discount block is [NEW] in the schema; if absent entirely, mark MISSING (not wrong)
-        "discount_amount":     discount.get("discount_amount") if discount else _MISSING,
+        # discount amount lives on the discount_terms block (was reading a wrong key before)
+        "discount_amount":     _amount(discount.get("amount")),
     }
 
 
@@ -138,16 +138,23 @@ def compare(field, predicted, truth):
     """Return True/False if comparable, or None if skipped (not attempted, or no GT)."""
     if predicted is _MISSING:
         return None                      # Agent 1's schema doesn't provide it -> not scored as wrong
+
+    # For numeric fee/amount fields, 0 and None both mean "there is no such fee". Treat
+    # agreement that there is no fee as correct (true negative), and a present-vs-absent
+    # mismatch in either direction as wrong (a miss or an over-extraction).
+    if field in _NUMERIC_FIELDS:
+        p = None if predicted is None else _to_float(predicted)
+        t = None if truth is None else _to_float(truth)
+        p_absent = p is None or p == 0.0
+        t_absent = t is None or t == 0.0
+        if p_absent or t_absent:
+            return p_absent and t_absent
+        return abs(p - t) <= NUM_ABS_TOL or (t != 0 and abs(p - t) / abs(t) <= NUM_REL_TOL)
+
     if _is_empty(truth):
         return None                      # ground truth has nothing to compare
     if _is_empty(predicted):
         return False                     # GT expects a value, Agent 1 gave none -> wrong
-
-    if field in _NUMERIC_FIELDS:
-        p, t = _to_float(predicted), _to_float(truth)
-        if p is None or t is None:
-            return _norm(predicted) == _norm(truth)
-        return abs(p - t) <= NUM_ABS_TOL or (t != 0 and abs(p - t) / abs(t) <= NUM_REL_TOL)
 
     return _norm(predicted) == _norm(truth)
 
@@ -177,8 +184,8 @@ def sufficiency(records_by_cid, gt):
 
     # discount allocation (KB1_14/KB2_8): relevant = contracts with a discount
     relevant = [c for c in CONTRACT_IDS if (gt[c]["characterisation"].get("discount_amount") or 0) > 0]
-    supplied = [c for c in relevant if (vo(c).get("discount") or {}).get("discount_amount") is not None]
-    rows.append(("discount allocation", "discount.discount_amount", "KB1_14/KB2_8", len(supplied), len(relevant)))
+    supplied = [c for c in relevant if (vo(c).get("discount_terms") or {}).get("has_discount")]
+    rows.append(("discount allocation", "discount_terms.has_discount", "KB1_14/KB2_8", len(supplied), len(relevant)))
 
     # material right (KB1_15/KB2_10): relevant = contracts GT flags as material right
     relevant = [c for c in CONTRACT_IDS if gt[c]["characterisation"].get("material_right") is True]
@@ -209,7 +216,13 @@ def evaluate(input_path):
             p = mapped.get(field, _MISSING)
             t = truth.get(field)
             attempted = not (p is _MISSING or _is_empty(p))
-            comp_rows.append({"field": field, "attempted": attempted})
+            # does ground truth actually expect a value here? (numeric 0 / empty = "not expected")
+            if field in _NUMERIC_FIELDS:
+                tf = None if t is None else _to_float(t)
+                expected = tf is not None and tf != 0.0
+            else:
+                expected = not _is_empty(t)
+            comp_rows.append({"field": field, "expected": expected, "covered": expected and attempted})
             res = compare(field, p, t)
             if res is not None:
                 acc_rows.append({"field": field, "correct": res})
@@ -221,9 +234,10 @@ def evaluate(input_path):
     acc_tbl = (acc.groupby("field")["correct"].agg(correct="sum", scored="count").reset_index())
     acc_tbl["accuracy_%"] = (acc_tbl["correct"] / acc_tbl["scored"] * 100).round(1)
 
-    # 2. Completeness per field (attempted on how many of 50)
-    comp_tbl = (comp.groupby("field")["attempted"].agg(attempted="sum", total="count").reset_index())
-    comp_tbl["coverage_%"] = (comp_tbl["attempted"] / comp_tbl["total"] * 100).round(1)
+    # 2. Completeness per field: of the contracts where GT expects the field, how many did
+    #    Agent 1 supply? (denominator is the expected count, not a flat 50)
+    comp_tbl = (comp.groupby("field").agg(covered=("covered", "sum"), expected=("expected", "sum")).reset_index())
+    comp_tbl["coverage_%"] = (comp_tbl["covered"] / comp_tbl["expected"].replace(0, pd.NA) * 100).round(1)
 
     # 3. Sufficiency for Agent 2
     suff_tbl = sufficiency(by_cid, gt)

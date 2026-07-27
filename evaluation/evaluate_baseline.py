@@ -152,80 +152,19 @@ def values_match(field, predicted, truth):
 
 
 def evaluate():
-    """Compare saved baseline outputs against ground truth and print tables."""
+    """Score the baseline with the SAME report function as evaluate_agent3, so baseline vs
+    pipeline is strictly apples-to-apples (same fields, same comparison, same non-default view)."""
+    from evaluate_agent3 import score_report
+
     gt = load_ground_truth()
     if not OUTPUTS_JSON.exists():
         raise FileNotFoundError(
             f"{OUTPUTS_JSON} not found. Run without --eval-only first to generate outputs."
         )
     outputs = json.loads(OUTPUTS_JSON.read_text(encoding="utf-8"))
-
-    fields = [("characterisation", f) for f in SCORE_CHAR] + [("treatment", f) for f in SCORE_TREAT]
-    rows = []          # one row per (contract, field): correct or not
-    n_failed = 0
-
-    for cid in CONTRACT_IDS:
-        out = outputs.get(cid, {})
-        if "_error" in out:
-            n_failed += 1
-            continue
-        char = gt[cid]["characterisation"]
-        truth_all = {**char, **gt[cid]["treatment"]}
-        for group, field in fields:
-            t = truth_all.get(field)
-            p = out.get(field)
-            rows.append({
-                "contract": cid,
-                "type": char.get("type"),
-                "difficulty": char.get("difficulty"),
-                "group": group,
-                "field": field,
-                "predicted": p,
-                "ground_truth": t,
-                "correct": values_match(field, p, t),
-            })
-
-    df = pd.DataFrame(rows)
-
-    def acc_by(keys):
-        t = (df.groupby(keys)["correct"]
-               .agg(correct="sum", total="count")
-               .reset_index())
-        t["accuracy_%"] = (t["correct"] / t["total"] * 100).round(1)
-        return t
-
-    field_order = {f: i for i, (_, f) in enumerate(fields)}
-    diff_order = {"E": 0, "M": 1, "H": 2}
-    type_order = {"simple_sub": 0, "sub_onboarding": 1, "sub_usage": 2,
-                  "sub_discount": 3, "ambiguous": 4, "combo_sub_onboard_usage": 5}
-
-    pd.set_option("display.width", 0)
-
-    if n_failed:
-        print(f"({n_failed} contract(s) returned invalid JSON and were skipped)")
-
-    # 1. Overall, by group (extraction vs judgment)
-    print("\n=== Accuracy by group ===")
-    print(acc_by("group").to_string(index=False))
-
-    # 2. By difficulty — shows the baseline degrading as contracts get harder
-    print("\n=== Accuracy by difficulty (E/M/H) ===")
-    t = acc_by(["difficulty", "group"])
-    t = t.sort_values(["difficulty", "group"], key=lambda s: s.map(diff_order) if s.name == "difficulty" else s)
-    print(t.to_string(index=False))
-
-    # 3. By contract type — shows which contract structures the baseline handles or fails
-    print("\n=== Accuracy by contract type ===")
-    t = acc_by(["type", "group"])
-    t = t.sort_values(["type", "group"], key=lambda s: s.map(type_order) if s.name == "type" else s)
-    print(t.to_string(index=False))
-
-    # 4. Per-field accuracy, weakest first — the baseline's specific blind spots
-    print("\n=== Accuracy by field (weakest first) ===")
-    t = acc_by(["group", "field"]).sort_values("accuracy_%")
-    print(t.to_string(index=False))
-
-    return df
+    # baseline_outputs.json is a dict keyed by contract id, each a flat field dict.
+    pred_by_cid = {c.upper(): v for c, v in outputs.items() if isinstance(v, dict) and "_error" not in v}
+    return score_report(pred_by_cid, gt, "BASELINE")
 
 def main():
     ap = argparse.ArgumentParser()

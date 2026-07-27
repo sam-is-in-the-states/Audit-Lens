@@ -232,14 +232,40 @@ def validate_structured_output(candidate: dict[str, Any]) -> tuple[ExtractedCont
         return None, exc.errors(include_context=False)
 
 
-# Optional: deterministic starter extraction baseline
-# Replace this later with LLM output, then validate it.
+# update1: extend written-number month map (was only 12/24)
 MONTHS = {
     "twelve": 12,
     "12": 12,
+    "thirteen": 13,
     "twenty-four": 24,
     "24": 24,
+    "thirty-six": 36,
+    "36": 36,
+    "forty-eight": 48,
+    "48": 48,
+    "sixty": 60,
+    "60": 60,
 }
+
+
+def implementation_required_for_platform(text: str) -> bool | None:
+    """Is the implementation/onboarding required for the customer to access the platform?
+    True / False / None (None = no evidence either way - a real state, do NOT coerce to False).
+    Single source of truth for both the top-level field and onboarding_terms.required_for_platform."""
+    if re.search(
+        r"required for the Platform to operate|production access depends|"
+        r"provisioned upon[^.]{0,60}completed (?:implementation|onboarding|activation|migration)|"
+        r"not offered by RevLens on a standalone basis",
+        text, re.I):
+        return True
+    if re.search(
+        r"not required for (?:Customer'?s )?(?:subscription access|the subscription)|"
+        r"not required for Customer to access|has standalone value|"
+        r"value[^.]{0,40}independent of[^.]{0,25}subscription|"
+        r"subscription access does not depend on|also offered by independent",
+        text, re.I):
+        return False
+    return None
 
 
 def build_rule_based_candidate(raw: dict[str, Any]) -> dict[str, Any]:
@@ -248,26 +274,49 @@ def build_rule_based_candidate(raw: dict[str, Any]) -> dict[str, Any]:
 
     contract_id = search1(r"Order Form No\.\s*(RL-\d{4}-\d{4})", text)
     provider = search1(r"Provider:\s*([^,\n]+)", text) or "RevLens, Inc."
-    customer = search1(r"Customer:\s*([^,\n]+(?:,\s*LLC|,\s*Inc\.|,\s*LLP|,\s*Corp\.)?)", text)
+    # update5: recognise ", LP" as a company suffix (was only LLC/Inc/LLP/Corp)
+    customer = search1(r"Customer:\s*([^,\n]+(?:,\s*LLC|,\s*Inc\.|,\s*LLP|,\s*LP\b|,\s*Corp\.)?)", text)
     effective_date = search1(r"([A-Z][a-z]+\s+\d{1,2},\s+\d{4})\s*\(the \"Effective Date\"\)", text)
 
+    # update1: read the numeric "(NN) months" / "NN months" form directly so any term
+    # length works (36, 13, ...), not just the words in the MONTHS map
     term_months = None
-    term_match = re.search(r"(Twelve|twenty-four|\d+)\s*\(?\d*\)?\s+months", text, flags=re.I)
-    if term_match:
-        term_months = MONTHS.get(term_match.group(1).lower(), None)
+    digit_match = re.search(r"(\d{1,3})\s*\)?\s+months\b", text, flags=re.I)
+    if digit_match:
+        term_months = int(digit_match.group(1))
+    else:
+        word_match = re.search(r"(twelve|twenty-four|thirty-six|forty-eight|sixty)\s*\(?\d*\)?\s+months", text, flags=re.I)
+        if word_match:
+            term_months = MONTHS.get(word_match.group(1).lower())
 
     hosted_service = bool(re.search(r"hosted service|hosted, subscription basis|hosted subscription", text, re.I))
     authorized_users = search_int(r"up to ([\w-]+|\d+)\s*\(?\d*\)?\s+(?:named\s+)?authorized users", text)
 
-    implementation_services = bool(re.search(r"Implementation Services|Implementation comprises", text, re.I))
-    implementation_required = None
-    if implementation_services:
-        implementation_required = bool(re.search(r"required for the Platform to operate", text, re.I))
+    # update9: recognise onboarding/implementation under any name, and read whether it is
+    # required for the platform from BOTH the "integral" and the "standalone" wording, so the
+    # onboarding-distinct judgment downstream actually gets its trigger fact
+    implementation_services = bool(re.search(
+        r"implementation services|implementation comprises|onboarding|data migration|account activation|\bsetup\b",
+        text, re.I))
+    implementation_required = implementation_required_for_platform(text)
 
     fees = extract_fees(text, raw.get("tables", []))
     discount_terms = extract_discount_terms(text)
     usage_fee = extract_usage_fee(text)
     onboarding_terms = extract_onboarding_terms(text, fees)
+    # update3: surface the onboarding/implementation fee into fees[] (it was only stored on
+    # onboarding_terms, so downstream fee-based logic never saw it)
+    onb_fee = (onboarding_terms or {}).get("fee")
+    onb_val = onb_fee.get("amount") if isinstance(onb_fee, dict) else onb_fee
+    if onb_val and not any(
+        re.search(r"onboard|implementation|setup|training|activation", (f.get("name") or ""), re.I)
+        for f in fees
+    ):
+        fees.append({
+            "name": "Onboarding",
+            "amount": {"amount": float(onb_val), "currency": "USD"},
+            "billing_frequency": "one_time",
+        })
     renewal_terms = extract_renewal_terms(text)
     termination_terms = extract_termination_terms(text)
     ambiguous = extract_ambiguous_clauses(text)
@@ -329,6 +378,14 @@ def extract_fees(text: str, tables: list[dict[str, Any]]) -> list[dict[str, Any]
             subscription_amount = money_from_text(search1(r"Subscription Fee\.\s*(\$[\d,]+)", text, flags=re.I) or "")
         if not subscription_amount:
             subscription_amount = money_from_text(search1(r"Base Subscription Fee\.\s*(\$[\d,]+)", text, flags=re.I) or "")
+        # update7: usage/minimum contracts state the fee as a "minimum annual fee/commitment"
+        if not subscription_amount:
+            subscription_amount = money_from_text(search1(r"minimum annual (?:fee|commitment)[^$]{0,40}(\$[\d,]+)", text, flags=re.I) or "")
+        # update7: a "monthly minimum of $X" implies an annual subscription of 12x that amount
+        if not subscription_amount:
+            monthly = money_from_text(search1(r"monthly minimum of (\$[\d,]+)", text, flags=re.I) or "")
+            if monthly:
+                subscription_amount = {"amount": monthly["amount"] * 12, "currency": "USD"}
         if subscription_amount:
             billing_frequency = "annual"
             payment_timing = None
@@ -343,17 +400,106 @@ def extract_fees(text: str, tables: list[dict[str, Any]]) -> list[dict[str, Any]
                 }
             )
 
+    # update8: split a bundled "comprising a $X subscription and a $Y implementation" price
+    # into its subscription and implementation parts (they are separate obligations)
+    combo = re.search(
+        r"comprising a \$([\d,]+)\s+subscription and a \$([\d,]+)\s+implementation",
+        text, flags=re.I,
+    )
+    if combo:
+        sub_v = money_from_text("$" + combo.group(1))
+        impl_v = money_from_text("$" + combo.group(2))
+        fees = [f for f in fees if "combined" not in (f.get("name") or "").lower()]
+        if sub_v:
+            fees.append({"name": "Platform Subscription", "amount": sub_v, "billing_frequency": "annual"})
+        if impl_v:
+            fees.append({"name": "Implementation", "amount": impl_v, "billing_frequency": "one_time"})
+
+    # update6: two-column "Item / Amount" fee tables (pdfplumber misses them) linearise as a
+    # label line immediately followed by a "$amount" line; pair up onboarding-type items
+    lines = [ln.strip() for ln in text.splitlines()]
+    existing_amounts = {
+        (f.get("amount") or {}).get("amount")
+        for f in fees
+        if isinstance(f.get("amount"), dict)
+    }
+    for i in range(len(lines) - 1):
+        label = lines[i]
+        # note: "training" alone is excluded - advisor-training programs are distinct
+        # services, not onboarding (they would be double counted otherwise)
+        if not re.search(r"onboard|implementation|setup|activation|migration", label, re.I):
+            continue
+        if not re.match(r"^\$[\d,]+(?:\.\d+)?$", lines[i + 1]):
+            continue
+        amt = money_from_text(lines[i + 1])
+        if amt and amt["amount"] not in existing_amounts:
+            fees.append({"name": label, "amount": amt, "billing_frequency": "one_time"})
+            existing_amounts.add(amt["amount"])
+
+    # update4: when a per-year subscription is stated (e.g. "$30,000/yr x 2" or "$36,000 per
+    # year"), use the yearly figure for the subscription fee instead of the multi-year total
+    per_year_raw = (
+        search1(r"\$([\d,]+)\s*/\s*yr", text, flags=re.I)
+        or search1(r"\$([\d,]+)\s+per\s+(?:contract\s+)?year", text, flags=re.I)
+    )
+    if per_year_raw:
+        per_year = money_from_text("$" + per_year_raw)
+        if per_year:
+            replaced = False
+            for f in fees:
+                nm = (f.get("name") or "").lower()
+                if any(k in nm for k in ("subscription", "platform", "base")):
+                    f["amount"] = per_year
+                    replaced = True
+                    break
+            if not replaced:
+                fees.append({"name": "Platform Subscription", "amount": per_year, "billing_frequency": "annual"})
+
     return fees
 
 
 def extract_discount_terms(text: str) -> dict[str, Any]:
     """Extract discount terms such as percentage discounts, fixed discounts, and waived fees."""
-    has_discount = bool(re.search(r"discount|reduction|reduced by|waiv(?:e|ed|er)|credit", text, re.I))
+    # update11: bundled contracts imply a discount via "Combined list price" > "Total payable"
+    # even when the word "discount" never appears - trigger on that structure too
+    has_discount = bool(re.search(
+        r"discount|reduction|reduced by|waiv(?:e|ed|er)|credit|"
+        r"combined (?:list|standalone) price|bundled package",
+        text, re.I))
     if not has_discount:
         return {"has_discount": False}
 
     pct_raw = search1(r"(\d+(?:\.\d+)?)\s*%\s*(?:discount|reduction|off)", text, flags=re.I)
-    amount = money_from_text(search1(r"(?:discount|credit|reduced by|reduction of)\s*(\$[\d,]+(?:\.\d+)?)", text, flags=re.I) or "")
+    # update10: contracts state the discount as an explicit dollar figure, usually as
+    # "list $X, less $Y discount" or "the $Y discount is applied to ...". Match the dollar
+    # amount directly (the stated % is often about RevLens's general pricing, not this deal).
+    amount = money_from_text(
+        search1(r"less\s+(\$[\d,]+(?:\.\d+)?)\s+discount", text, flags=re.I)
+        or search1(r"(\$[\d,]+(?:\.\d+)?)\s+discount\s+(?:is\s+)?applied", text, flags=re.I)
+        or search1(r"discount\s*\(\$([\d,]+(?:\.\d+)?)\)", text, flags=re.I)
+        or search1(r"(?:discount|credit|reduced by|reduction of)\s*(\$[\d,]+(?:\.\d+)?)", text, flags=re.I | re.S)
+        or ""
+    )
+
+    # update11: bundled contracts don't state a discount figure - they list a "Combined
+    # (list|standalone) price" and a lower "Total payable/fixed fees". The discount is the
+    # difference (list minus net), which is exactly how ASC 606 defines it here.
+    if amount is None:
+        disc_lines = [ln.strip() for ln in text.splitlines()]
+
+        def _amount_near(label_pattern):
+            for i, ln in enumerate(disc_lines):
+                if re.search(label_pattern, ln, re.I):
+                    for j in range(i, min(i + 3, len(disc_lines))):
+                        m = re.search(r"\$([\d,]+(?:\.\d+)?)", disc_lines[j])
+                        if m:
+                            return float(m.group(1).replace(",", ""))
+            return None
+
+        combined = _amount_near(r"combined (?:list|standalone) price")
+        total = _amount_near(r"total payable|total fixed fees")
+        if combined and total and combined > total:
+            amount = {"amount": combined - total, "currency": "USD"}
 
     discount_type = "unknown"
     if pct_raw is not None:
@@ -395,17 +541,24 @@ def extract_onboarding_terms(text: str, fees: list[dict[str, Any]] | None = None
         "required": required if required else None,
         "fee": fee,
         "billing_frequency": "one_time" if fee else "unknown",
-        "required_for_platform": bool(re.search(r"required for the Platform to operate", text, re.I)) if required else None,
+        "required_for_platform": implementation_required_for_platform(text),
         "timeline": search1(r"(?:onboarding|implementation)[^.;\n]{0,120}(?:within|during|over)\s+([^.;\n]+)", text, flags=re.I),
         "notes": first_sentence_matching(text, r"onboarding|implementation services|setup"),
     }
 
 
 def extract_usage_fee(text: str) -> dict[str, Any] | None:
-    if not re.search(r"Usage Fees|overage|processed account transactions", text, re.I):
+    # update2: widen the usage trigger so per-run / usage-based / minimum contracts count too
+    if not re.search(r"usage fee|usage-based|usage above|overage|monthly minimum|per transaction|per processed|processed account transaction|analytics run", text, re.I):
         return None
     included_units = search_int(r"up to ([\w,]+|\d+)\s*\(?[\d,]*\)?\s+processed account transactions", text)
-    overage = money_from_text(search1(r"billed at (\$[\d,.]+) per transaction", text, flags=re.I) or "")
+    # update2: catch "overage fee of $X per transaction", "at $X per processed account transaction",
+    # "$X for each analytics run" - not only the old "billed at $X per transaction"
+    overage = money_from_text(
+        search1(r"(?:overage fee of|billed at|charged at|at)\s*(\$[\d,.]+)\s*(?:per|for each|/)\s*(?:processed account\s*)?(?:transaction|analytics run|run)", text, flags=re.I)
+        or search1(r"(\$[\d,.]+)\s*(?:per|for each)\s*(?:processed account\s*)?(?:transaction|analytics run|run)", text, flags=re.I)
+        or ""
+    )
     frequency = "quarterly" if re.search(r"quarterly basis|quarter-end", text, re.I) else "unknown"
     return {
         "included_units": included_units,
@@ -521,6 +674,7 @@ def main() -> None:
             {
                 "file_name": raw["file_name"],
                 "raw_text_preview": raw["full_text"][:1000],
+                "full_text": raw["full_text"],   # carried forward so Agent 3 can use it as supplementary evidence
                 "section_names": list(raw["sections"].keys()),
                 "tables": raw["tables"],
                 "candidate_output": candidate,

@@ -27,6 +27,7 @@ from load_ground_truth import load_ground_truth
 EXTRACTED_PATH = ROOT / "app" / "llm" / "extracted_contracts.json"
 OUTPUTS_PATH = HERE / "results" / "treatment_outputs.json"      # <- Agent 4 reads this
 SUMMARY_PATH = HERE / "results" / "treatment_summary.csv"       # per-contract detail + field-level metrics
+AGENT2_CACHE_PATH = HERE / "results" / "agent2_output_cache.json"  # cached Agent 2 outputs so Agent 3 can be iterated without re-running Agent 2
 
 CONTRACT_IDS = [f"C{i:02d}" for i in range(1, 51)]
 
@@ -39,6 +40,9 @@ CATEGORICAL_FIELDS = {
     "onboarding_distinct", "usage_model", "discount_type",
     "material_right", "recognition_method",
 }
+# scored on ALL 50 contracts: 'none' / 'n/a' are real answers here (correctly saying
+# "no discount" / "no usage" / "no onboarding" counts), not rows to skip.
+FULL_CATEGORICAL = {"onboarding_distinct", "usage_model", "discount_type"}
 ALL_FIELDS = list(CATEGORICAL_FIELDS) + list(NUMERIC_FIELDS)
 
 NUM_ABS_TOL = 1.0
@@ -48,22 +52,41 @@ _EMPTY = {"", "n/a", "na", "none", "null", "nil"}
 
 # generation: run Agent 3 and save the outputs Agent 4 will use 
 
-def generate_outputs(limit=None):
+def generate_outputs(limit=None, refresh_agent2=False):
     from app.llm.treatment_agent import run as run_agent3
     from app.llm.policy_retrieval import PolicyRetrievalAgent
 
     extracted = json.loads(EXTRACTED_PATH.read_text(encoding="utf-8"))
-    agent2 = PolicyRetrievalAgent()
+
+    # Agent 2's retrieval only depends on Agent 1's facts, so once cached we can iterate on
+    # Agent 3 WITHOUT re-running Agent 2. Rebuild the cache with --refresh-agent2 after Agent 1 changes.
+    if refresh_agent2 or not AGENT2_CACHE_PATH.exists():
+        a2_cache = {}
+    else:
+        a2_cache = json.loads(AGENT2_CACHE_PATH.read_text(encoding="utf-8"))
+        print(f"Using cached Agent 2 outputs ({len(a2_cache)} contracts). Pass --refresh-agent2 to rebuild.")
+
+    agent2 = None  # built lazily - only if some contract is not already cached
 
     outputs = []
     for i, record in enumerate(extracted):
         if limit is not None and i >= limit:
             break
         facts = record.get("validated_output") or record.get("candidate_output") or {}
-        agent2_output = agent2.run(facts)
+        key = record.get("file_name") or str(i)
+        if key in a2_cache:
+            agent2_output = a2_cache[key]
+        else:
+            if agent2 is None:
+                agent2 = PolicyRetrievalAgent()
+            agent2_output = agent2.run(facts)
+            a2_cache[key] = agent2_output
         result = run_agent3(record, agent2_output)
         outputs.append(result)
         print(f"  ran {result.get('source_file')}")
+
+    AGENT2_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    AGENT2_CACHE_PATH.write_text(json.dumps(a2_cache, indent=2), encoding="utf-8")
 
     OUTPUTS_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUTS_PATH.write_text(json.dumps(outputs, indent=2), encoding="utf-8")
@@ -115,6 +138,37 @@ def _norm(v):
     return str(v).strip().lower() if v is not None else ""
 
 
+_ABSENT = {"", "n/a", "na", "none", "null", "nil", "nan"}
+
+
+def _norm_cat(v):
+    """Categorical normaliser that folds the whole 'nothing here' family (None, '', 'n/a',
+    'none', ...) into one token, so 'no onboarding'/'no usage'/'no discount' agree regardless
+    of how each side spells it. NOTE: 'FALSE' is NOT absent (it means present-but-not-distinct)."""
+    s = _norm(v)
+    return "absent" if s in _ABSENT else s
+
+
+def _canon_method(v):
+    """recognition_method is free text in the ground truth ('both over_time_ratable',
+    'sub:over_time; onboarding:point_in_time', 'UNDETERMINED', ...). Compare the SET of
+    recognition patterns mentioned, ignoring wording and per-component labels, so a
+    semantically identical answer is not marked wrong on phrasing alone."""
+    s = _norm(v)
+    toks = set()
+    if "undetermined" in s:
+        toks.add("undetermined")
+    if "point_in_time" in s or "point in time" in s:
+        toks.add("point_in_time")
+    if "over_time" in s or "over time" in s or "ratable" in s:
+        toks.add("over_time")
+    if "usage" in s or "as usage occurs" in s:
+        toks.add("usage")
+    if "input_method" in s or "input method" in s:
+        toks.add("input_method")
+    return toks
+
+
 def _is_empty(v):
     return v is None or (isinstance(v, str) and v.strip().lower() in _EMPTY)
 
@@ -139,6 +193,15 @@ def compare(field, predicted, truth):
         if p is None:
             return False
         return abs(p - t) <= NUM_ABS_TOL or (t != 0 and abs(p - t) / abs(t) <= NUM_REL_TOL)
+
+    if field == "recognition_method":
+        if _is_empty(truth):
+            return None
+        return _canon_method(predicted) == _canon_method(truth)
+
+    # these are scored on all 50 - "none"/"n/a"/None all mean "nothing here" and must agree
+    if field in FULL_CATEGORICAL:
+        return _norm_cat(predicted) == _norm_cat(truth)
 
     # categorical
     if _is_empty(truth):
@@ -191,6 +254,58 @@ def binary_metrics(detail, field, positive="true"):
 
 # evaluation
 
+def _is_nondefault(field, truth):
+    """Is this a case that needs a real judgment (not the trivial majority answer)?
+    Plain accuracy is dominated by simple contracts; the non-default subset is where the
+    KB / judgment actually matters."""
+    if field == "num_POs":
+        return _to_float(truth) not in (None, 1.0)
+    if field in NUMERIC_FIELDS:
+        return True
+    if field == "recognition_method":
+        return _canon_method(truth) != {"over_time"}
+    if field == "material_right":
+        return _norm(truth) == "true"
+    return _norm_cat(truth) not in ("absent", "false")
+
+
+def score_report(pred_by_cid, gt, title=""):
+    """Per-field accuracy on all 50 AND on the non-default subset. Identical logic for
+    baseline and pipeline so the two are strictly comparable."""
+    rows = []
+    tot_c = tot_n = nd_c = nd_n = 0
+    for field in ALL_FIELDS:
+        oc = on = hc = hn = 0
+        for cid in CONTRACT_IDS:
+            pred = pred_by_cid.get(cid)
+            if pred is None:
+                continue
+            truth, _ = field_ground_truth(cid, gt)
+            r = compare(field, pred.get(field), truth[field])
+            if r is None:
+                continue
+            oc += 1 if r else 0; on += 1
+            tot_c += 1 if r else 0; tot_n += 1
+            if _is_nondefault(field, truth[field]):
+                hc += 1 if r else 0; hn += 1
+                nd_c += 1 if r else 0; nd_n += 1
+        rows.append({
+            "field": field,
+            "acc_%": round(100 * oc / on, 1) if on else None,
+            "all": f"{oc}/{on}",
+            "nondefault_%": round(100 * hc / hn, 1) if hn else None,
+            "nondefault": f"{hc}/{hn}",
+        })
+    df = pd.DataFrame(rows)
+    pd.set_option("display.width", 0)
+    if title:
+        print(f"\n=== {title}: per-field (all 50 + non-default subset) ===")
+    print(df.to_string(index=False))
+    print(f"OVERALL: {round(100 * tot_c / tot_n, 1)}%  ({tot_c}/{tot_n})   "
+          f"NON-DEFAULT: {round(100 * nd_c / nd_n, 1)}%  ({nd_c}/{nd_n})")
+    return df
+
+
 def evaluate(outputs):
     gt = load_ground_truth()
     by_cid = {}
@@ -199,7 +314,15 @@ def evaluate(outputs):
         if cid in CONTRACT_IDS:
             by_cid[cid] = out
 
-    detail_rows = []
+    # Column order for the wide per-contract report (matches the ground-truth layout).
+    WIDE_ORDER = [
+        "onboarding_distinct", "usage_model", "discount_type", "material_right",
+        "num_POs", "transaction_price", "recognition_method",
+        "recognition_period_months", "monthly_revenue", "opening_deferred",
+    ]
+
+    detail_rows = []   # long form, used for the metrics
+    wide_rows = []     # one row per contract, predicted vs ground truth side by side
     for cid in CONTRACT_IDS:
         out = by_cid.get(cid)
         if out is None:
@@ -207,22 +330,28 @@ def evaluate(outputs):
         pred = flatten(out)
         truth, onb_fee = field_ground_truth(cid, gt)
 
+        row = {"contract_id": cid, "type": gt[cid]["characterisation"].get("type")}
+        wrong = []
         for field in ALL_FIELDS:
-            # onboarding_distinct is only a real judgment when there is an
-            # onboarding fee; skip the trivial "no onboarding" contracts.
-            if field == "onboarding_distinct" and not (onb_fee or 0) > 0:
-                continue
             result = compare(field, pred[field], truth[field])
-            if result is None:
-                continue
-            detail_rows.append({
-                "contract_id": cid,
-                "type": gt[cid]["characterisation"].get("type"),
-                "field": field,
-                "predicted": pred[field],
-                "truth": truth[field],
-                "correct": result,
-            })
+            if result is not None:
+                detail_rows.append({
+                    "contract_id": cid,
+                    "type": gt[cid]["characterisation"].get("type"),
+                    "field": field,
+                    "predicted": pred[field],
+                    "truth": truth[field],
+                    "correct": result,
+                })
+                if result is False:
+                    wrong.append(field)
+        # wide row: predicted next to ground truth for every scored field
+        for field in WIDE_ORDER:
+            row[field] = pred.get(field)
+            row[field + "__gt"] = truth.get(field)
+        row["n_wrong"] = len(wrong)
+        row["wrong_fields"] = ", ".join(wrong)
+        wide_rows.append(row)
 
     detail = pd.DataFrame(detail_rows)
 
@@ -237,17 +366,16 @@ def evaluate(outputs):
 
     overall = round(detail["correct"].mean() * 100, 1)
 
-    # One flat CSV: per-contract detail, with the field-level metrics merged on as
-    # extra columns (accuracy for every field; recall/F1 for the binary judgments).
-    acc_map = dict(zip(per_field["field"], per_field["accuracy_%"]))
-    recall_map = {b["field"]: b["recall"] for b in binary}
-    f1_map = {b["field"]: b["f1"] for b in binary}
-    detail["field_accuracy_%"] = detail["field"].map(acc_map)
-    detail["field_recall"] = detail["field"].map(recall_map)
-    detail["field_f1"] = detail["field"].map(f1_map)
+    # One row per contract: predicted vs ground truth side by side, in GT column order,
+    # plus n_wrong / wrong_fields so mismatches are easy to scan.
+    wide = pd.DataFrame(wide_rows)
+    col_order = ["contract_id", "type", "n_wrong", "wrong_fields"]
+    for field in WIDE_ORDER:
+        col_order += [field, field + "__gt"]
+    wide = wide[[c for c in col_order if c in wide.columns]]
 
     SUMMARY_PATH.parent.mkdir(parents=True, exist_ok=True)
-    detail.to_csv(SUMMARY_PATH, index=False)
+    wide.to_csv(SUMMARY_PATH, index=False)
 
     pd.set_option("display.width", 0)
     print("\n=== Agent 3 per-field accuracy ===")
@@ -257,6 +385,8 @@ def evaluate(outputs):
         print(pd.DataFrame(binary).to_string(index=False))
     print(f"\nOverall accuracy: {overall}%  ({int(detail['correct'].sum())}/{len(detail)})")
     print(f"Report: {SUMMARY_PATH}")
+    # unified report (same function baseline uses) - overall + non-default subset
+    score_report({c: flatten(o) for c, o in by_cid.items()}, gt, "AGENT 3")
 
 
 def main():
@@ -264,10 +394,12 @@ def main():
     ap.add_argument("--run", action="store_true",
                     help="run Agent 3 over the contracts (calls the LLM) and save outputs")
     ap.add_argument("--limit", type=int, default=None, help="only run the first N contracts")
+    ap.add_argument("--refresh-agent2", action="store_true",
+                    help="rebuild the cached Agent 2 outputs (do this after Agent 1 changes)")
     args = ap.parse_args()
 
     if args.run:
-        outputs = generate_outputs(limit=args.limit)
+        outputs = generate_outputs(limit=args.limit, refresh_agent2=args.refresh_agent2)
     else:
         if not OUTPUTS_PATH.exists():
             print(f"No saved outputs at {OUTPUTS_PATH}. Run with --run first.")
