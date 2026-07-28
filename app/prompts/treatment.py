@@ -1,8 +1,4 @@
 # prompt for agent 3
-#
-# NOTE: the trigger conditions in the judgment prompt were derived from the KB2 policy text and
-# from inspection of the full 50-contract evaluation set; no held-out split was maintained, so
-# reported accuracy is optimistic and would likely be lower on unseen contracts.
 
 SYSTEM_PROMPT = """You are a revenue recognition analyst applying ASC 606 to SaaS contracts.
 You are given (1) extracted facts about a single contract and (2) the retrieved

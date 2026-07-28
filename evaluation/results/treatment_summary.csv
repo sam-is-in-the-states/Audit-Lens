@@ -1,48 +1,51 @@
-contract_id,type,field,predicted,truth,correct,field_accuracy_%,field_recall,field_f1
-C41,ambiguous,recognition_method,UNDETERMINED,UNDETERMINED,True,66.7,,
-C41,ambiguous,material_right,UNDETERMINED,False,False,16.7,0.0,0.0
-C41,ambiguous,opening_deferred,0.0,18000.0,False,66.7,,
-C41,ambiguous,transaction_price,18000.0,18000.0,True,83.3,,
-C41,ambiguous,recognition_period_months,,0.0,False,83.3,,
-C41,ambiguous,monthly_revenue,0.0,0.0,True,83.3,,
-C41,ambiguous,num_POs,1,1.0,True,66.7,,
-C42,ambiguous,recognition_method,UNDETERMINED,UNDETERMINED,True,66.7,,
-C42,ambiguous,material_right,UNDETERMINED,False,False,16.7,0.0,0.0
-C42,ambiguous,opening_deferred,24000.0,0.0,False,66.7,,
-C42,ambiguous,transaction_price,24000.0,0.0,False,83.3,,
-C42,ambiguous,recognition_period_months,12,12.0,True,83.3,,
-C42,ambiguous,monthly_revenue,2000.0,0.0,False,83.3,,
-C42,ambiguous,num_POs,1,1.0,True,66.7,,
-C43,ambiguous,onboarding_distinct,UNDETERMINED,UNDETERMINED,True,50.0,0.0,0.0
-C43,ambiguous,recognition_method,UNDETERMINED,UNDETERMINED,True,66.7,,
-C43,ambiguous,material_right,UNDETERMINED,False,False,16.7,0.0,0.0
-C43,ambiguous,opening_deferred,20000.0,20000.0,True,66.7,,
-C43,ambiguous,transaction_price,20000.0,20000.0,True,83.3,,
-C43,ambiguous,recognition_period_months,12,12.0,True,83.3,,
-C43,ambiguous,monthly_revenue,1666.6666666666667,1666.6666666666667,True,83.3,,
-C43,ambiguous,num_POs,1,0.0,False,66.7,,
-C44,ambiguous,usage_model,none,undefined,False,0.0,,
-C44,ambiguous,recognition_method,UNDETERMINED,base over time; usage UNDETERMINED,False,66.7,,
-C44,ambiguous,material_right,UNDETERMINED,False,False,16.7,0.0,0.0
-C44,ambiguous,opening_deferred,12000.0,12000.0,True,66.7,,
-C44,ambiguous,transaction_price,12000.0,12000.0,True,83.3,,
-C44,ambiguous,recognition_period_months,12,12.0,True,83.3,,
-C44,ambiguous,monthly_revenue,1000.0,1000.0,True,83.3,,
-C44,ambiguous,num_POs,1,1.0,True,66.7,,
-C45,ambiguous,recognition_method,UNDETERMINED,UNDETERMINED,True,66.7,,
-C45,ambiguous,discount_type,none,renewal_option_unclear,False,0.0,,
-C45,ambiguous,material_right,UNDETERMINED,UNDETERMINED,True,16.7,0.0,0.0
-C45,ambiguous,opening_deferred,20000.0,20000.0,True,66.7,,
-C45,ambiguous,transaction_price,20000.0,20000.0,True,83.3,,
-C45,ambiguous,recognition_period_months,12,12.0,True,83.3,,
-C45,ambiguous,monthly_revenue,1666.6666666666667,1666.6666666666667,True,83.3,,
-C45,ambiguous,num_POs,1,0.0,False,66.7,,
-C46,combo_sub_onboard_usage,onboarding_distinct,UNDETERMINED,FALSE,False,50.0,0.0,0.0
-C46,combo_sub_onboard_usage,usage_model,none,base_plus_overage,False,0.0,,
-C46,combo_sub_onboard_usage,recognition_method,UNDETERMINED,over_time_ratable,False,66.7,,
-C46,combo_sub_onboard_usage,material_right,UNDETERMINED,False,False,16.7,0.0,0.0
-C46,combo_sub_onboard_usage,opening_deferred,30000.0,30000.0,True,66.7,,
-C46,combo_sub_onboard_usage,transaction_price,30000.0,30000.0,True,83.3,,
-C46,combo_sub_onboard_usage,recognition_period_months,12,12.0,True,83.3,,
-C46,combo_sub_onboard_usage,monthly_revenue,2500.0,2500.0,True,83.3,,
-C46,combo_sub_onboard_usage,num_POs,1,1.0,True,66.7,,
+contract_id,type,n_wrong,wrong_fields,onboarding_distinct,onboarding_distinct__gt,usage_model,usage_model__gt,discount_type,discount_type__gt,material_right,material_right__gt,num_POs,num_POs__gt,transaction_price,transaction_price__gt,recognition_method,recognition_method__gt,recognition_period_months,recognition_period_months__gt,monthly_revenue,monthly_revenue__gt,opening_deferred,opening_deferred__gt
+C01,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,9600.0,9600.0,over_time_ratable,over_time_ratable,12,12.0,800.0,800.0,9600.0,9600.0
+C02,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,18000.0,18000.0,over_time_ratable,over_time_ratable,12,12.0,1500.0,1500.0,0.0,0.0
+C03,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,24000.0,24000.0,over_time_ratable,over_time_ratable,12,12.0,2000.0,2000.0,24000.0,24000.0
+C04,simple_sub,1,opening_deferred,n/a,,none,none,none,none,FALSE,False,1,1.0,45000.0,45000.0,over_time_ratable,over_time_ratable,36,36.0,1250.0,1250.0,5000.0,15000.0
+C05,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,36000.0,36000.0,over_time_ratable,over_time_ratable,12,12.0,3000.0,3000.0,9000.0,9000.0
+C06,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,4800.0,4800.0,over_time_ratable,over_time_ratable,12,12.0,400.0,400.0,4800.0,4800.0
+C07,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,60000.0,60000.0,over_time_ratable,over_time_ratable,24,24.0,2500.0,2500.0,60000.0,60000.0
+C08,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,21600.0,21600.0,over_time_ratable,over_time_ratable,12,12.0,1800.0,1800.0,0.0,0.0
+C09,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,120000.0,120000.0,over_time_ratable,over_time_ratable,12,12.0,10000.0,10000.0,120000.0,120000.0
+C10,simple_sub,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,7200.0,7200.0,over_time_ratable,over_time_ratable,12,12.0,600.0,600.0,7200.0,7200.0
+C11,sub_onboarding,0,,FALSE,FALSE,none,none,none,none,FALSE,False,1,1.0,15000.0,15000.0,over_time_ratable,over_time_ratable,12,12.0,1250.0,1250.0,15000.0,15000.0
+C12,sub_onboarding,0,,TRUE,TRUE,none,none,none,none,FALSE,False,2,2.0,20000.0,20000.0,sub:over_time_ratable; onboarding:point_in_time,sub:over_time_ratable; onboarding:point_in_time,12,12.0,1666.6666666666667,1666.6666666666667,20000.0,20000.0
+C13,sub_onboarding,0,,FALSE,FALSE,none,none,none,none,FALSE,False,1,1.0,44000.0,44000.0,over_time_ratable,over_time_ratable,12,12.0,3666.6666666666665,3666.6666666666665,44000.0,44000.0
+C14,sub_onboarding,1,opening_deferred,TRUE,TRUE,none,none,none,none,FALSE,False,2,2.0,65000.0,65000.0,sub:over_time_ratable; onboarding:point_in_time,sub:over_time_ratable; onboarding:point_in_time,24,24.0,2708.3333333333335,2708.3333333333335,20000.0,35000.0
+C15,sub_onboarding,0,,FALSE,FALSE,none,none,none,none,FALSE,False,1,1.0,19500.0,19500.0,over_time_ratable,over_time_ratable,12,12.0,1625.0,1625.0,19500.0,19500.0
+C16,sub_onboarding,0,,FALSE,FALSE,none,none,none,none,FALSE,False,1,1.0,44000.0,44000.0,over_time_ratable,over_time_ratable,12,12.0,3666.6666666666665,3666.6666666666665,11000.0,11000.0
+C17,sub_onboarding,0,,TRUE,TRUE,none,none,none,none,FALSE,False,2,2.0,11100.0,11100.0,sub:over_time_ratable; onboarding:point_in_time,sub:over_time_ratable; training:point_in_time,12,12.0,925.0,925.0,11100.0,11100.0
+C18,sub_onboarding,2,"material_right, num_POs",FALSE,FALSE,none,none,none,none,FALSE,True,1,2.0,25000.0,25000.0,over_time_ratable,over_time_ratable,12,12.0,2083.3333333333335,2083.3333333333335,25000.0,25000.0
+C19,sub_onboarding,0,,FALSE,FALSE,none,none,none,none,FALSE,False,1,1.0,18000.0,18000.0,over_time_ratable,over_time_ratable,12,12.0,1500.0,1500.0,0.0,0.0
+C20,sub_onboarding,1,opening_deferred,TRUE,TRUE,none,none,none,none,FALSE,False,2,2.0,60000.0,60000.0,sub:over_time_ratable; onboarding:point_in_time,sub:over_time_ratable; onboarding:point_in_time,36,36.0,1666.6666666666667,1666.6666666666667,12000.0,24000.0
+C21,sub_usage,0,,n/a,,base_plus_overage,base_plus_overage,none,none,FALSE,False,1,1.0,12000.0,12000.0,over_time_ratable,over_time_ratable,12,12.0,1000.0,1000.0,12000.0,12000.0
+C22,sub_usage,0,,n/a,,minimum_commitment,minimum_commitment,none,none,FALSE,False,1,1.0,24000.0,24000.0,over_time_ratable,over_time_ratable,12,12.0,2000.0,2000.0,24000.0,24000.0
+C23,sub_usage,0,,n/a,,pure_usage,pure_usage,none,none,FALSE,False,1,1.0,0.02,0.0,over_time_as_usage_occurs,over_time_as_usage_occurs,12,12.0,0.0016666666666666668,0.0,0.02,0.0
+C24,sub_usage,0,,n/a,,usage_royalty,usage_royalty,none,none,FALSE,False,1,1.0,18000.0,18000.0,over_time_ratable,over_time_ratable,12,12.0,1500.0,1500.0,18000.0,18000.0
+C25,sub_usage,0,,n/a,,base_plus_overage,base_plus_overage,none,none,FALSE,False,1,1.0,36000.0,36000.0,over_time_ratable,over_time_ratable,12,12.0,3000.0,3000.0,9000.0,9000.0
+C26,sub_usage,0,,n/a,,base_plus_capped,base_plus_capped,none,none,FALSE,False,1,1.0,15000.0,15000.0,over_time_ratable,over_time_ratable,12,12.0,1250.0,1250.0,15000.0,15000.0
+C27,sub_usage,0,,n/a,,usage_with_floor,usage_with_floor,none,none,FALSE,False,1,1.0,6000.0,6000.0,over_time_ratable,over_time_ratable,12,12.0,500.0,500.0,0.0,0.0
+C28,sub_usage,0,,n/a,,purchase_option,purchase_option,none,none,FALSE,False,1,1.0,20000.0,20000.0,over_time_ratable,over_time_ratable,12,12.0,1666.6666666666667,1666.6666666666667,20000.0,20000.0
+C29,sub_usage,0,,n/a,,base_plus_overage,base_plus_overage,none,none,FALSE,False,1,1.0,3600.0,3600.0,over_time_ratable,over_time_ratable,12,12.0,300.0,300.0,3600.0,3600.0
+C30,sub_usage,0,,n/a,,base_plus_overage,base_plus_overage,none,none,FALSE,False,1,1.0,48000.0,48000.0,over_time_ratable,over_time_ratable,12,12.0,4000.0,4000.0,48000.0,48000.0
+C31,sub_discount,1,onboarding_distinct,FALSE,,none,none,fixed_prorata,fixed_prorata,FALSE,False,2,2.0,10000.0,10000.0,sub:over_time_ratable; onboarding:point_in_time,sub:over_time_ratable; training:point_in_time,12,12.0,833.3333333333334,833.3333333333334,10000.0,10000.0
+C32,sub_discount,0,,n/a,,none,none,fixed_directed,fixed_directed,FALSE,False,2,2.0,22000.0,22000.0,over_time_ratable,both over_time_ratable,12,12.0,1833.3333333333333,1833.3333333333333,22000.0,22000.0
+C33,sub_discount,0,,n/a,,none,none,renewal_option,renewal_option,TRUE,True,2,2.0,24000.0,24000.0,over_time_ratable,over_time_ratable,12,12.0,2000.0,2000.0,24000.0,24000.0
+C34,sub_discount,4,"discount_type, onboarding_distinct, material_right, num_POs",n/a,FALSE,none,none,none,upfront_fee_material_right,FALSE,True,1,2.0,17000.0,17000.0,over_time_ratable,over_time_ratable,12,12.0,1416.6666666666667,1416.6666666666667,17000.0,17000.0
+C35,sub_discount,2,"recognition_method, onboarding_distinct",FALSE,,none,none,fixed_prorata,fixed_prorata,FALSE,False,3,3.0,100000.0,100000.0,sub:over_time_ratable; onboarding:point_in_time,sub/support:over_time; consulting:input_method,12,12.0,8333.333333333334,8333.333333333334,100000.0,100000.0
+C36,sub_discount,1,opening_deferred,n/a,,none,none,fixed_prorata,fixed_prorata,FALSE,False,2,2.0,60000.0,60000.0,over_time_ratable,both over_time_ratable,24,24.0,2500.0,2500.0,18000.0,33000.0
+C37,sub_discount,1,discount_type,n/a,,none,none,none,residual_method,FALSE,False,2,2.0,40000.0,40000.0,over_time_ratable,both over_time_ratable,12,12.0,3333.3333333333335,3333.3333333333335,40000.0,40000.0
+C38,sub_discount,0,,n/a,,none,none,free_period,free_period,FALSE,False,1,1.0,12000.0,12000.0,over_time_ratable,over_time_ratable,13,13.0,923.0769230769231,923.0769230769231,12000.0,12000.0
+C39,sub_discount,1,discount_type,TRUE,TRUE,none,none,renewal_option,fixed_prorata,TRUE,True,3,3.0,20500.0,20500.0,sub:over_time_ratable; onboarding:point_in_time,sub:over_time; onboarding:point_in_time; MR:on exercise,12,12.0,1708.3333333333333,1708.3333333333333,20500.0,20500.0
+C40,sub_discount,0,,n/a,,none,none,fixed_directed,fixed_directed,FALSE,False,2,2.0,40000.0,40000.0,sub:over_time_ratable; onboarding:point_in_time,sub:over_time_ratable; training:point_in_time,12,12.0,3333.3333333333335,3333.3333333333335,40000.0,40000.0
+C41,ambiguous,0,,n/a,,none,none,none,none,FALSE,False,1,1.0,18000.0,18000.0,UNDETERMINED,UNDETERMINED,0,0.0,0.0,0.0,18000.0,18000.0
+C42,ambiguous,1,material_right,n/a,,none,none,none,none,UNDETERMINED,False,1,1.0,0.0,0.0,UNDETERMINED,UNDETERMINED,12,12.0,0.0,0.0,0.0,0.0
+C43,ambiguous,3,"recognition_method, onboarding_distinct, num_POs",FALSE,UNDETERMINED,none,none,none,none,FALSE,False,1,0.0,20000.0,20000.0,over_time_ratable,UNDETERMINED,12,12.0,1666.6666666666667,1666.6666666666667,20000.0,20000.0
+C44,ambiguous,2,"recognition_method, usage_model",n/a,,base_plus_overage,undefined,none,none,FALSE,False,1,1.0,12000.0,12000.0,over_time_ratable,base over time; usage UNDETERMINED,12,12.0,1000.0,1000.0,12000.0,12000.0
+C45,ambiguous,1,discount_type,n/a,,none,none,none,renewal_option_unclear,UNDETERMINED,UNDETERMINED,0,0.0,20000.0,20000.0,UNDETERMINED,UNDETERMINED,12,12.0,1666.6666666666667,1666.6666666666667,20000.0,20000.0
+C46,combo_sub_onboard_usage,0,,FALSE,FALSE,base_plus_overage,base_plus_overage,none,none,FALSE,False,1,1.0,30000.0,30000.0,over_time_ratable,over_time_ratable,12,12.0,2500.0,2500.0,30000.0,30000.0
+C47,combo_sub_onboard_usage,0,,TRUE,TRUE,minimum_commitment,minimum_commitment,none,none,FALSE,False,2,2.0,41000.0,41000.0,sub:over_time_ratable; onboarding:point_in_time; usage:as_incurred,sub:over_time; onboarding:point_in_time; usage:as_incurred,12,12.0,3416.6666666666665,3416.6666666666665,41000.0,41000.0
+C48,combo_sub_onboard_usage,1,opening_deferred,FALSE,FALSE,usage_royalty,usage_royalty,fixed_prorata,fixed_prorata,FALSE,False,1,1.0,63000.0,63000.0,over_time_ratable,over_time_ratable,24,24.0,2625.0,2625.0,38000.0,34000.0
+C49,combo_sub_onboard_usage,1,discount_type,TRUE,TRUE,base_plus_capped,base_plus_capped,renewal_option,none,TRUE,True,3,3.0,49000.0,49000.0,sub:over_time_ratable; onboarding:point_in_time; usage:as_incurred,sub:over_time; onboarding:point_in_time; MR:on exercise; usage:as_incurred,12,12.0,4083.3333333333335,4083.3333333333335,49000.0,49000.0
+C50,combo_sub_onboard_usage,1,recognition_method,FALSE,FALSE,usage_with_floor,usage_with_floor,none,none,FALSE,False,1,1.0,22000.0,22000.0,over_time_ratable,combined:over_time; usage:estimate+constraint,12,12.0,1833.3333333333333,1833.3333333333333,0.0,0.0
