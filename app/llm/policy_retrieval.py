@@ -5,9 +5,9 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from openai import OpenAI
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from app.llm.client import get_llm_response
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -49,9 +49,7 @@ class PolicyRetrievalAgent:
         max_features: int = 10000,
         kb_quotas: dict[str, int] | None = None,
         use_llm: bool = True,
-        llm_model: str | None = None,
         llm_temperature: float = 0,
-        llm_client: OpenAI | None = None,
         llm_fail_open: bool = True,
     ):
         self.kb_dir = Path(kb_dir)
@@ -70,17 +68,9 @@ class PolicyRetrievalAgent:
         # LLM refinement settings. Retrieval remains the grounding stage;
         # the LLM may only choose among retrieved policy document IDs.
         self.use_llm = use_llm
-        self.llm_model = (
-            llm_model
-            or os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
-        )
+        self.llm_model = os.getenv("OLLAMA_MODEL")
         self.llm_temperature = llm_temperature
         self.llm_fail_open = llm_fail_open
-        self.llm_client = (
-            llm_client
-            if llm_client is not None
-            else (OpenAI() if self.use_llm else None)
-        )
 
         # Validate retrieval hyperparameters
         if self.top_k < 1:
@@ -746,10 +736,7 @@ Schema:
         }
 
         try:
-            response = self.llm_client.chat.completions.create(
-                model=self.llm_model,
-                temperature=self.llm_temperature,
-                response_format={"type": "json_object"},
+            response_text = get_llm_response(
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {
@@ -761,11 +748,11 @@ Schema:
                         ),
                     },
                 ],
+                response_format="json_object",
+                temperature=self.llm_temperature,
             )
 
-            parsed = json.loads(
-                response.choices[0].message.content or "{}"
-            )
+            parsed = json.loads(response_text or "{}")
 
             score_map: dict[str, dict[str, Any]] = {}
 
@@ -803,8 +790,6 @@ Schema:
                 for c in candidates
             ]
 
-            usage = getattr(response, "usage", None)
-
             return {
                 "policy_scores": policy_scores,
                 "reasoning": str(
@@ -813,23 +798,7 @@ Schema:
                 "model": self.llm_model,
                 "used_llm": True,
                 "error": None,
-                "usage": {
-                    "input_tokens": (
-                        getattr(usage, "prompt_tokens", None)
-                        if usage is not None
-                        else None
-                    ),
-                    "output_tokens": (
-                        getattr(usage, "completion_tokens", None)
-                        if usage is not None
-                        else None
-                    ),
-                    "total_tokens": (
-                        getattr(usage, "total_tokens", None)
-                        if usage is not None
-                        else None
-                    ),
-                },
+                "usage": None,
             }
 
         except Exception as exc:
