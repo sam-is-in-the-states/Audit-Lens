@@ -1,230 +1,165 @@
-# RevenueLens
+# Rev-Lens
 
-RevenueLens is an AI-powered revenue recognition review system for SaaS contracts. The project evaluates whether a multi-agent architecture can improve the accuracy, consistency, and explainability of revenue recognition reviews compared to a traditional single-prompt Large Language Model (LLM) approach.
+Rev-Lens reviews SaaS contracts for revenue recognition under ASC 606. It tests whether a
+multi-agent pipeline produces a more accurate and more auditable review than a single-prompt
+LLM baseline.
 
-The system analyzes SaaS contracts, retrieves relevant accounting guidance and internal policies using Retrieval-Augmented Generation (RAG), evaluates revenue recognition treatment under ASC 606, identifies accounting risks, generates revenue schedules, and produces an auditable review memo.
+A contract goes in as a PDF. What comes out is an ASC 606 position paper: the recognition
+conclusion, the judgments it rests on with the paragraph relied on for each, a monthly revenue
+schedule, the journal entries, and the matters an accountant has to follow up before close.
 
----
-
-# Features
-
-* PDF contract ingestion and parsing
-* Retrieval-Augmented Generation (RAG) using ChromaDB
-* Local LLM inference using Ollama and Qwen3 1.7B
-* Single-prompt baseline implementation
-* Structured JSON output generation
-* Revenue schedule generation
-* Accounting risk identification
-* Multi-agent architecture (planned)
-* Evaluation framework comparing baseline and multi-agent systems
+The division of labour is the point of the design. **Python computes every figure**; the language
+model is asked only for the interpretive calls a rule cannot make — whether onboarding is a
+distinct performance obligation, whether a renewal option creates a material right, how
+usage-based consideration is structured. The model never does arithmetic and never writes a
+number into the memo unchecked.
 
 ---
 
-# Technology Stack
+## Architecture
 
-* Python 3.12.10
-* Ollama
-* Qwen3 1.7B
-* LangChain
-* LangGraph
-* ChromaDB
-* OpenAI Python SDK (used to communicate with the local Ollama server)
-* Pydantic
+Five agents run in sequence. Each one's output is the next one's input.
 
----
+| Agent | File | Role | LLM? |
+|---|---|---|---|
+| 1 | `app/llm/contract_label_extraction.py` | Parses the PDF and extracts the contract facts into a validated schema | No — regex + Pydantic |
+| 2 | `app/llm/policy_retrieval.py` | Retrieves the applicable guidance from the three knowledge bases | TF-IDF retrieval + LLM rerank |
+| 3 | `app/llm/treatment_agent.py` | Determines the accounting treatment: obligations, transaction price, recognition method, schedule | Judgments only; all arithmetic in Python |
+| 4 | `app/llm/audit_agent.py` | Applies the review checklist to the contract text and cross-checks the layers above it | No — rule-based |
+| 5 | `app/llm/memo_agent.py` | Produces the schedule, journal entries, materiality conclusions and the memo | Prose only, guarded against unsourced figures |
 
-# Prerequisites
+Agent 4 is the only stage holding every upstream output at once, so it is the only one that can
+catch a contradiction between them. Agent 5's language model writes narrative and nothing else: a
+whitelist rejects any figure that did not come from the deterministic layer, and the memo falls
+back to a template if the guard trips.
 
-Before running the project, install:
+**Knowledge bases** (`documents/knowledge_base/`)
 
-* Python 3.12.10
-* Ollama (https://ollama.com/download)
-
-Verify the installations:
-
-```bash
-python --version
-```
-
-```bash
-ollama --version
-```
+- `KB1_asc606_guidance.jsonl` — ASC 606 guidance, keyed to paragraph references
+- `KB2_revlens_policy.jsonl` — the entity's own revenue policy
+- `KB3_review_checklist.jsonl` — the review checklist Agent 4 applies
 
 ---
 
-# Installation
+## Requirements
 
-## 1. Clone the Repository
-
-```bash
-git clone <repository-url>
-
-cd revenue-lens
-```
-
----
-
-## 2. Create a Virtual Environment
-
-Windows
+- Python **3.12** (the code uses `X | Y` type syntax; 3.9 will not run it)
+- An OpenAI API key
 
 ```bash
 py -3.12 -m venv venv
+venv\Scripts\Activate.ps1        # PowerShell; use source venv/bin/activate elsewhere
+py -3.12 -m pip install -r requirements.txt
 ```
 
-macOS/Linux
+### Configuration
 
-```bash
-python3 -m venv venv
+Copy `.env.example` to `.env` and fill it in:
+
 ```
+OLLAMA_BASE_URL=https://api.openai.com
+OLLAMA_MODEL=gpt-4.1-mini
+OPENAI_API_KEY=sk-...
+```
+
+The `OLLAMA_*` names are historical. The project began on a local Ollama server running Qwen3
+1.7B; that model proved too weak for the accounting judgments and the project moved to the
+OpenAI API. `app/llm/client.py` speaks the OpenAI protocol and reads these three variables, so
+pointing `OLLAMA_BASE_URL` at a local Ollama instance still works if you prefer to run a local
+model — the variable names were left alone to avoid breaking teammates' local configuration.
 
 ---
 
-## 3. Activate the Virtual Environment
+## Running
 
-### Windows (PowerShell)
+### The application
 
 ```powershell
-.\venv\Scripts\Activate.ps1
+py -3.12 -m streamlit run app\UI\ui.py
 ```
 
-### Windows (Command Prompt)
+Upload a contract, run the analysis, and read the memo. Every completed run is saved to
+`analysis_history/`, so an earlier contract can be reopened without calling the model again.
+The memo downloads as a PDF; the full analysis downloads as JSON.
 
-```cmd
-venv\Scripts\activate.bat
+### One contract from the command line
+
+```powershell
+py -3.12 -m app.pipeline.run_pipeline "app\llm\contracts\sub_onboarding\C11_CedarPoint.pdf" --out pipeline_result.json
 ```
 
-### macOS/Linux
+Must be run from the repository root. `pipeline_result.json` in the root is a committed sample of
+this output — the full five-agent trace for one contract, readable without an API key.
 
-```bash
-source venv/bin/activate
-```
+Programmatic use:
 
----
+```python
+from app.pipeline.run_pipeline import EndToEndPipeline
 
-## 4. Upgrade pip
+pipeline = EndToEndPipeline()                    # builds the retrieval index once
+result = pipeline.run_contract("contract.pdf")
 
-```bash
-python -m pip install --upgrade pip
-```
-
----
-
-## 5. Install Project Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 6. Download the Local Models
-
-```bash
-ollama pull qwen3:1.7b-q8_0
-ollama pull nomic-embed-text
-```
-
-Verify that the models has been installed:
-
-```bash
-ollama list
+result["memo"]                # the finished memo
+result["recognition_status"]  # the one-line conclusion
+result["agent5_output"]       # schedule, journal entries, review points
 ```
 
 ---
 
-## 7. Start the Ollama Server
+## Data
 
-```bash
-ollama serve
+50 synthetic SaaS contracts (`app/llm/contracts/`, C01–C50) spanning six kinds of arrangement —
+plain subscriptions, bundled onboarding, usage-based pricing, discounts and material rights,
+combinations, and deliberately ambiguous contracts where the correct answer is to refuse to
+conclude. Labels are in `evaluation/GroundTruth.xlsx`; plain-text copies of the contracts are in
+`evaluation/contract_txt/`.
+
+---
+
+## Evaluation
+
+Each agent is scored against the ground truth by its own script. Run them from `evaluation/`:
+
+```powershell
+$env:PYTHONUTF8=1
+py -3.12 evaluate_agent1.py           # extraction: field accuracy
+py -3.12 evaluate_agent2.py           # retrieval: precision / recall / F1
+py -3.12 evaluate_agent3.py           # treatment: per-field accuracy (add --run to call the model)
+py -3.12 evaluate_agent4.py           # review: detection precision / recall / F1
+py -3.12 evaluate_agent5.py           # memo: arithmetic integrity and the narrative guard
+py -3.12 evaluate_baseline.py         # single-prompt baseline, for comparison
 ```
 
-On Windows and macOS, Ollama typically runs automatically as a background service.
+`evaluate_agent3.py` with no arguments re-scores the saved outputs without calling the model;
+`--run` regenerates them.
+
+The metric differs by agent because the task does. Agents 1 and 3 answer questions that have an
+answer on every contract, so accuracy is meaningful and is reported both overall and on the
+subset where the answer is not the common default. Agents 2 and 4 search for items that are rare
+— roughly 1.4 checklist matters per contract out of 18 — where accuracy would be flattered by
+saying nothing at all, so precision and recall are reported separately. Agent 4 is deliberately
+tuned toward recall: a missed matter is a potential misstatement, a false alarm only costs
+reviewer time.
+
+Results are written to `evaluation/results/`. Reported figures are in the project report.
+
+A limitation worth stating: the 50 contracts are synthetic and there is no held-out split for the
+treatment layer, so its scores should be read as optimistic.
 
 ---
 
-## 8. Configure Environment Variables
+## Layout
 
-Copy the example environment file.
-
-Windows
-
-```bash
-copy .env.example .env
 ```
-
-macOS/Linux
-
-```bash
-cp .env.example .env
+app/
+  llm/           the five agents, the LLM client, and the contract corpus
+  pipeline/      run_pipeline.py - wires the agents end to end
+  prompts/       prompt templates (method only; no accounting rules hardcoded)
+  UI/            ui.py - the Streamlit application
+  baseline/      the single-prompt baseline
+  vector_db/     earlier ChromaDB experiment; the shipped retriever is TF-IDF
+documents/
+  knowledge_base/  KB1 guidance, KB2 policy, KB3 checklist
+evaluation/
+  evaluate_agent*.py, GroundTruth.xlsx, contract_txt/, results/
 ```
-
----
-
-# Test installation
-
-```bash
-python app/llm/client.py
-```
-
----
-
-# Running the Project
-
-```bash
-python app/main.py
-```
-
----
-
-# Architecture
-
-## Phase 1
-
-* PDF contract parsing
-* RAG pipeline
-* Single-prompt baseline
-* Revenue schedule generation
-
-## Phase 2
-
-* Contract Understanding Agent
-* Accounting Standards Agent
-* Audit & Risk Agent
-* Financial Impact Agent
-* Decision & Synthesis Agent
-
-## Phase 3
-
-* Evaluation framework
-* Baseline vs. multi-agent comparison
-* Accuracy and performance analysis
-* Explainability metrics
-
----
-
-# Development Workflow
-
-Whenever a new team member sets up the project:
-
-1. Install Python 3.12.10
-2. Install Ollama
-3. Clone the repository
-4. Create and activate a virtual environment
-5. Install project dependencies
-6. Pull the Qwen3 1.7B model
-7. Copy `.env.example` to `.env`
-8. Start Ollama
-9. Run the application
-
----
-
-# Future Improvements
-
-* Additional open-weight models
-* Agent memory
-* Human-in-the-loop review
-* Financial statement impact visualization
-* Web interface
-* Automated benchmark dataset
-* Cloud deployment support

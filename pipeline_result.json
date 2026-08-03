@@ -1,0 +1,1881 @@
+{
+  "source_file": "C11_CedarPoint.pdf",
+  "contract_path": "app\\llm\\contracts\\sub_onboarding\\C11_CedarPoint.pdf",
+  "memo": "==============================================================================\nREVENUE RECOGNITION MEMORANDUM\n==============================================================================\nContract:            RL-2025-0633\nCustomer:            Cedar Point Wealth Advisors, LP\nPrepared by:         Treatment Agent (Agent 3)\nReviewed by:         Audit Agent (Agent 4) - 18-item review checklist\nStandard:            ASC 606, Revenue from Contracts with Customers\nRecognition status:  Cleared for recognition; open items to be resolved before period close\n==============================================================================\n\n1. PURPOSE AND SCOPE\n\n   This memorandum documents the revenue recognition analysis for the\n   arrangement identified above under ASC 606, Revenue from Contracts with\n   Customers, and records the accounting conclusion, the recognition\n   schedule, the journal entries, and the open items for follow-up.\n\n2. FACTS AND CIRCUMSTANCES\n\n   Cedar Point Wealth Advisors, LP has entered into a 12-month subscription\n   contract with a total transaction price of $15,000. This amount comprises\n   a fixed annual platform subscription fee of $12,000 and a one-time\n   implementation service fee of $3,000. The contract includes standard\n   support and updates as part of the subscription and contains no usage-\n   based fees or discounts. The contract is valid and enforceable with\n   defined terms, auto-renewal provisions, and no collectibility concerns.\n\n3. AUTHORITATIVE GUIDANCE\n\n   ASC 606-10-05-4               Revenue model — overview\n   ASC 606-10-55-42 to 55-45     Customer options / material right; Material rights — discounted renewals/options\n   ASC 606-10-25-14(b); 25-27    Subscription — single PO, ratable\n   ASC 606-10-25-19 to 25-21; 55-51  Onboarding — non-distinct by default\n\n   The paragraph references above point to the relevant provisions of ASC\n   606; the entity's revenue policy paraphrases those provisions and should\n   be read together with them.\n\n4. ANALYSIS\n\n   Identify the contract with the customer\n      The Company has concluded that a valid, enforceable contract exists.\n      We have concluded that a valid contract exists under ASC 606 as the\n      agreement specifies the subscription term, fees, renewal terms at then-\n      current list pricing, and enforceable termination provisions. There are no\n      indications of unconstrained cancellation rights or collectibility issues,\n      satisfying the criteria for contract identification.\n\n   Identify the performance obligations\n      1 performance obligation(s) were identified: core_subscription. On\n      onboarding, onboarding is not distinct and is combined into the\n      subscription.\n      The contract contains a single performance obligation, which is the\n      combined subscription service. The one-time implementation service is not\n      distinct because access to the platform is conditioned on completion of\n      implementation, and the implementation is integrated with the subscription\n      service. Therefore, the implementation service is combined with the\n      subscription into one performance obligation.\n\n   Determine the transaction price\n      The transaction price is $15,000.00. The arrangement includes no variable\n      consideration and no discount.\n      The transaction price is fixed at $15,000, consisting of the $12,000\n      annual subscription fee and the $3,000 implementation fee. There are no\n      variable consideration components, discounts, or material rights affecting\n      the transaction price. Renewal pricing is at then-current list prices and\n      does not confer a material right.\n\n   Allocate the transaction price to the performance obligations\n      A single performance obligation was identified; no allocation is required.\n      Since there is only one combined performance obligation, the entire\n      transaction price of $15,000 is allocated to that single obligation. No\n      allocation among multiple obligations is necessary.\n\n   Recognise revenue as performance obligations are satisfied\n      Revenue is recognised ratably over time over 12 months.\n      Revenue is recognised over time on a ratable basis over the 12-month\n      contract term. This reflects the continuous transfer of control of the\n      subscription service to the customer throughout the period. The\n      implementation service is included in this pattern of recognition as it is\n      not distinct.\n\n5. REVENUE RECOGNITION SCHEDULE\n\n   Mo  Period                            Billed       Revenue       Balance\n   ------------------------------------------------------------------------------\n   1   07/01/2025 - 07/31/2025       $15,000.00     $1,250.00    $13,750.00\n   2   08/01/2025 - 08/31/2025            $0.00     $1,250.00    $12,500.00\n   3   09/01/2025 - 09/30/2025            $0.00     $1,250.00    $11,250.00\n   4   10/01/2025 - 10/31/2025            $0.00     $1,250.00    $10,000.00\n   5   11/01/2025 - 11/30/2025            $0.00     $1,250.00     $8,750.00\n   6   12/01/2025 - 12/31/2025            $0.00     $1,250.00     $7,500.00\n   7   01/01/2026 - 01/31/2026            $0.00     $1,250.00     $6,250.00\n   8   02/01/2026 - 02/28/2026            $0.00     $1,250.00     $5,000.00\n   9   03/01/2026 - 03/31/2026            $0.00     $1,250.00     $3,750.00\n   10  04/01/2026 - 04/30/2026            $0.00     $1,250.00     $2,500.00\n   11  05/01/2026 - 05/31/2026            $0.00     $1,250.00     $1,250.00\n   12  06/01/2026 - 06/30/2026            $0.00     $1,250.00         $0.00\n   ------------------------------------------------------------------------------\n                                     $15,000.00    $15,000.00\n\n   Revenue account            4100 Subscription Revenue\n   Balance sheet account      Deferred revenue (contract liability), 2400 Deferred Revenue - Current\n\n   Revenue is recognised on a straight-line monthly basis. Partial first or\n   last months are not prorated by days; where the term starts mid-month this\n   affects the timing pattern only, not the total transaction price.\n\n6. JOURNAL ENTRIES\n\n   On invoice\n      Dr  1200 Accounts Receivable                         $15,000.00\n          Cr  2400 Deferred Revenue - Current              $15,000.00\n      Record the contract liability on billing in advance of performance.\n\n   Monthly, over the subscription term\n      Dr  2400 Deferred Revenue - Current                   $1,250.00\n          Cr  4100 Subscription Revenue                     $1,250.00\n      Release the contract liability as the subscription is delivered.\n\n7. OPEN ITEMS AND MATTERS FOR FOLLOW-UP\n\n   [MEDIUM] Bundled onboarding distinctness\n      Facts and circumstances:  separately priced onboarding fee of 3000.0 alongside subscription of 12000.0\n      Question:                 Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardized, optional, and available elsewhere (suggesting a separate performance obligation)? Confirm whether the onboarding fee is being front-loaded rather than recognized over the service period.\n      Recommended procedure:    Document whether the onboarding is customised and required for platform access (combine into the subscription obligation) or standardised and optional (separate obligation). Retain the evidence relied on.\n      Timing:                   Before period close\n      Disposition:              open\n      The separately priced onboarding fee of $3,000 alongside the $12,000\n      subscription fee warrants documentation of whether the onboarding is\n      customised and required for platform access, which supports combining it\n      into the subscription performance obligation, or if it is standardised and\n      optional, which would support treating it as a separate obligation.\n      Evidence relied upon for this conclusion should be retained.\n\n8. MATTERS CONSIDERED AND CONCLUDED IMMATERIAL\n\n   No quantified matter was concluded immaterial on this contract.\n\n9. COMPLETENESS OF REVIEW\n\n   The 18-item review checklist was completed in full. Of the 18 matters, 1\n   is reported at section 7, 0 at section 8, and 17 were considered and\n   concluded not applicable to this contract on the facts. The completed\n   checklist, with the basis for each conclusion, is retained in the\n   structured review record.\n\n10. CONCLUSION\n\n   In summary, the contract with Cedar Point Wealth Advisors, LP represents a\n   single performance obligation comprising the subscription service and the\n   implementation service combined. The fixed transaction price of $15,000 is\n   allocated entirely to this obligation. Revenue is recognised ratably over\n   the 12-month term, consistent with the continuous transfer of control.\n   There are no variable consideration elements, discounts, or material\n   rights impacting the accounting. The contract is valid and enforceable\n   under ASC 606, and the revenue recognition approach aligns with the\n   guidance and relevant policies.\n\n   Recognition status: Cleared for recognition; open items to be resolved before period close\n\n   Scope and limitations: allocation of the transaction price across\n   performance obligations by relative standalone selling price is not\n   implemented; partial periods are not prorated by days; variable\n   consideration is excluded from the transaction price and recognised as\n   incurred.\n\n11. PREPARED BY / REVIEWED BY\n\n   Preparer sign-off ______________________  Date __________\n   Reviewer sign-off ______________________  Date __________\n==============================================================================",
+  "recognition_status": "Cleared for recognition; open items to be resolved before period close",
+  "disposition": "review_before_close",
+  "agent1_output": {
+    "candidate_output": {
+      "contract_id": "RL-2025-0633",
+      "provider_name": "RevLens",
+      "customer_name": "Cedar Point Wealth Advisors, LP",
+      "effective_date": "July 1, 2025",
+      "subscription_term_months": 12,
+      "start_date": "July 1, 2025",
+      "end_date": null,
+      "services_summary": "3.1 Subscription. RevLens grants Customer a hosted subscription to the RevLens Portfolio Management",
+      "hosted_service": true,
+      "authorized_users": null,
+      "implementation_services": true,
+      "implementation_required_for_platform": true,
+      "fees": [
+        {
+          "name": "Platform Subscription (annual)",
+          "amount": {
+            "amount": 12000.0,
+            "currency": "USD"
+          },
+          "billing_frequency": "annual"
+        },
+        {
+          "name": "Implementation Services (one-time)",
+          "amount": {
+            "amount": 3000.0,
+            "currency": "USD"
+          },
+          "billing_frequency": "one_time"
+        }
+      ],
+      "discount_terms": {
+        "has_discount": false
+      },
+      "usage_fee": null,
+      "onboarding_terms": {
+        "required": true,
+        "fee": {
+          "amount": 3000.0,
+          "currency": "USD"
+        },
+        "billing_frequency": "one_time",
+        "required_for_platform": true,
+        "timeline": "approximately",
+        "notes": "3.2 Implementation Services."
+      },
+      "renewal_terms": {
+        "auto_renewal": true,
+        "renewal_term_months": 12,
+        "notice_days": 30,
+        "renewal_price": null,
+        "renewal_pricing_basis": "then-current list pricing"
+      },
+      "termination_terms": {
+        "termination_for_breach": true,
+        "notice_days": 30,
+        "convenience_termination": false,
+        "missing_terms": []
+      },
+      "ambiguous_clauses": [],
+      "source_file": "C11_CedarPoint.pdf"
+    },
+    "validated_output": {
+      "contract_id": "RL-2025-0633",
+      "provider_name": "RevLens",
+      "customer_name": "Cedar Point Wealth Advisors, LP",
+      "effective_date": "2025-07-01",
+      "subscription_term_months": 12,
+      "start_date": "2025-07-01",
+      "end_date": null,
+      "services_summary": "3.1 Subscription. RevLens grants Customer a hosted subscription to the RevLens Portfolio Management",
+      "hosted_service": true,
+      "authorized_users": null,
+      "implementation_services": true,
+      "implementation_required_for_platform": true,
+      "fees": [
+        {
+          "name": "Platform Subscription (annual)",
+          "amount": {
+            "amount": 12000.0,
+            "currency": "USD"
+          },
+          "billing_frequency": "annual",
+          "payment_timing": null,
+          "notes": null
+        },
+        {
+          "name": "Implementation Services (one-time)",
+          "amount": {
+            "amount": 3000.0,
+            "currency": "USD"
+          },
+          "billing_frequency": "one_time",
+          "payment_timing": null,
+          "notes": null
+        }
+      ],
+      "discount_terms": {
+        "has_discount": false,
+        "discount_type": "unknown",
+        "percentage": null,
+        "amount": null,
+        "applies_to": null,
+        "duration": null,
+        "notes": null
+      },
+      "usage_fee": null,
+      "onboarding_terms": {
+        "required": true,
+        "fee": {
+          "amount": 3000.0,
+          "currency": "USD"
+        },
+        "billing_frequency": "one_time",
+        "required_for_platform": true,
+        "timeline": "approximately",
+        "notes": "3.2 Implementation Services."
+      },
+      "renewal_terms": {
+        "auto_renewal": true,
+        "renewal_term_months": 12,
+        "notice_days": 30,
+        "renewal_price": null,
+        "renewal_pricing_basis": "then-current list pricing"
+      },
+      "termination_terms": {
+        "termination_for_breach": true,
+        "notice_days": 30,
+        "convenience_termination": false,
+        "missing_terms": []
+      },
+      "ambiguous_clauses": [],
+      "source_file": "C11_CedarPoint.pdf",
+      "raw_text_hash": null
+    },
+    "validation_errors": [],
+    "source_file": "C11_CedarPoint.pdf"
+  },
+  "agent2_output": {
+    "agent": "Agent 2 - KB-Balanced Retrieval + LLM Relevance Reranking",
+    "queries": [
+      "ASC 606 contract existence enforceable rights collectibility transaction price performance obligations",
+      "ASC 606 hosted SaaS subscription stand-ready service revenue recognized over time",
+      "SaaS contract services: 3.1 Subscription. RevLens grants Customer a hosted subscription to the RevLens Portfolio Management",
+      "ASC 606 implementation onboarding setup services distinct performance obligation nonrefundable upfront fee",
+      "implementation required for SaaS platform not distinct combined performance obligation",
+      "onboarding upfront fee implementation revenue recognition {\"required\": true, \"fee\": {\"amount\": 3000.0, \"currency\": \"USD\"}, \"billing_frequency\": \"one_time\", \"required_for_platform\": true, \"timeline\": \"approximately\", \"notes\": \"3.2 Implementation Services.\"}",
+      "ASC 606 renewal option material right renewal pricing {\"auto_renewal\": true, \"renewal_term_months\": 12, \"notice_days\": 30, \"renewal_price\": null, \"renewal_pricing_basis\": \"then-current list pricing\"}",
+      "ASC 606 termination rights enforceable contract term {\"termination_for_breach\": true, \"notice_days\": 30, \"convenience_termination\": false, \"missing_terms\": []}"
+    ],
+    "top_k": 20,
+    "candidate_top_k": 30,
+    "min_results": 14,
+    "score_threshold": 0.45,
+    "retrieval_weight": 0.4,
+    "llm_weight": 0.6,
+    "final_result_count": 15,
+    "KB1 Chunks": "KB1_16; KB1_1; KB1_4; KB1_6; KB1_5; KB1_15; KB1_3",
+    "KB2 Chunks": "KB2_2; KB2_1; KB2_11; KB2_3; KB2_10",
+    "KB3 Chunks": "KB3_10; KB3_1; KB3_2",
+    "retrieved_policy_chunks": [
+      {
+        "chunk_id": "KB1_16_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_16",
+        "kb_prefix": "KB1",
+        "title": "Nonrefundable upfront fees",
+        "text": "topic: Nonrefundable upfront fees text: A nonrefundable upfront fee (for example, an activation, setup, or initiation fee) is assessed to determine whether it relates to the transfer of a promised good or service. If the upfront fee does not relate to a distinct good or service, it is an advance payment for future goods or services and is recognized as revenue when those future goods or services are provided. Where the fee, combined with the customer's option to renew without paying it again, ef",
+        "metadata": {
+          "id": "KB1_16",
+          "name": "nonrefundable_upfront_fees",
+          "topic": "Nonrefundable upfront fees",
+          "asc_ref": "606-10-55-50 to 55-51",
+          "text": "A nonrefundable upfront fee (for example, an activation, setup, or initiation fee) is assessed to determine whether it relates to the transfer of a promised good or service. If the upfront fee does not relate to a distinct good or service, it is an advance payment for future goods or services and is recognized as revenue when those future goods or services are provided. Where the fee, combined with the customer's option to renew without paying it again, effectively provides a material right with respect to future contract periods, a portion of the fee is allocated to that right.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.9020175892434052,
+        "best_single_query_score": 0.2680410592574783,
+        "kb_candidate_rank": 1,
+        "candidate_rank": 1,
+        "normalized_retrieval_score": 1.0,
+        "llm_relevance_score": 0.95,
+        "final_score": 0.97,
+        "rank": 1,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB2_2_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_2",
+        "kb_prefix": "KB2",
+        "title": "Onboarding — non-distinct by default",
+        "text": "topic: Onboarding — non-distinct by default text: RevLens treats implementation, configuration, data-migration, and setup services as not distinct from the subscription by default, and combines them into the single subscription performance obligation recognized over the service period. This default applies whenever the services are configured to the customer's environment or the customer's production access is conditioned on their completion. Onboarding fees are not recognized when billed or whe",
+        "metadata": {
+          "id": "KB2_2",
+          "name": "onboarding_default_non_distinct",
+          "topic": "Onboarding — non-distinct by default",
+          "related_asc": "606-10-25-19 to 25-21; 55-51",
+          "text": "RevLens treats implementation, configuration, data-migration, and setup services as not distinct from the subscription by default, and combines them into the single subscription performance obligation recognized over the service period. This default applies whenever the services are configured to the customer's environment or the customer's production access is conditioned on their completion. Onboarding fees are not recognized when billed or when the work is completed; they are recognized over the subscription term together with the subscription.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.7232027563038734,
+        "best_single_query_score": 0.21566961813850616,
+        "kb_candidate_rank": 1,
+        "candidate_rank": 3,
+        "normalized_retrieval_score": 1.0,
+        "llm_relevance_score": 0.9,
+        "final_score": 0.9400000000000001,
+        "rank": 2,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB3_10_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_10",
+        "kb_prefix": "KB3",
+        "title": "material_right_renewal_or_fee",
+        "text": "id: KB3_10 name: material_right_renewal_or_fee risk: A discounted renewal or nonrefundable upfront fee may hide a separate performance obligation. trigger: The contract grants a renewal or future-purchase option at a discount, or a nonrefundable upfront fee that is not charged again on renewal. review_question: Does the renewal/option price sit significantly below the price offered to comparable customers (a material right), requiring a portion of the transaction price to be allocated to it and",
+        "metadata": {
+          "id": "KB3_10",
+          "name": "material_right_renewal_or_fee",
+          "risk": "A discounted renewal or nonrefundable upfront fee may hide a separate performance obligation.",
+          "trigger": "The contract grants a renewal or future-purchase option at a discount, or a nonrefundable upfront fee that is not charged again on renewal.",
+          "review_question": "Does the renewal/option price sit significantly below the price offered to comparable customers (a material right), requiring a portion of the transaction price to be allocated to it and recognized at exercise or expiry? For an upfront fee waived on renewal, has the material-right question been assessed?",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.8129117275011796,
+        "best_single_query_score": 0.23377210017078343,
+        "kb_candidate_rank": 1,
+        "candidate_rank": 2,
+        "normalized_retrieval_score": 1.0,
+        "llm_relevance_score": 0.85,
+        "final_score": 0.91,
+        "rank": 3,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB3_1_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_1",
+        "kb_prefix": "KB3",
+        "title": "bundled_onboarding_distinctness",
+        "text": "id: KB3_1 name: bundled_onboarding_distinctness risk: Bundled onboarding may be wrongly separated or wrongly combined; drives PO count and recognition pattern. trigger: The contract includes an onboarding, implementation, setup, configuration, data-migration, or activation fee alongside the subscription. review_question: Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardiz",
+        "metadata": {
+          "id": "KB3_1",
+          "name": "bundled_onboarding_distinctness",
+          "risk": "Bundled onboarding may be wrongly separated or wrongly combined; drives PO count and recognition pattern.",
+          "trigger": "The contract includes an onboarding, implementation, setup, configuration, data-migration, or activation fee alongside the subscription.",
+          "review_question": "Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardized, optional, and available elsewhere (suggesting a separate performance obligation)? Confirm whether the onboarding fee is being front-loaded rather than recognized over the service period.",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.7039553781250775,
+        "best_single_query_score": 0.24176919743336597,
+        "kb_candidate_rank": 2,
+        "candidate_rank": 5,
+        "normalized_retrieval_score": 0.7436971711063339,
+        "llm_relevance_score": 0.85,
+        "final_score": 0.8074788684425336,
+        "rank": 4,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB2_1_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_1",
+        "kb_prefix": "KB2",
+        "title": "Subscription — single PO, ratable",
+        "text": "topic: Subscription — single PO, ratable text: RevLens accounts for a standard hosted subscription as a single performance obligation. Access to the Platform, product updates, and standard support are provided together as one combined offering and are not separated into multiple performance obligations, because they are not separately priced or separately purchasable and serve to maintain a current, supported subscription. Subscription fees are recognized ratably (straight-line) over the subscri",
+        "metadata": {
+          "id": "KB2_1",
+          "name": "standard_subscription_recognition",
+          "topic": "Subscription — single PO, ratable",
+          "related_asc": "606-10-25-14(b); 25-27",
+          "text": "RevLens accounts for a standard hosted subscription as a single performance obligation. Access to the Platform, product updates, and standard support are provided together as one combined offering and are not separated into multiple performance obligations, because they are not separately priced or separately purchasable and serve to maintain a current, supported subscription. Subscription fees are recognized ratably (straight-line) over the subscription term, beginning when access is provisioned.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.568502929592997,
+        "best_single_query_score": 0.19359780675198263,
+        "kb_candidate_rank": 2,
+        "candidate_rank": 12,
+        "normalized_retrieval_score": 0.6474379571199079,
+        "llm_relevance_score": 0.85,
+        "final_score": 0.7689751828479632,
+        "rank": 5,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB2_11_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_11",
+        "kb_prefix": "KB2",
+        "title": "Nonrefundable upfront fees",
+        "text": "topic: Nonrefundable upfront fees text: RevLens assesses nonrefundable upfront fees (such as activation or setup fees) for whether they relate to a distinct good or service. Where they do not, they are treated as advance payment for future services and recognized over the period those services are provided. Where such a fee is not charged again on renewal, RevLens evaluates whether it gives rise to a material right and, if so, allocates a portion of the fee to that right. id: KB2_11 name: nonref",
+        "metadata": {
+          "id": "KB2_11",
+          "name": "nonrefundable_upfront_fees_policy",
+          "topic": "Nonrefundable upfront fees",
+          "related_asc": "606-10-55-50 to 55-51",
+          "text": "RevLens assesses nonrefundable upfront fees (such as activation or setup fees) for whether they relate to a distinct good or service. Where they do not, they are treated as advance payment for future services and recognized over the period those services are provided. Where such a fee is not charged again on renewal, RevLens evaluates whether it gives rise to a material right and, if so, allocates a portion of the fee to that right.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.5574574334211798,
+        "best_single_query_score": 0.21374720097914032,
+        "kb_candidate_rank": 4,
+        "candidate_rank": 14,
+        "normalized_retrieval_score": 0.6222651901055135,
+        "llm_relevance_score": 0.85,
+        "final_score": 0.7589060760422054,
+        "rank": 6,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB2_3_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_3",
+        "kb_prefix": "KB2",
+        "title": "Onboarding — distinct (exception)",
+        "text": "topic: Onboarding — distinct (exception) text: Onboarding or related services are treated as a distinct, separate performance obligation only when they are standardized, optional, and available to the customer from third parties (or capable of being performed by the customer), and the customer's access to the Platform does not depend on RevLens performing them. Where these conditions are met and documented, the service is a separate performance obligation and the transaction price allocated to i",
+        "metadata": {
+          "id": "KB2_3",
+          "name": "onboarding_distinct_exception",
+          "topic": "Onboarding — distinct (exception)",
+          "related_asc": "606-10-25-19 to 25-22",
+          "text": "Onboarding or related services are treated as a distinct, separate performance obligation only when they are standardized, optional, and available to the customer from third parties (or capable of being performed by the customer), and the customer's access to the Platform does not depend on RevLens performing them. Where these conditions are met and documented, the service is a separate performance obligation and the transaction price allocated to it is recognized at the point the service is delivered and accepted.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.5588560145597441,
+        "best_single_query_score": 0.150688066325168,
+        "kb_candidate_rank": 3,
+        "candidate_rank": 13,
+        "normalized_retrieval_score": 0.6254525668067643,
+        "llm_relevance_score": 0.75,
+        "final_score": 0.7001810267227058,
+        "rank": 7,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB1_1_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_1",
+        "kb_prefix": "KB1",
+        "title": "Revenue model — overview",
+        "text": "topic: Revenue model — overview text: ASC 606 recognizes revenue from contracts with customers under a five-step model: (1) identify the contract with the customer; (2) identify the performance obligations in the contract; (3) determine the transaction price; (4) allocate the transaction price to the performance obligations; and (5) recognize revenue as (or when) each performance obligation is satisfied. Because each performance obligation is accounted for separately, identifying the obligations",
+        "metadata": {
+          "id": "KB1_1",
+          "name": "revenue_recognition_5step_model",
+          "topic": "Revenue model — overview",
+          "asc_ref": "606-10-05-4",
+          "text": "ASC 606 recognizes revenue from contracts with customers under a five-step model: (1) identify the contract with the customer; (2) identify the performance obligations in the contract; (3) determine the transaction price; (4) allocate the transaction price to the performance obligations; and (5) recognize revenue as (or when) each performance obligation is satisfied. Because each performance obligation is accounted for separately, identifying the obligations and allocating the transaction price among them drives the recognition pattern and timing.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.7047111040606112,
+        "best_single_query_score": 0.2737134124840869,
+        "kb_candidate_rank": 2,
+        "candidate_rank": 4,
+        "normalized_retrieval_score": 0.40560888265111533,
+        "llm_relevance_score": 0.8,
+        "final_score": 0.6422435530604461,
+        "rank": 8,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB2_10_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_10",
+        "kb_prefix": "KB2",
+        "title": "Material rights — discounted renewals/options",
+        "text": "topic: Material rights — discounted renewals/options text: RevLens evaluates renewal options and future-purchase options for material rights. Where a contract entitles the customer to renew or purchase additional services at a price significantly below the price offered to comparable customers, RevLens treats the option as a separate performance obligation, allocates a portion of the transaction price to it, and recognizes that amount when the option is exercised or expires. id: KB2_10 name: mat",
+        "metadata": {
+          "id": "KB2_10",
+          "name": "material_rights_renewals",
+          "topic": "Material rights — discounted renewals/options",
+          "related_asc": "606-10-55-42 to 55-45",
+          "text": "RevLens evaluates renewal options and future-purchase options for material rights. Where a contract entitles the customer to renew or purchase additional services at a price significantly below the price offered to comparable customers, RevLens treats the option as a separate performance obligation, allocates a portion of the transaction price to it, and recognizes that amount when the option is exercised or expires.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.4634812832855384,
+        "best_single_query_score": 0.11840869386799882,
+        "kb_candidate_rank": 5,
+        "candidate_rank": 17,
+        "normalized_retrieval_score": 0.40809285275861884,
+        "llm_relevance_score": 0.7,
+        "final_score": 0.5832371411034476,
+        "rank": 9,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB1_4_chunk_2",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_4",
+        "kb_prefix": "KB1",
+        "title": "Step 2 — separately identifiable (factors)",
+        "text": "rately identifiable and are therefore combined into a single performance obligation. id: KB1_4 name: separately_identifiable_factors asc_ref: 606-10-25-21 source: ASC 606 (paraphrased)",
+        "metadata": {
+          "id": "KB1_4",
+          "name": "separately_identifiable_factors",
+          "topic": "Step 2 — separately identifiable (factors)",
+          "asc_ref": "606-10-25-21",
+          "text": "In evaluating whether a promise is separately identifiable, the objective is to determine whether the entity is transferring each good or service individually or, instead, a combined item to which the individual goods or services are inputs. Factors indicating that two or more promises are not separately identifiable include: the entity provides a significant service of integrating the goods or services into a combined output; one or more of the goods or services significantly modifies or customizes another; or the goods or services are highly interdependent or highly interrelated. Implementation, configuration, data-migration, or setup activities that an entity must complete before the customer can access or operate the underlying service typically indicate the promises are not separately identifiable and are therefore combined into a single performance obligation.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.6996170889784513,
+        "best_single_query_score": 0.12528847989224445,
+        "kb_candidate_rank": 3,
+        "candidate_rank": 6,
+        "normalized_retrieval_score": 0.390263024588356,
+        "llm_relevance_score": 0.7,
+        "final_score": 0.5761052098353424,
+        "rank": 10,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB1_6_chunk_1",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_6",
+        "kb_prefix": "KB1",
+        "title": "Step 5 — recognition over time",
+        "text": "entity, and the entity has an enforceable right to payment for performance completed to date. Software-as-a-service arrangements generally meet criterion (a), because the customer continuously receives and consumes the benefit of access throughout the term; subscription revenue is therefore recognized over the service period rather than at a point in time. id: KB1_6 name: over_time_recognition asc_ref: 606-10-25-27 source: ASC 606 (paraphrased)",
+        "metadata": {
+          "id": "KB1_6",
+          "name": "over_time_recognition",
+          "topic": "Step 5 — recognition over time",
+          "asc_ref": "606-10-25-27",
+          "text": "An entity recognizes revenue over time if any one of the following criteria is met: (a) the customer simultaneously receives and consumes the benefits provided as the entity performs; (b) the entity's performance creates or enhances an asset the customer controls as it is created or enhanced; or (c) the entity's performance does not create an asset with an alternative use to the entity, and the entity has an enforceable right to payment for performance completed to date. Software-as-a-service arrangements generally meet criterion (a), because the customer continuously receives and consumes the benefit of access throughout the term; subscription revenue is therefore recognized over the service period rather than at a point in time.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.605156114448141,
+        "best_single_query_score": 0.16463888830004053,
+        "kb_candidate_rank": 5,
+        "candidate_rank": 8,
+        "normalized_retrieval_score": 0.1056967867127044,
+        "llm_relevance_score": 0.75,
+        "final_score": 0.4922787146850817,
+        "rank": 11,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB1_5_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_5",
+        "kb_prefix": "KB1",
+        "title": "Step 2 — series of distinct services",
+        "text": "topic: Step 2 — series of distinct services text: A series of distinct goods or services that are substantially the same and have the same pattern of transfer to the customer is accounted for as a single performance obligation. This applies when each distinct increment is satisfied over time and the same method would be used to measure progress toward satisfaction. A subscription that provides continuous access to a hosted application over the contract period is the typical example: it is treate",
+        "metadata": {
+          "id": "KB1_5",
+          "name": "series_of_services",
+          "topic": "Step 2 — series of distinct services",
+          "asc_ref": "606-10-25-14(b), 25-15",
+          "text": "A series of distinct goods or services that are substantially the same and have the same pattern of transfer to the customer is accounted for as a single performance obligation. This applies when each distinct increment is satisfied over time and the same method would be used to measure progress toward satisfaction. A subscription that provides continuous access to a hosted application over the contract period is the typical example: it is treated as a single performance obligation satisfied over time, rather than as a series of separately accounted-for daily or monthly promises.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.6117769677262073,
+        "best_single_query_score": 0.1362844732912213,
+        "kb_candidate_rank": 4,
+        "candidate_rank": 7,
+        "normalized_retrieval_score": 0.1256422860920427,
+        "llm_relevance_score": 0.7,
+        "final_score": 0.47025691443681705,
+        "rank": 12,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB3_2_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_2",
+        "kb_prefix": "KB3",
+        "title": "large_upfront_fee_size_trap",
+        "text": "id: KB3_2 name: large_upfront_fee_size_trap risk: A large onboarding/setup fee may be wrongly treated as distinct because of its size. trigger: An onboarding, implementation, or setup fee is large relative to the subscription fee. review_question: Is the conclusion on distinctness based on the nature of the service (integration, customization, dependency) rather than the dollar size of the fee? A large fee does not by itself make a service distinct. source: RevLens revenue review checklist (synt",
+        "metadata": {
+          "id": "KB3_2",
+          "name": "large_upfront_fee_size_trap",
+          "risk": "A large onboarding/setup fee may be wrongly treated as distinct because of its size.",
+          "trigger": "An onboarding, implementation, or setup fee is large relative to the subscription fee.",
+          "review_question": "Is the conclusion on distinctness based on the nature of the service (integration, customization, dependency) rather than the dollar size of the fee? A large fee does not by itself make a service distinct.",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.5047950378989009,
+        "best_single_query_score": 0.1775903678574125,
+        "kb_candidate_rank": 3,
+        "candidate_rank": 15,
+        "normalized_retrieval_score": 0.27520351382352065,
+        "llm_relevance_score": 0.6,
+        "final_score": 0.47008140552940825,
+        "rank": 13,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB1_15_chunk_1",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_15",
+        "kb_prefix": "KB1",
+        "title": "Step 4 — customer options / material right",
+        "text": "When a material right exists (for example, a significantly discounted renewal option, or a free or reduced-price future add-on), the entity allocates a portion of the transaction price to it and recognizes that amount when the future goods or services are transferred or when the option expires. id: KB1_15 name: material_right asc_ref: 606-10-55-42 to 55-45 source: ASC 606 (paraphrased)",
+        "metadata": {
+          "id": "KB1_15",
+          "name": "material_right",
+          "topic": "Step 4 — customer options / material right",
+          "asc_ref": "606-10-55-42 to 55-45",
+          "text": "An option granting the customer the right to acquire additional goods or services free or at a discount gives rise to a separate performance obligation if it provides a material right — that is, a right the customer would not receive without entering into the contract, such as a discount incremental to the range of discounts typically given to that class of customer. When a material right exists (for example, a significantly discounted renewal option, or a free or reduced-price future add-on), the entity allocates a portion of the transaction price to it and recognizes that amount when the future goods or services are transferred or when the option expires.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.5838652510862701,
+        "best_single_query_score": 0.21780238152687315,
+        "kb_candidate_rank": 7,
+        "candidate_rank": 10,
+        "normalized_retrieval_score": 0.041557485608330655,
+        "llm_relevance_score": 0.75,
+        "final_score": 0.4666229942433322,
+        "rank": 14,
+        "passed_score_threshold": true
+      },
+      {
+        "chunk_id": "KB1_3_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_3",
+        "kb_prefix": "KB1",
+        "title": "Step 2 — distinct performance obligations",
+        "text": "topic: Step 2 — distinct performance obligations text: A good or service is a distinct performance obligation when both criteria are met: (a) the customer can benefit from the good or service on its own or together with other resources readily available to the customer (capable of being distinct); and (b) the entity's promise to transfer it is separately identifiable from other promises in the contract (distinct within the context of the contract). If a promised good or service is not distinct,",
+        "metadata": {
+          "id": "KB1_3",
+          "name": "distinct_test",
+          "topic": "Step 2 — distinct performance obligations",
+          "asc_ref": "606-10-25-19 to 25-22",
+          "text": "A good or service is a distinct performance obligation when both criteria are met: (a) the customer can benefit from the good or service on its own or together with other resources readily available to the customer (capable of being distinct); and (b) the entity's promise to transfer it is separately identifiable from other promises in the contract (distinct within the context of the contract). If a promised good or service is not distinct, it is combined with other promised goods or services until a distinct bundle is identified. A good or service that is capable of being distinct may still fail criterion (b) because, in the context of the specific contract, it is not separately identifiable from the other promises.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.5983847342064924,
+        "best_single_query_score": 0.14544983593867006,
+        "kb_candidate_rank": 6,
+        "candidate_rank": 9,
+        "normalized_retrieval_score": 0.08529782078870625,
+        "llm_relevance_score": 0.7,
+        "final_score": 0.4541191283154825,
+        "rank": 15,
+        "passed_score_threshold": true
+      }
+    ],
+    "candidate_KB1 Chunks": "KB1_16; KB1_1; KB1_4; KB1_5; KB1_6; KB1_3; KB1_15; KB1_18",
+    "candidate_KB2 Chunks": "KB2_2; KB2_1; KB2_3; KB2_11; KB2_10; KB2_15; KB2_8",
+    "candidate_KB3 Chunks": "KB3_10; KB3_1; KB3_2; KB3_18; KB3_9",
+    "candidate_policy_chunks": [
+      {
+        "chunk_id": "KB1_16_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_16",
+        "kb_prefix": "KB1",
+        "title": "Nonrefundable upfront fees",
+        "text": "topic: Nonrefundable upfront fees text: A nonrefundable upfront fee (for example, an activation, setup, or initiation fee) is assessed to determine whether it relates to the transfer of a promised good or service. If the upfront fee does not relate to a distinct good or service, it is an advance payment for future goods or services and is recognized as revenue when those future goods or services are provided. Where the fee, combined with the customer's option to renew without paying it again, ef",
+        "metadata": {
+          "id": "KB1_16",
+          "name": "nonrefundable_upfront_fees",
+          "topic": "Nonrefundable upfront fees",
+          "asc_ref": "606-10-55-50 to 55-51",
+          "text": "A nonrefundable upfront fee (for example, an activation, setup, or initiation fee) is assessed to determine whether it relates to the transfer of a promised good or service. If the upfront fee does not relate to a distinct good or service, it is an advance payment for future goods or services and is recognized as revenue when those future goods or services are provided. Where the fee, combined with the customer's option to renew without paying it again, effectively provides a material right with respect to future contract periods, a portion of the fee is allocated to that right.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.9020175892434052,
+        "best_single_query_score": 0.2680410592574783,
+        "kb_candidate_rank": 1,
+        "candidate_rank": 1
+      },
+      {
+        "chunk_id": "KB3_10_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_10",
+        "kb_prefix": "KB3",
+        "title": "material_right_renewal_or_fee",
+        "text": "id: KB3_10 name: material_right_renewal_or_fee risk: A discounted renewal or nonrefundable upfront fee may hide a separate performance obligation. trigger: The contract grants a renewal or future-purchase option at a discount, or a nonrefundable upfront fee that is not charged again on renewal. review_question: Does the renewal/option price sit significantly below the price offered to comparable customers (a material right), requiring a portion of the transaction price to be allocated to it and",
+        "metadata": {
+          "id": "KB3_10",
+          "name": "material_right_renewal_or_fee",
+          "risk": "A discounted renewal or nonrefundable upfront fee may hide a separate performance obligation.",
+          "trigger": "The contract grants a renewal or future-purchase option at a discount, or a nonrefundable upfront fee that is not charged again on renewal.",
+          "review_question": "Does the renewal/option price sit significantly below the price offered to comparable customers (a material right), requiring a portion of the transaction price to be allocated to it and recognized at exercise or expiry? For an upfront fee waived on renewal, has the material-right question been assessed?",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.8129117275011796,
+        "best_single_query_score": 0.23377210017078343,
+        "kb_candidate_rank": 1,
+        "candidate_rank": 2
+      },
+      {
+        "chunk_id": "KB2_2_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_2",
+        "kb_prefix": "KB2",
+        "title": "Onboarding — non-distinct by default",
+        "text": "topic: Onboarding — non-distinct by default text: RevLens treats implementation, configuration, data-migration, and setup services as not distinct from the subscription by default, and combines them into the single subscription performance obligation recognized over the service period. This default applies whenever the services are configured to the customer's environment or the customer's production access is conditioned on their completion. Onboarding fees are not recognized when billed or whe",
+        "metadata": {
+          "id": "KB2_2",
+          "name": "onboarding_default_non_distinct",
+          "topic": "Onboarding — non-distinct by default",
+          "related_asc": "606-10-25-19 to 25-21; 55-51",
+          "text": "RevLens treats implementation, configuration, data-migration, and setup services as not distinct from the subscription by default, and combines them into the single subscription performance obligation recognized over the service period. This default applies whenever the services are configured to the customer's environment or the customer's production access is conditioned on their completion. Onboarding fees are not recognized when billed or when the work is completed; they are recognized over the subscription term together with the subscription.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.7232027563038734,
+        "best_single_query_score": 0.21566961813850616,
+        "kb_candidate_rank": 1,
+        "candidate_rank": 3
+      },
+      {
+        "chunk_id": "KB1_1_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_1",
+        "kb_prefix": "KB1",
+        "title": "Revenue model — overview",
+        "text": "topic: Revenue model — overview text: ASC 606 recognizes revenue from contracts with customers under a five-step model: (1) identify the contract with the customer; (2) identify the performance obligations in the contract; (3) determine the transaction price; (4) allocate the transaction price to the performance obligations; and (5) recognize revenue as (or when) each performance obligation is satisfied. Because each performance obligation is accounted for separately, identifying the obligations",
+        "metadata": {
+          "id": "KB1_1",
+          "name": "revenue_recognition_5step_model",
+          "topic": "Revenue model — overview",
+          "asc_ref": "606-10-05-4",
+          "text": "ASC 606 recognizes revenue from contracts with customers under a five-step model: (1) identify the contract with the customer; (2) identify the performance obligations in the contract; (3) determine the transaction price; (4) allocate the transaction price to the performance obligations; and (5) recognize revenue as (or when) each performance obligation is satisfied. Because each performance obligation is accounted for separately, identifying the obligations and allocating the transaction price among them drives the recognition pattern and timing.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.7047111040606112,
+        "best_single_query_score": 0.2737134124840869,
+        "kb_candidate_rank": 2,
+        "candidate_rank": 4
+      },
+      {
+        "chunk_id": "KB3_1_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_1",
+        "kb_prefix": "KB3",
+        "title": "bundled_onboarding_distinctness",
+        "text": "id: KB3_1 name: bundled_onboarding_distinctness risk: Bundled onboarding may be wrongly separated or wrongly combined; drives PO count and recognition pattern. trigger: The contract includes an onboarding, implementation, setup, configuration, data-migration, or activation fee alongside the subscription. review_question: Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardiz",
+        "metadata": {
+          "id": "KB3_1",
+          "name": "bundled_onboarding_distinctness",
+          "risk": "Bundled onboarding may be wrongly separated or wrongly combined; drives PO count and recognition pattern.",
+          "trigger": "The contract includes an onboarding, implementation, setup, configuration, data-migration, or activation fee alongside the subscription.",
+          "review_question": "Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardized, optional, and available elsewhere (suggesting a separate performance obligation)? Confirm whether the onboarding fee is being front-loaded rather than recognized over the service period.",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.7039553781250775,
+        "best_single_query_score": 0.24176919743336597,
+        "kb_candidate_rank": 2,
+        "candidate_rank": 5
+      },
+      {
+        "chunk_id": "KB1_4_chunk_2",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_4",
+        "kb_prefix": "KB1",
+        "title": "Step 2 — separately identifiable (factors)",
+        "text": "rately identifiable and are therefore combined into a single performance obligation. id: KB1_4 name: separately_identifiable_factors asc_ref: 606-10-25-21 source: ASC 606 (paraphrased)",
+        "metadata": {
+          "id": "KB1_4",
+          "name": "separately_identifiable_factors",
+          "topic": "Step 2 — separately identifiable (factors)",
+          "asc_ref": "606-10-25-21",
+          "text": "In evaluating whether a promise is separately identifiable, the objective is to determine whether the entity is transferring each good or service individually or, instead, a combined item to which the individual goods or services are inputs. Factors indicating that two or more promises are not separately identifiable include: the entity provides a significant service of integrating the goods or services into a combined output; one or more of the goods or services significantly modifies or customizes another; or the goods or services are highly interdependent or highly interrelated. Implementation, configuration, data-migration, or setup activities that an entity must complete before the customer can access or operate the underlying service typically indicate the promises are not separately identifiable and are therefore combined into a single performance obligation.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.6996170889784513,
+        "best_single_query_score": 0.12528847989224445,
+        "kb_candidate_rank": 3,
+        "candidate_rank": 6
+      },
+      {
+        "chunk_id": "KB1_5_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_5",
+        "kb_prefix": "KB1",
+        "title": "Step 2 — series of distinct services",
+        "text": "topic: Step 2 — series of distinct services text: A series of distinct goods or services that are substantially the same and have the same pattern of transfer to the customer is accounted for as a single performance obligation. This applies when each distinct increment is satisfied over time and the same method would be used to measure progress toward satisfaction. A subscription that provides continuous access to a hosted application over the contract period is the typical example: it is treate",
+        "metadata": {
+          "id": "KB1_5",
+          "name": "series_of_services",
+          "topic": "Step 2 — series of distinct services",
+          "asc_ref": "606-10-25-14(b), 25-15",
+          "text": "A series of distinct goods or services that are substantially the same and have the same pattern of transfer to the customer is accounted for as a single performance obligation. This applies when each distinct increment is satisfied over time and the same method would be used to measure progress toward satisfaction. A subscription that provides continuous access to a hosted application over the contract period is the typical example: it is treated as a single performance obligation satisfied over time, rather than as a series of separately accounted-for daily or monthly promises.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.6117769677262073,
+        "best_single_query_score": 0.1362844732912213,
+        "kb_candidate_rank": 4,
+        "candidate_rank": 7
+      },
+      {
+        "chunk_id": "KB1_6_chunk_1",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_6",
+        "kb_prefix": "KB1",
+        "title": "Step 5 — recognition over time",
+        "text": "entity, and the entity has an enforceable right to payment for performance completed to date. Software-as-a-service arrangements generally meet criterion (a), because the customer continuously receives and consumes the benefit of access throughout the term; subscription revenue is therefore recognized over the service period rather than at a point in time. id: KB1_6 name: over_time_recognition asc_ref: 606-10-25-27 source: ASC 606 (paraphrased)",
+        "metadata": {
+          "id": "KB1_6",
+          "name": "over_time_recognition",
+          "topic": "Step 5 — recognition over time",
+          "asc_ref": "606-10-25-27",
+          "text": "An entity recognizes revenue over time if any one of the following criteria is met: (a) the customer simultaneously receives and consumes the benefits provided as the entity performs; (b) the entity's performance creates or enhances an asset the customer controls as it is created or enhanced; or (c) the entity's performance does not create an asset with an alternative use to the entity, and the entity has an enforceable right to payment for performance completed to date. Software-as-a-service arrangements generally meet criterion (a), because the customer continuously receives and consumes the benefit of access throughout the term; subscription revenue is therefore recognized over the service period rather than at a point in time.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.605156114448141,
+        "best_single_query_score": 0.16463888830004053,
+        "kb_candidate_rank": 5,
+        "candidate_rank": 8
+      },
+      {
+        "chunk_id": "KB1_3_chunk_0",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_3",
+        "kb_prefix": "KB1",
+        "title": "Step 2 — distinct performance obligations",
+        "text": "topic: Step 2 — distinct performance obligations text: A good or service is a distinct performance obligation when both criteria are met: (a) the customer can benefit from the good or service on its own or together with other resources readily available to the customer (capable of being distinct); and (b) the entity's promise to transfer it is separately identifiable from other promises in the contract (distinct within the context of the contract). If a promised good or service is not distinct,",
+        "metadata": {
+          "id": "KB1_3",
+          "name": "distinct_test",
+          "topic": "Step 2 — distinct performance obligations",
+          "asc_ref": "606-10-25-19 to 25-22",
+          "text": "A good or service is a distinct performance obligation when both criteria are met: (a) the customer can benefit from the good or service on its own or together with other resources readily available to the customer (capable of being distinct); and (b) the entity's promise to transfer it is separately identifiable from other promises in the contract (distinct within the context of the contract). If a promised good or service is not distinct, it is combined with other promised goods or services until a distinct bundle is identified. A good or service that is capable of being distinct may still fail criterion (b) because, in the context of the specific contract, it is not separately identifiable from the other promises.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.5983847342064924,
+        "best_single_query_score": 0.14544983593867006,
+        "kb_candidate_rank": 6,
+        "candidate_rank": 9
+      },
+      {
+        "chunk_id": "KB1_15_chunk_1",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_15",
+        "kb_prefix": "KB1",
+        "title": "Step 4 — customer options / material right",
+        "text": "When a material right exists (for example, a significantly discounted renewal option, or a free or reduced-price future add-on), the entity allocates a portion of the transaction price to it and recognizes that amount when the future goods or services are transferred or when the option expires. id: KB1_15 name: material_right asc_ref: 606-10-55-42 to 55-45 source: ASC 606 (paraphrased)",
+        "metadata": {
+          "id": "KB1_15",
+          "name": "material_right",
+          "topic": "Step 4 — customer options / material right",
+          "asc_ref": "606-10-55-42 to 55-45",
+          "text": "An option granting the customer the right to acquire additional goods or services free or at a discount gives rise to a separate performance obligation if it provides a material right — that is, a right the customer would not receive without entering into the contract, such as a discount incremental to the range of discounts typically given to that class of customer. When a material right exists (for example, a significantly discounted renewal option, or a free or reduced-price future add-on), the entity allocates a portion of the transaction price to it and recognizes that amount when the future goods or services are transferred or when the option expires.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.5838652510862701,
+        "best_single_query_score": 0.21780238152687315,
+        "kb_candidate_rank": 7,
+        "candidate_rank": 10
+      },
+      {
+        "chunk_id": "KB1_18_chunk_1",
+        "source_file": "KB1_asc606_guidance.jsonl",
+        "doc_id": "KB1_18",
+        "kb_prefix": "KB1",
+        "title": "Contract modifications",
+        "text": "performance obligations) when the remaining goods or services are distinct, or on a cumulative catch-up basis when they are not distinct and form part of a single performance obligation partially satisfied. Determining the appropriate treatment requires the added scope and the change in price. id: KB1_18 name: contract_modifications asc_ref: 606-10-25-10 to 25-13 source: ASC 606 (paraphrased)",
+        "metadata": {
+          "id": "KB1_18",
+          "name": "contract_modifications",
+          "topic": "Contract modifications",
+          "asc_ref": "606-10-25-10 to 25-13",
+          "text": "A contract modification is a change in the scope or price (or both) of a contract approved by the parties. A modification is accounted for as a separate contract if it adds distinct goods or services priced at their standalone selling prices. If it is not a separate contract, the entity accounts for the modification prospectively (allocating the remaining consideration to the remaining performance obligations) when the remaining goods or services are distinct, or on a cumulative catch-up basis when they are not distinct and form part of a single performance obligation partially satisfied. Determining the appropriate treatment requires the added scope and the change in price.",
+          "source": "ASC 606 (paraphrased)"
+        },
+        "score": 0.5700703588358843,
+        "best_single_query_score": 0.13661911980461644,
+        "kb_candidate_rank": 8,
+        "candidate_rank": 11
+      },
+      {
+        "chunk_id": "KB2_1_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_1",
+        "kb_prefix": "KB2",
+        "title": "Subscription — single PO, ratable",
+        "text": "topic: Subscription — single PO, ratable text: RevLens accounts for a standard hosted subscription as a single performance obligation. Access to the Platform, product updates, and standard support are provided together as one combined offering and are not separated into multiple performance obligations, because they are not separately priced or separately purchasable and serve to maintain a current, supported subscription. Subscription fees are recognized ratably (straight-line) over the subscri",
+        "metadata": {
+          "id": "KB2_1",
+          "name": "standard_subscription_recognition",
+          "topic": "Subscription — single PO, ratable",
+          "related_asc": "606-10-25-14(b); 25-27",
+          "text": "RevLens accounts for a standard hosted subscription as a single performance obligation. Access to the Platform, product updates, and standard support are provided together as one combined offering and are not separated into multiple performance obligations, because they are not separately priced or separately purchasable and serve to maintain a current, supported subscription. Subscription fees are recognized ratably (straight-line) over the subscription term, beginning when access is provisioned.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.568502929592997,
+        "best_single_query_score": 0.19359780675198263,
+        "kb_candidate_rank": 2,
+        "candidate_rank": 12
+      },
+      {
+        "chunk_id": "KB2_3_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_3",
+        "kb_prefix": "KB2",
+        "title": "Onboarding — distinct (exception)",
+        "text": "topic: Onboarding — distinct (exception) text: Onboarding or related services are treated as a distinct, separate performance obligation only when they are standardized, optional, and available to the customer from third parties (or capable of being performed by the customer), and the customer's access to the Platform does not depend on RevLens performing them. Where these conditions are met and documented, the service is a separate performance obligation and the transaction price allocated to i",
+        "metadata": {
+          "id": "KB2_3",
+          "name": "onboarding_distinct_exception",
+          "topic": "Onboarding — distinct (exception)",
+          "related_asc": "606-10-25-19 to 25-22",
+          "text": "Onboarding or related services are treated as a distinct, separate performance obligation only when they are standardized, optional, and available to the customer from third parties (or capable of being performed by the customer), and the customer's access to the Platform does not depend on RevLens performing them. Where these conditions are met and documented, the service is a separate performance obligation and the transaction price allocated to it is recognized at the point the service is delivered and accepted.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.5588560145597441,
+        "best_single_query_score": 0.150688066325168,
+        "kb_candidate_rank": 3,
+        "candidate_rank": 13
+      },
+      {
+        "chunk_id": "KB2_11_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_11",
+        "kb_prefix": "KB2",
+        "title": "Nonrefundable upfront fees",
+        "text": "topic: Nonrefundable upfront fees text: RevLens assesses nonrefundable upfront fees (such as activation or setup fees) for whether they relate to a distinct good or service. Where they do not, they are treated as advance payment for future services and recognized over the period those services are provided. Where such a fee is not charged again on renewal, RevLens evaluates whether it gives rise to a material right and, if so, allocates a portion of the fee to that right. id: KB2_11 name: nonref",
+        "metadata": {
+          "id": "KB2_11",
+          "name": "nonrefundable_upfront_fees_policy",
+          "topic": "Nonrefundable upfront fees",
+          "related_asc": "606-10-55-50 to 55-51",
+          "text": "RevLens assesses nonrefundable upfront fees (such as activation or setup fees) for whether they relate to a distinct good or service. Where they do not, they are treated as advance payment for future services and recognized over the period those services are provided. Where such a fee is not charged again on renewal, RevLens evaluates whether it gives rise to a material right and, if so, allocates a portion of the fee to that right.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.5574574334211798,
+        "best_single_query_score": 0.21374720097914032,
+        "kb_candidate_rank": 4,
+        "candidate_rank": 14
+      },
+      {
+        "chunk_id": "KB3_2_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_2",
+        "kb_prefix": "KB3",
+        "title": "large_upfront_fee_size_trap",
+        "text": "id: KB3_2 name: large_upfront_fee_size_trap risk: A large onboarding/setup fee may be wrongly treated as distinct because of its size. trigger: An onboarding, implementation, or setup fee is large relative to the subscription fee. review_question: Is the conclusion on distinctness based on the nature of the service (integration, customization, dependency) rather than the dollar size of the fee? A large fee does not by itself make a service distinct. source: RevLens revenue review checklist (synt",
+        "metadata": {
+          "id": "KB3_2",
+          "name": "large_upfront_fee_size_trap",
+          "risk": "A large onboarding/setup fee may be wrongly treated as distinct because of its size.",
+          "trigger": "An onboarding, implementation, or setup fee is large relative to the subscription fee.",
+          "review_question": "Is the conclusion on distinctness based on the nature of the service (integration, customization, dependency) rather than the dollar size of the fee? A large fee does not by itself make a service distinct.",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.5047950378989009,
+        "best_single_query_score": 0.1775903678574125,
+        "kb_candidate_rank": 3,
+        "candidate_rank": 15
+      },
+      {
+        "chunk_id": "KB3_18_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_18",
+        "kb_prefix": "KB3",
+        "title": "silent_renewal_materiality",
+        "text": "id: KB3_18 name: silent_renewal_materiality risk: A possible material right may be missed where renewal pricing is unstated. trigger: The contract grants a renewal or future-purchase option but does not state the renewal price or how it compares to standard pricing. review_question: Is the renewal price specified, and is it at, above, or below the price offered to comparable customers? Without this, whether the option conveys a material right cannot be concluded and should be flagged. source: Re",
+        "metadata": {
+          "id": "KB3_18",
+          "name": "silent_renewal_materiality",
+          "risk": "A possible material right may be missed where renewal pricing is unstated.",
+          "trigger": "The contract grants a renewal or future-purchase option but does not state the renewal price or how it compares to standard pricing.",
+          "review_question": "Is the renewal price specified, and is it at, above, or below the price offered to comparable customers? Without this, whether the option conveys a material right cannot be concluded and should be flagged.",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.4825971926340483,
+        "best_single_query_score": 0.35142340345175305,
+        "kb_candidate_rank": 4,
+        "candidate_rank": 16
+      },
+      {
+        "chunk_id": "KB2_10_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_10",
+        "kb_prefix": "KB2",
+        "title": "Material rights — discounted renewals/options",
+        "text": "topic: Material rights — discounted renewals/options text: RevLens evaluates renewal options and future-purchase options for material rights. Where a contract entitles the customer to renew or purchase additional services at a price significantly below the price offered to comparable customers, RevLens treats the option as a separate performance obligation, allocates a portion of the transaction price to it, and recognizes that amount when the option is exercised or expires. id: KB2_10 name: mat",
+        "metadata": {
+          "id": "KB2_10",
+          "name": "material_rights_renewals",
+          "topic": "Material rights — discounted renewals/options",
+          "related_asc": "606-10-55-42 to 55-45",
+          "text": "RevLens evaluates renewal options and future-purchase options for material rights. Where a contract entitles the customer to renew or purchase additional services at a price significantly below the price offered to comparable customers, RevLens treats the option as a separate performance obligation, allocates a portion of the transaction price to it, and recognizes that amount when the option is exercised or expires.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.4634812832855384,
+        "best_single_query_score": 0.11840869386799882,
+        "kb_candidate_rank": 5,
+        "candidate_rank": 17
+      },
+      {
+        "chunk_id": "KB3_9_chunk_0",
+        "source_file": "KB3_review_checklist.jsonl",
+        "doc_id": "KB3_9",
+        "kb_prefix": "KB3",
+        "title": "multiple_performance_obligations",
+        "text": "id: KB3_9 name: multiple_performance_obligations risk: Allocation and recognition errors increase with the number of POs. trigger: The contract contains more than two performance obligations, or mixes over-time and point-in-time items. review_question: Has the transaction price been allocated across all obligations by relative SSP, and is each obligation recognized on its correct pattern (over time for the subscription; at completion for distinct one-time deliverables; by effort/hours for profes",
+        "metadata": {
+          "id": "KB3_9",
+          "name": "multiple_performance_obligations",
+          "risk": "Allocation and recognition errors increase with the number of POs.",
+          "trigger": "The contract contains more than two performance obligations, or mixes over-time and point-in-time items.",
+          "review_question": "Has the transaction price been allocated across all obligations by relative SSP, and is each obligation recognized on its correct pattern (over time for the subscription; at completion for distinct one-time deliverables; by effort/hours for professional services)?",
+          "source": "RevLens revenue review checklist (synthetic)"
+        },
+        "score": 0.3878038586321024,
+        "best_single_query_score": 0.11019350194953087,
+        "kb_candidate_rank": 5,
+        "candidate_rank": 18
+      },
+      {
+        "chunk_id": "KB2_15_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_15",
+        "kb_prefix": "KB2",
+        "title": "Contract validity and collectibility",
+        "text": "topic: Contract validity and collectibility text: RevLens recognizes revenue only when a valid contract exists: the parties have approved it, rights and payment terms are identifiable, and collection of substantially all consideration is probable. Where payment terms are left to be agreed, cancellation terms are absent, or collectibility is doubtful (for example, a newly formed customer with no payment history), RevLens does not recognize revenue and escalates the arrangement for review. id: KB2",
+        "metadata": {
+          "id": "KB2_15",
+          "name": "contract_validity_collectibility",
+          "topic": "Contract validity and collectibility",
+          "related_asc": "606-10-25-1",
+          "text": "RevLens recognizes revenue only when a valid contract exists: the parties have approved it, rights and payment terms are identifiable, and collection of substantially all consideration is probable. Where payment terms are left to be agreed, cancellation terms are absent, or collectibility is doubtful (for example, a newly formed customer with no payment history), RevLens does not recognize revenue and escalates the arrangement for review.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.2937888872725535,
+        "best_single_query_score": 0.11181135504711637,
+        "kb_candidate_rank": 6,
+        "candidate_rank": 19
+      },
+      {
+        "chunk_id": "KB2_8_chunk_0",
+        "source_file": "KB2_revlens_policy.jsonl",
+        "doc_id": "KB2_8",
+        "kb_prefix": "KB2",
+        "title": "Discount allocation — pro-rata default vs directed",
+        "text": "topic: Discount allocation — pro-rata default vs directed text: When a contract bundles multiple performance obligations at a combined price below the sum of their standalone selling prices, RevLens allocates the discount proportionately across all performance obligations based on relative standalone selling prices by default. RevLens allocates a discount entirely to a specific performance obligation only where it has observable evidence that the discount relates solely to that item — namely, Re",
+        "metadata": {
+          "id": "KB2_8",
+          "name": "discount_allocation",
+          "topic": "Discount allocation — pro-rata default vs directed",
+          "related_asc": "606-10-32-36 to 32-37",
+          "text": "When a contract bundles multiple performance obligations at a combined price below the sum of their standalone selling prices, RevLens allocates the discount proportionately across all performance obligations based on relative standalone selling prices by default. RevLens allocates a discount entirely to a specific performance obligation only where it has observable evidence that the discount relates solely to that item — namely, RevLens regularly sells each item separately and regularly sells the discounted item on its own at a comparable discount.",
+          "source": "RevLens revenue policy (synthetic)"
+        },
+        "score": 0.28441522986702844,
+        "best_single_query_score": 0.09998365263468058,
+        "kb_candidate_rank": 7,
+        "candidate_rank": 20
+      }
+    ],
+    "llm_refinement": {
+      "policy_scores": [
+        {
+          "doc_id": "KB1_16",
+          "relevance": 0.95,
+          "reason": "Directly addresses nonrefundable upfront fees like implementation fees, relevant to the contract's onboarding fee."
+        },
+        {
+          "doc_id": "KB3_10",
+          "relevance": 0.85,
+          "reason": "Discusses material rights related to renewal options and nonrefundable fees, relevant given the contract's auto-renewal and fees."
+        },
+        {
+          "doc_id": "KB2_2",
+          "relevance": 0.9,
+          "reason": "Specifically covers onboarding services treated as non-distinct and combined with subscription, matching contract's implementation services."
+        },
+        {
+          "doc_id": "KB1_1",
+          "relevance": 0.8,
+          "reason": "Provides an overview of ASC 606 revenue recognition steps, foundational for any revenue analysis."
+        },
+        {
+          "doc_id": "KB3_1",
+          "relevance": 0.85,
+          "reason": "Focuses on onboarding distinctness and its impact on performance obligations, relevant to the contract's onboarding terms."
+        },
+        {
+          "doc_id": "KB1_4",
+          "relevance": 0.7,
+          "reason": "Discusses criteria for separate performance obligations, useful for analyzing contract components."
+        },
+        {
+          "doc_id": "KB1_5",
+          "relevance": 0.7,
+          "reason": "Explains series of distinct services and subscription treatment, relevant to hosted subscription service."
+        },
+        {
+          "doc_id": "KB1_6",
+          "relevance": 0.75,
+          "reason": "Covers revenue recognition over time for SaaS, applicable to the hosted subscription."
+        },
+        {
+          "doc_id": "KB1_3",
+          "relevance": 0.7,
+          "reason": "Details criteria for distinct performance obligations, relevant for contract analysis."
+        },
+        {
+          "doc_id": "KB1_15",
+          "relevance": 0.75,
+          "reason": "Discusses material rights and allocation of transaction price, relevant to renewal options."
+        },
+        {
+          "doc_id": "KB1_18",
+          "relevance": 0.65,
+          "reason": "Covers contract modifications, potentially relevant for renewal and term changes."
+        },
+        {
+          "doc_id": "KB2_1",
+          "relevance": 0.85,
+          "reason": "Specifically addresses RevLens subscription as a single performance obligation recognized ratably."
+        },
+        {
+          "doc_id": "KB2_3",
+          "relevance": 0.75,
+          "reason": "Describes conditions when onboarding is distinct, relevant to implementation services."
+        },
+        {
+          "doc_id": "KB2_11",
+          "relevance": 0.85,
+          "reason": "RevLens policy on nonrefundable upfront fees and material rights, directly applicable to contract fees."
+        },
+        {
+          "doc_id": "KB3_2",
+          "relevance": 0.6,
+          "reason": "Warns against treating large upfront fees as distinct solely due to size, relevant to onboarding fee."
+        },
+        {
+          "doc_id": "KB3_18",
+          "relevance": 0.6,
+          "reason": "Flags risk of missing material rights when renewal pricing is unstated, relevant given contract's renewal terms."
+        },
+        {
+          "doc_id": "KB2_10",
+          "relevance": 0.7,
+          "reason": "Details evaluation of material rights for discounted renewals, relevant to renewal pricing."
+        },
+        {
+          "doc_id": "KB3_9",
+          "relevance": 0.5,
+          "reason": "Discusses multiple performance obligations risk, less directly relevant as contract has two main fees."
+        },
+        {
+          "doc_id": "KB2_15",
+          "relevance": 0.5,
+          "reason": "Covers contract validity and collectibility, generally relevant but less specific to revenue recognition details here."
+        },
+        {
+          "doc_id": "KB2_8",
+          "relevance": 0.4,
+          "reason": "Discusses discount allocation, but contract has no discount, so less relevant."
+        }
+      ],
+      "reasoning": "Policies related to nonrefundable upfront fees, onboarding distinctness, subscription revenue recognition, and material rights for renewal options are highly relevant to analyzing the contract's revenue recognition under ASC 606. General ASC 606 overview and performance obligation criteria are also useful. Policies less related to discounts or multiple POs are scored lower.",
+      "model": "gpt-4.1-mini",
+      "used_llm": true,
+      "error": null,
+      "usage": null
+    },
+    "policy_prompt": "You are Agent 2: Accounting Standards Policy Retrieval Agent.\n\nYour task is to identify and organize the ASC 606 guidance, company\nrevenue-recognition policy, and risk guidance needed to evaluate the\nsupplied contract.\n\nDo not make the final accounting conclusion.\nDo not calculate the revenue schedule.\nDo not invent policy guidance that is not supported by the retrieved context.\n\nContract Information:\n{\n  \"contract_id\": \"RL-2025-0633\",\n  \"provider_name\": \"RevLens\",\n  \"customer_name\": \"Cedar Point Wealth Advisors, LP\",\n  \"effective_date\": \"2025-07-01\",\n  \"subscription_term_months\": 12,\n  \"start_date\": \"2025-07-01\",\n  \"end_date\": null,\n  \"services_summary\": \"3.1 Subscription. RevLens grants Customer a hosted subscription to the RevLens Portfolio Management\",\n  \"hosted_service\": true,\n  \"authorized_users\": null,\n  \"implementation_services\": true,\n  \"implementation_required_for_platform\": true,\n  \"fees\": [\n    {\n      \"name\": \"Platform Subscription (annual)\",\n      \"amount\": {\n        \"amount\": 12000.0,\n        \"currency\": \"USD\"\n      },\n      \"billing_frequency\": \"annual\",\n      \"payment_timing\": null,\n      \"notes\": null\n    },\n    {\n      \"name\": \"Implementation Services (one-time)\",\n      \"amount\": {\n        \"amount\": 3000.0,\n        \"currency\": \"USD\"\n      },\n      \"billing_frequency\": \"one_time\",\n      \"payment_timing\": null,\n      \"notes\": null\n    }\n  ],\n  \"discount_terms\": {\n    \"has_discount\": false,\n    \"discount_type\": \"unknown\",\n    \"percentage\": null,\n    \"amount\": null,\n    \"applies_to\": null,\n    \"duration\": null,\n    \"notes\": null\n  },\n  \"usage_fee\": null,\n  \"onboarding_terms\": {\n    \"required\": true,\n    \"fee\": {\n      \"amount\": 3000.0,\n      \"currency\": \"USD\"\n    },\n    \"billing_frequency\": \"one_time\",\n    \"required_for_platform\": true,\n    \"timeline\": \"approximately\",\n    \"notes\": \"3.2 Implementation Services.\"\n  },\n  \"renewal_terms\": {\n    \"auto_renewal\": true,\n    \"renewal_term_months\": 12,\n    \"notice_days\": 30,\n    \"renewal_price\": null,\n    \"renewal_pricing_basis\": \"then-current list pricing\"\n  },\n  \"termination_terms\": {\n    \"termination_for_breach\": true,\n    \"notice_days\": 30,\n    \"convenience_termination\": false,\n    \"missing_terms\": []\n  },\n  \"ambiguous_clauses\": [],\n  \"source_file\": \"C11_CedarPoint.pdf\",\n  \"raw_text_hash\": null\n}\n\nRetrieved Policy Context:\n[Policy Source: KB1_asc606_guidance.jsonl | Document: KB1_16 | Chunk: KB1_16_chunk_0 | Aggregate Score: 0.902]\ntopic: Nonrefundable upfront fees text: A nonrefundable upfront fee (for example, an activation, setup, or initiation fee) is assessed to determine whether it relates to the transfer of a promised good or service. If the upfront fee does not relate to a distinct good or service, it is an advance payment for future goods or services and is recognized as revenue when those future goods or services are provided. Where the fee, combined with the customer's option to renew without paying it again, ef\n\n[Policy Source: KB2_revlens_policy.jsonl | Document: KB2_2 | Chunk: KB2_2_chunk_0 | Aggregate Score: 0.723]\ntopic: Onboarding — non-distinct by default text: RevLens treats implementation, configuration, data-migration, and setup services as not distinct from the subscription by default, and combines them into the single subscription performance obligation recognized over the service period. This default applies whenever the services are configured to the customer's environment or the customer's production access is conditioned on their completion. Onboarding fees are not recognized when billed or whe\n\n[Policy Source: KB3_review_checklist.jsonl | Document: KB3_10 | Chunk: KB3_10_chunk_0 | Aggregate Score: 0.813]\nid: KB3_10 name: material_right_renewal_or_fee risk: A discounted renewal or nonrefundable upfront fee may hide a separate performance obligation. trigger: The contract grants a renewal or future-purchase option at a discount, or a nonrefundable upfront fee that is not charged again on renewal. review_question: Does the renewal/option price sit significantly below the price offered to comparable customers (a material right), requiring a portion of the transaction price to be allocated to it and\n\n[Policy Source: KB3_review_checklist.jsonl | Document: KB3_1 | Chunk: KB3_1_chunk_0 | Aggregate Score: 0.704]\nid: KB3_1 name: bundled_onboarding_distinctness risk: Bundled onboarding may be wrongly separated or wrongly combined; drives PO count and recognition pattern. trigger: The contract includes an onboarding, implementation, setup, configuration, data-migration, or activation fee alongside the subscription. review_question: Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardiz\n\n[Policy Source: KB2_revlens_policy.jsonl | Document: KB2_1 | Chunk: KB2_1_chunk_0 | Aggregate Score: 0.569]\ntopic: Subscription — single PO, ratable text: RevLens accounts for a standard hosted subscription as a single performance obligation. Access to the Platform, product updates, and standard support are provided together as one combined offering and are not separated into multiple performance obligations, because they are not separately priced or separately purchasable and serve to maintain a current, supported subscription. Subscription fees are recognized ratably (straight-line) over the subscri\n\n[Policy Source: KB2_revlens_policy.jsonl | Document: KB2_11 | Chunk: KB2_11_chunk_0 | Aggregate Score: 0.557]\ntopic: Nonrefundable upfront fees text: RevLens assesses nonrefundable upfront fees (such as activation or setup fees) for whether they relate to a distinct good or service. Where they do not, they are treated as advance payment for future services and recognized over the period those services are provided. Where such a fee is not charged again on renewal, RevLens evaluates whether it gives rise to a material right and, if so, allocates a portion of the fee to that right. id: KB2_11 name: nonref\n\n[Policy Source: KB2_revlens_policy.jsonl | Document: KB2_3 | Chunk: KB2_3_chunk_0 | Aggregate Score: 0.559]\ntopic: Onboarding — distinct (exception) text: Onboarding or related services are treated as a distinct, separate performance obligation only when they are standardized, optional, and available to the customer from third parties (or capable of being performed by the customer), and the customer's access to the Platform does not depend on RevLens performing them. Where these conditions are met and documented, the service is a separate performance obligation and the transaction price allocated to i\n\n[Policy Source: KB1_asc606_guidance.jsonl | Document: KB1_1 | Chunk: KB1_1_chunk_0 | Aggregate Score: 0.705]\ntopic: Revenue model — overview text: ASC 606 recognizes revenue from contracts with customers under a five-step model: (1) identify the contract with the customer; (2) identify the performance obligations in the contract; (3) determine the transaction price; (4) allocate the transaction price to the performance obligations; and (5) recognize revenue as (or when) each performance obligation is satisfied. Because each performance obligation is accounted for separately, identifying the obligations\n\n[Policy Source: KB2_revlens_policy.jsonl | Document: KB2_10 | Chunk: KB2_10_chunk_0 | Aggregate Score: 0.463]\ntopic: Material rights — discounted renewals/options text: RevLens evaluates renewal options and future-purchase options for material rights. Where a contract entitles the customer to renew or purchase additional services at a price significantly below the price offered to comparable customers, RevLens treats the option as a separate performance obligation, allocates a portion of the transaction price to it, and recognizes that amount when the option is exercised or expires. id: KB2_10 name: mat\n\n[Policy Source: KB1_asc606_guidance.jsonl | Document: KB1_4 | Chunk: KB1_4_chunk_2 | Aggregate Score: 0.700]\nrately identifiable and are therefore combined into a single performance obligation. id: KB1_4 name: separately_identifiable_factors asc_ref: 606-10-25-21 source: ASC 606 (paraphrased)\n\n[Policy Source: KB1_asc606_guidance.jsonl | Document: KB1_6 | Chunk: KB1_6_chunk_1 | Aggregate Score: 0.605]\nentity, and the entity has an enforceable right to payment for performance completed to date. Software-as-a-service arrangements generally meet criterion (a), because the customer continuously receives and consumes the benefit of access throughout the term; subscription revenue is therefore recognized over the service period rather than at a point in time. id: KB1_6 name: over_time_recognition asc_ref: 606-10-25-27 source: ASC 606 (paraphrased)\n\n[Policy Source: KB1_asc606_guidance.jsonl | Document: KB1_5 | Chunk: KB1_5_chunk_0 | Aggregate Score: 0.612]\ntopic: Step 2 — series of distinct services text: A series of distinct goods or services that are substantially the same and have the same pattern of transfer to the customer is accounted for as a single performance obligation. This applies when each distinct increment is satisfied over time and the same method would be used to measure progress toward satisfaction. A subscription that provides continuous access to a hosted application over the contract period is the typical example: it is treate\n\n[Policy Source: KB3_review_checklist.jsonl | Document: KB3_2 | Chunk: KB3_2_chunk_0 | Aggregate Score: 0.505]\nid: KB3_2 name: large_upfront_fee_size_trap risk: A large onboarding/setup fee may be wrongly treated as distinct because of its size. trigger: An onboarding, implementation, or setup fee is large relative to the subscription fee. review_question: Is the conclusion on distinctness based on the nature of the service (integration, customization, dependency) rather than the dollar size of the fee? A large fee does not by itself make a service distinct. source: RevLens revenue review checklist (synt\n\n[Policy Source: KB1_asc606_guidance.jsonl | Document: KB1_15 | Chunk: KB1_15_chunk_1 | Aggregate Score: 0.584]\nWhen a material right exists (for example, a significantly discounted renewal option, or a free or reduced-price future add-on), the entity allocates a portion of the transaction price to it and recognizes that amount when the future goods or services are transferred or when the option expires. id: KB1_15 name: material_right asc_ref: 606-10-55-42 to 55-45 source: ASC 606 (paraphrased)\n\n[Policy Source: KB1_asc606_guidance.jsonl | Document: KB1_3 | Chunk: KB1_3_chunk_0 | Aggregate Score: 0.598]\ntopic: Step 2 — distinct performance obligations text: A good or service is a distinct performance obligation when both criteria are met: (a) the customer can benefit from the good or service on its own or together with other resources readily available to the customer (capable of being distinct); and (b) the entity's promise to transfer it is separately identifiable from other promises in the contract (distinct within the context of the contract). If a promised good or service is not distinct,\n\nReturn the result in the following structure:\n\n1. Relevant ASC 606 Guidance\n2. Relevant Company Revenue Policy\n3. Relevant Risk Guidance\n4. Rules Needed for Schedule Calculation\n5. Rules Needed for Risk Flagging\n6. Missing or Ambiguous Policy Areas"
+  },
+  "agent3_output": {
+    "contract_id": "RL-2025-0633",
+    "source_file": "C11_CedarPoint.pdf",
+    "billing_used": "annual_upfront",
+    "characterization": {
+      "onboarding_distinct": {
+        "conclusion": "FALSE",
+        "kb_basis": [
+          "KB2_2"
+        ],
+        "reasoning": "Rule (not LLM): production access to the platform is conditioned on completion of the implementation, so the service is combined into the subscription performance obligation and is not distinct."
+      },
+      "usage_model": {
+        "reasoning": "The contract facts show no usage fee or consumption-based pricing; fees are fixed annual subscription and one-time implementation fees. Therefore, there is no usage-based pricing.",
+        "kb_basis": [],
+        "conclusion": "none"
+      },
+      "discount_type": {
+        "reasoning": "The contract facts explicitly state no discount applies (has_discount: false). There is no indication of free periods, material rights from upfront fees, or renewal price discounts. The renewal price is at then-current list pricing, which is not a discount. Therefore, the discount type is none.",
+        "kb_basis": [
+          "KB3_10",
+          "KB2_10"
+        ],
+        "conclusion": "none"
+      },
+      "material_right": {
+        "reasoning": "ASC 606 (KB1_15) and RevLens policy (KB2_10) require a material right to exist if renewal or future purchase options are priced significantly below standard pricing. The contract states renewal at then-current list pricing, which is not below standard pricing. Therefore, no material right exists.",
+        "kb_basis": [
+          "KB1_15",
+          "KB2_10"
+        ],
+        "conclusion": "FALSE"
+      },
+      "contract_valid": {
+        "reasoning": "The contract facts show defined subscription term, fees, auto-renewal with notice, termination for breach with notice, and no indication of collectibility issues or unconstrained cancellation rights. Therefore, the contract is valid and enforceable under ASC 606 Step 1.",
+        "kb_basis": [
+          "KB1_1"
+        ],
+        "conclusion": "TRUE"
+      },
+      "additional_distinct_services": {
+        "reasoning": "The contract includes a one-time implementation service fee, but onboarding/implementation is not distinct per judgment 1 and RevLens policy (KB2_2). No other separately priced services are identified. Standard support and updates are included in the subscription and not distinct (KB2_1). Therefore, no additional distinct services exist.",
+        "kb_basis": [
+          "KB2_1",
+          "KB2_2"
+        ],
+        "conclusion": []
+      },
+      "transaction_price": {
+        "reasoning": "Fees included: Platform Subscription (annual) $12,000 + Implementation Services (one-time) $3,000. Contract term is 12 months, so sum fees once: 12000 + 3000 = 15000.",
+        "kb_basis": [
+          "KB1_1"
+        ],
+        "conclusion": 15000
+      },
+      "onboarding_distinct_llm": {
+        "reasoning": "ASC 606 (KB1_3) requires a performance obligation to be distinct, meaning the customer can benefit from it on its own and it is separately identifiable. The contract facts show implementation services are required for platform access, indicating the service is not distinct. RevLens policy (KB2_2) treats implementation and setup services as not distinct when required for platform access and combines them with the subscription into a single performance obligation.",
+        "kb_basis": [
+          "KB1_3",
+          "KB2_2"
+        ],
+        "conclusion": "FALSE"
+      }
+    },
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 15000.0,
+      "recognition_method": "over_time_ratable",
+      "recognition_period_months": 12,
+      "transaction_price_det": 15000.0
+    },
+    "schedule": {
+      "monthly_revenue": 1250.0,
+      "opening_deferred": 15000.0,
+      "monthly_schedule": [
+        {
+          "month": 1,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-07-01",
+          "period_end": "2025-07-31"
+        },
+        {
+          "month": 2,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-08-01",
+          "period_end": "2025-08-31"
+        },
+        {
+          "month": 3,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-09-01",
+          "period_end": "2025-09-30"
+        },
+        {
+          "month": 4,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-10-01",
+          "period_end": "2025-10-31"
+        },
+        {
+          "month": 5,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-11-01",
+          "period_end": "2025-11-30"
+        },
+        {
+          "month": 6,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-12-01",
+          "period_end": "2025-12-31"
+        },
+        {
+          "month": 7,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        {
+          "month": 8,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        {
+          "month": 9,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        {
+          "month": 10,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-04-01",
+          "period_end": "2026-04-30"
+        },
+        {
+          "month": 11,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-05-01",
+          "period_end": "2026-05-31"
+        },
+        {
+          "month": 12,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-06-01",
+          "period_end": "2026-06-30"
+        }
+      ]
+    },
+    "fee_components": null
+  },
+  "agent4_output": {
+    "agent": "AuditAgent",
+    "contract_id": "RL-2025-0633",
+    "source_file": "C11_CedarPoint.pdf",
+    "audit_findings": [
+      {
+        "kb3_id": "KB3_1",
+        "name": "bundled_onboarding_distinctness",
+        "risk": "Bundled onboarding may be wrongly separated or wrongly combined; drives PO count and recognition pattern.",
+        "review_question": "Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardized, optional, and available elsewhere (suggesting a separate performance obligation)? Confirm whether the onboarding fee is being front-loaded rather than recognized over the service period.",
+        "applies": "yes",
+        "material": true,
+        "evidence": [
+          "separately priced onboarding fee of 3000.0 alongside subscription of 12000.0"
+        ],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_2",
+        "name": "large_upfront_fee_size_trap",
+        "risk": "A large onboarding/setup fee may be wrongly treated as distinct because of its size.",
+        "review_question": "Is the conclusion on distinctness based on the nature of the service (integration, customization, dependency) rather than the dollar size of the fee? A large fee does not by itself make a service distinct.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_3",
+        "name": "variable_consideration_present",
+        "risk": "Usage/overage may be recognized incorrectly (front-loaded, or estimated when it should be as-incurred).",
+        "review_question": "Has the variable portion been identified and separated from any fixed fee? Is RevLens recognizing usage as it is invoiced/incurred (right-to-invoice), or does the arrangement require estimating variable consideration? Confirm the fixed portion's recognition is not inflated by unearned usage.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_4",
+        "name": "minimum_commitment_floor",
+        "risk": "Committed minimum and above-floor usage may be conflated.",
+        "review_question": "Is the committed minimum being recognized as fixed consideration over the term, with only usage above the included volume treated as variable? Confirm the minimum is recognized regardless of actual usage.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_5",
+        "name": "unestimable_or_volatile_usage",
+        "risk": "Variable consideration may be over-recognized where it cannot be reliably estimated.",
+        "review_question": "Has the variable consideration estimate been constrained to the amount highly probable not to reverse? Where usage is seasonal or unpredictable, is revenue recognized only as the usage occurs rather than estimated for the full term?",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_6",
+        "name": "usage_royalty_vs_ordinary_usage",
+        "risk": "A fee tied to a license of IP may be mis-classified as ordinary usage (or vice versa).",
+        "review_question": "Is the variable fee consideration for a license of RevLens intellectual property (apply the royalty exception), an ordinary metered usage fee (variable consideration), or the purchase of new capacity the customer did not previously control (a separate option/purchase)? Confirm the correct one.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_7",
+        "name": "discount_allocation_method",
+        "risk": "A bundle discount may be allocated to the wrong obligations.",
+        "review_question": "Is the discount allocated proportionately across all performance obligations by default? A discount is directed to a specific obligation only where RevLens regularly sells each item separately and regularly sells the discounted item on its own at a comparable discount — is that evidence present?",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_8",
+        "name": "ssp_not_observable_residual",
+        "risk": "Allocation may be unreliable where a standalone selling price is not observable.",
+        "review_question": "Is at least one component supported by an observable standalone selling price, and is the residual approach applied only to the component whose price is genuinely not observable? Confirm the allocation is not based on an unsupported SSP estimate.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_9",
+        "name": "multiple_performance_obligations",
+        "risk": "Allocation and recognition errors increase with the number of POs.",
+        "review_question": "Has the transaction price been allocated across all obligations by relative SSP, and is each obligation recognized on its correct pattern (over time for the subscription; at completion for distinct one-time deliverables; by effort/hours for professional services)?",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_10",
+        "name": "material_right_renewal_or_fee",
+        "risk": "A discounted renewal or nonrefundable upfront fee may hide a separate performance obligation.",
+        "review_question": "Does the renewal/option price sit significantly below the price offered to comparable customers (a material right), requiring a portion of the transaction price to be allocated to it and recognized at exercise or expiry? For an upfront fee waived on renewal, has the material-right question been assessed?",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_11",
+        "name": "billing_timing_balances",
+        "risk": "Deferred revenue vs contract asset may be mis-stated based on billing timing.",
+        "review_question": "Where the customer is billed in advance, is a contract liability (deferred revenue) recorded and released as performance occurs? Where RevLens performs before it can bill (e.g., monthly in arrears), is a contract asset recorded rather than deferred revenue?",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_12",
+        "name": "proration_partial_period",
+        "risk": "Partial first/last periods may be recognized as full months.",
+        "review_question": "Is the partial first or last month prorated by days, with full amounts only for complete months? Confirm proration changes only the timing pattern, not the total transaction price.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_13",
+        "name": "financing_component_check",
+        "risk": "A significant financing component may exist on long-dated prepayments.",
+        "review_question": "Has a significant financing component been considered for the multi-year prepayment, and is the conclusion (typically immaterial) documented? Confirm the practical expedient for one-year-or-less arrangements is not being misapplied to a multi-year prepayment.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_14",
+        "name": "free_or_promotional_period",
+        "risk": "Free promotional periods may be recognized as zero-revenue rather than spread.",
+        "review_question": "Is the total transaction price spread over the entire access period including the free portion (a lower monthly rate), rather than treating the free months as periods of zero revenue?",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": false
+      },
+      {
+        "kb3_id": "KB3_15",
+        "name": "contract_validity_collectibility",
+        "risk": "Revenue may be recognized on an arrangement that is not a valid, collectible contract.",
+        "review_question": "Are the Step 1 criteria met — approval, identifiable rights and payment terms, commercial substance, and probable collection of substantially all consideration? If not, recognition should be withheld and the arrangement escalated.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": true
+      },
+      {
+        "kb3_id": "KB3_16",
+        "name": "missing_service_period_or_dates",
+        "risk": "Recognition timing cannot be established without a defined service period or start.",
+        "review_question": "Can the recognition period and start date be determined from the contract? If the term or go-live is unspecified, a recognition schedule should not be produced; the missing term should be flagged and obtained.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": true
+      },
+      {
+        "kb3_id": "KB3_17",
+        "name": "undetermined_distinctness_or_po_count",
+        "risk": "The number of performance obligations cannot be concluded from the facts given.",
+        "review_question": "Are the facts sufficient to apply the distinct criteria and the separability factors? If not, the PO count should not be fixed; the specific missing facts (customization, dependency, third-party availability) should be flagged as open questions.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": true
+      },
+      {
+        "kb3_id": "KB3_18",
+        "name": "silent_renewal_materiality",
+        "risk": "A possible material right may be missed where renewal pricing is unstated.",
+        "review_question": "Is the renewal price specified, and is it at, above, or below the price offered to comparable customers? Without this, whether the option conveys a material right cannot be concluded and should be flagged.",
+        "applies": "no",
+        "material": false,
+        "evidence": [],
+        "source": "rule",
+        "evidence_gap_item": true
+      }
+    ],
+    "predicted_kb3_ids": [
+      "KB3_1"
+    ],
+    "applicable_kb3_ids": [
+      "KB3_1"
+    ],
+    "consistency_issues": [],
+    "revision_requests": [],
+    "kb3_candidate_ids": [
+      "KB3_1",
+      "KB3_10",
+      "KB3_2"
+    ]
+  },
+  "agent5_output": {
+    "agent": "MemoAgent",
+    "contract_id": "RL-2025-0633",
+    "customer_name": "Cedar Point Wealth Advisors, LP",
+    "disposition": "review_before_close",
+    "treatment": {
+      "num_POs": 1,
+      "po_list": [
+        "core_subscription"
+      ],
+      "transaction_price": 15000.0,
+      "recognition_method": "over_time_ratable",
+      "recognition_period_months": 12,
+      "transaction_price_det": 15000.0
+    },
+    "schedule_source": {
+      "monthly_revenue": 1250.0,
+      "opening_deferred": 15000.0,
+      "monthly_schedule": [
+        {
+          "month": 1,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-07-01",
+          "period_end": "2025-07-31"
+        },
+        {
+          "month": 2,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-08-01",
+          "period_end": "2025-08-31"
+        },
+        {
+          "month": 3,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-09-01",
+          "period_end": "2025-09-30"
+        },
+        {
+          "month": 4,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-10-01",
+          "period_end": "2025-10-31"
+        },
+        {
+          "month": 5,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-11-01",
+          "period_end": "2025-11-30"
+        },
+        {
+          "month": 6,
+          "revenue_recognized": 1250.0,
+          "period_start": "2025-12-01",
+          "period_end": "2025-12-31"
+        },
+        {
+          "month": 7,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        {
+          "month": 8,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        {
+          "month": 9,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        {
+          "month": 10,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-04-01",
+          "period_end": "2026-04-30"
+        },
+        {
+          "month": 11,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-05-01",
+          "period_end": "2026-05-31"
+        },
+        {
+          "month": 12,
+          "revenue_recognized": 1250.0,
+          "period_start": "2026-06-01",
+          "period_end": "2026-06-30"
+        }
+      ]
+    },
+    "characterization": {
+      "onboarding_distinct": "FALSE",
+      "usage_model": "none",
+      "discount_type": "none",
+      "material_right": "FALSE",
+      "contract_valid": "TRUE",
+      "additional_distinct_services": [],
+      "transaction_price": 15000
+    },
+    "reasoning": {
+      "onboarding_distinct": "Rule (not LLM): production access to the platform is conditioned on completion of the implementation, so the service is combined into the subscription performance obligation and is not distinct.",
+      "usage_model": "The contract facts show no usage fee or consumption-based pricing; fees are fixed annual subscription and one-time implementation fees. Therefore, there is no usage-based pricing.",
+      "discount_type": "The contract facts explicitly state no discount applies (has_discount: false). There is no indication of free periods, material rights from upfront fees, or renewal price discounts. The renewal price is at then-current list pricing, which is not a discount. Therefore, the discount type is none.",
+      "material_right": "ASC 606 (KB1_15) and RevLens policy (KB2_10) require a material right to exist if renewal or future purchase options are priced significantly below standard pricing. The contract states renewal at then-current list pricing, which is not below standard pricing. Therefore, no material right exists.",
+      "contract_valid": "The contract facts show defined subscription term, fees, auto-renewal with notice, termination for breach with notice, and no indication of collectibility issues or unconstrained cancellation rights. Therefore, the contract is valid and enforceable under ASC 606 Step 1.",
+      "additional_distinct_services": "The contract includes a one-time implementation service fee, but onboarding/implementation is not distinct per judgment 1 and RevLens policy (KB2_2). No other separately priced services are identified. Standard support and updates are included in the subscription and not distinct (KB2_1). Therefore, no additional distinct services exist.",
+      "transaction_price": "Fees included: Platform Subscription (annual) $12,000 + Implementation Services (one-time) $3,000. Contract term is 12 months, so sum fees once: 12000 + 3000 = 15000."
+    },
+    "schedule": {
+      "rows": [
+        {
+          "month": 1,
+          "period_start": "2025-07-01",
+          "period_end": "2025-07-31",
+          "billed": 15000.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 1250.0,
+          "closing_balance": 13750.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 2,
+          "period_start": "2025-08-01",
+          "period_end": "2025-08-31",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 2500.0,
+          "closing_balance": 12500.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 3,
+          "period_start": "2025-09-01",
+          "period_end": "2025-09-30",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 3750.0,
+          "closing_balance": 11250.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 4,
+          "period_start": "2025-10-01",
+          "period_end": "2025-10-31",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 5000.0,
+          "closing_balance": 10000.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 5,
+          "period_start": "2025-11-01",
+          "period_end": "2025-11-30",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 6250.0,
+          "closing_balance": 8750.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 6,
+          "period_start": "2025-12-01",
+          "period_end": "2025-12-31",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 7500.0,
+          "closing_balance": 7500.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 7,
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 8750.0,
+          "closing_balance": 6250.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 8,
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 10000.0,
+          "closing_balance": 5000.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 9,
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 11250.0,
+          "closing_balance": 3750.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 10,
+          "period_start": "2026-04-01",
+          "period_end": "2026-04-30",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 12500.0,
+          "closing_balance": 2500.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 11,
+          "period_start": "2026-05-01",
+          "period_end": "2026-05-31",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 13750.0,
+          "closing_balance": 1250.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        },
+        {
+          "month": 12,
+          "period_start": "2026-06-01",
+          "period_end": "2026-06-30",
+          "billed": 0.0,
+          "revenue_recognised": 1250.0,
+          "cumulative_revenue": 15000.0,
+          "closing_balance": 0.0,
+          "balance_account": "2400 Deferred Revenue - Current",
+          "revenue_account": "4100 Subscription Revenue"
+        }
+      ],
+      "billing_events": [
+        {
+          "month": 1,
+          "amount": 15000.0,
+          "date": "2025-07-01"
+        }
+      ],
+      "opening_deferred": 15000.0,
+      "onboarding_at_completion": 0.0,
+      "ratable_monthly": 1250.0,
+      "note": null
+    },
+    "journal_entries": [
+      {
+        "when": "On invoice",
+        "lines": [
+          {
+            "dr": "1200 Accounts Receivable",
+            "cr": null,
+            "amount": 15000.0
+          },
+          {
+            "dr": null,
+            "cr": "2400 Deferred Revenue - Current",
+            "amount": 15000.0
+          }
+        ],
+        "narrative": "Record the contract liability on billing in advance of performance."
+      },
+      {
+        "when": "Monthly, over the subscription term",
+        "lines": [
+          {
+            "dr": "2400 Deferred Revenue - Current",
+            "cr": null,
+            "amount": 1250.0
+          },
+          {
+            "dr": null,
+            "cr": "4100 Subscription Revenue",
+            "amount": 1250.0
+          }
+        ],
+        "narrative": "Release the contract liability as the subscription is delivered."
+      }
+    ],
+    "review_points": [
+      {
+        "kb3_id": "KB3_1",
+        "name": "bundled_onboarding_distinctness",
+        "severity": "MEDIUM",
+        "finding": "separately priced onboarding fee of 3000.0 alongside subscription of 12000.0",
+        "review_question": "Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardized, optional, and available elsewhere (suggesting a separate performance obligation)? Confirm whether the onboarding fee is being front-loaded rather than recognized over the service period.",
+        "action": "Document whether the onboarding is customised and required for platform access (combine into the subscription obligation) or standardised and optional (separate obligation). Retain the evidence relied on.",
+        "timing": "Before period close",
+        "exposure": null,
+        "materiality_threshold": 1000.0,
+        "materiality_conclusion": "not_quantifiable",
+        "disposition": "open"
+      }
+    ],
+    "immaterial_matters": [],
+    "items_assessed": 18,
+    "items_not_applicable": [
+      {
+        "kb3_id": "KB3_2",
+        "name": "large_upfront_fee_size_trap"
+      },
+      {
+        "kb3_id": "KB3_3",
+        "name": "variable_consideration_present"
+      },
+      {
+        "kb3_id": "KB3_4",
+        "name": "minimum_commitment_floor"
+      },
+      {
+        "kb3_id": "KB3_5",
+        "name": "unestimable_or_volatile_usage"
+      },
+      {
+        "kb3_id": "KB3_6",
+        "name": "usage_royalty_vs_ordinary_usage"
+      },
+      {
+        "kb3_id": "KB3_7",
+        "name": "discount_allocation_method"
+      },
+      {
+        "kb3_id": "KB3_8",
+        "name": "ssp_not_observable_residual"
+      },
+      {
+        "kb3_id": "KB3_9",
+        "name": "multiple_performance_obligations"
+      },
+      {
+        "kb3_id": "KB3_10",
+        "name": "material_right_renewal_or_fee"
+      },
+      {
+        "kb3_id": "KB3_11",
+        "name": "billing_timing_balances"
+      },
+      {
+        "kb3_id": "KB3_12",
+        "name": "proration_partial_period"
+      },
+      {
+        "kb3_id": "KB3_13",
+        "name": "financing_component_check"
+      },
+      {
+        "kb3_id": "KB3_14",
+        "name": "free_or_promotional_period"
+      },
+      {
+        "kb3_id": "KB3_15",
+        "name": "contract_validity_collectibility"
+      },
+      {
+        "kb3_id": "KB3_16",
+        "name": "missing_service_period_or_dates"
+      },
+      {
+        "kb3_id": "KB3_17",
+        "name": "undetermined_distinctness_or_po_count"
+      },
+      {
+        "kb3_id": "KB3_18",
+        "name": "silent_renewal_materiality"
+      }
+    ],
+    "consistency_issues": [],
+    "revision_requests": [],
+    "kb1_refs": [
+      "KB1_1",
+      "KB1_15"
+    ],
+    "kb2_refs": [
+      "KB2_1",
+      "KB2_10",
+      "KB2_2"
+    ],
+    "kb3_refs": [
+      "KB3_1"
+    ],
+    "basis": {
+      "authoritative": [
+        {
+          "kb_id": "KB1_1",
+          "asc_ref": "606-10-05-4"
+        },
+        {
+          "kb_id": "KB1_15",
+          "asc_ref": "606-10-55-42 to 55-45"
+        }
+      ],
+      "entity_policy": [
+        {
+          "kb_id": "KB2_1",
+          "asc_ref": "606-10-25-14(b); 25-27"
+        },
+        {
+          "kb_id": "KB2_10",
+          "asc_ref": "606-10-55-42 to 55-45"
+        },
+        {
+          "kb_id": "KB2_2",
+          "asc_ref": "606-10-25-19 to 25-21; 55-51"
+        }
+      ],
+      "review_checklist": [
+        {
+          "kb_id": "KB3_1",
+          "name": "bundled_onboarding_distinctness"
+        }
+      ]
+    },
+    "narrative": {
+      "background": "Cedar Point Wealth Advisors, LP has entered into a 12-month subscription contract with a total transaction price of $15,000. This amount comprises a fixed annual platform subscription fee of $12,000 and a one-time implementation service fee of $3,000. The contract includes standard support and updates as part of the subscription and contains no usage-based fees or discounts. The contract is valid and enforceable with defined terms, auto-renewal provisions, and no collectibility concerns.",
+      "analysis": {
+        "step1": "We have concluded that a valid contract exists under ASC 606 as the agreement specifies the subscription term, fees, renewal terms at then-current list pricing, and enforceable termination provisions. There are no indications of unconstrained cancellation rights or collectibility issues, satisfying the criteria for contract identification.",
+        "step2": "The contract contains a single performance obligation, which is the combined subscription service. The one-time implementation service is not distinct because access to the platform is conditioned on completion of implementation, and the implementation is integrated with the subscription service. Therefore, the implementation service is combined with the subscription into one performance obligation.",
+        "step3": "The transaction price is fixed at $15,000, consisting of the $12,000 annual subscription fee and the $3,000 implementation fee. There are no variable consideration components, discounts, or material rights affecting the transaction price. Renewal pricing is at then-current list prices and does not confer a material right.",
+        "step4": "Since there is only one combined performance obligation, the entire transaction price of $15,000 is allocated to that single obligation. No allocation among multiple obligations is necessary.",
+        "step5": "Revenue is recognised over time on a ratable basis over the 12-month contract term. This reflects the continuous transfer of control of the subscription service to the customer throughout the period. The implementation service is included in this pattern of recognition as it is not distinct."
+      },
+      "conclusion_narrative": "In summary, the contract with Cedar Point Wealth Advisors, LP represents a single performance obligation comprising the subscription service and the implementation service combined. The fixed transaction price of $15,000 is allocated entirely to this obligation. Revenue is recognised ratably over the 12-month term, consistent with the continuous transfer of control. There are no variable consideration elements, discounts, or material rights impacting the accounting. The contract is valid and enforceable under ASC 606, and the revenue recognition approach aligns with the guidance and relevant policies.",
+      "review_points": [
+        {
+          "kb3_id": "KB3_1",
+          "narrative": "The separately priced onboarding fee of $3,000 alongside the $12,000 subscription fee warrants documentation of whether the onboarding is customised and required for platform access, which supports combining it into the subscription performance obligation, or if it is standardised and optional, which would support treating it as a separate obligation. Evidence relied upon for this conclusion should be retained."
+        }
+      ]
+    },
+    "narrative_source": "llm",
+    "narrative_reject_reason": "ok",
+    "memo": "==============================================================================\nREVENUE RECOGNITION MEMORANDUM\n==============================================================================\nContract:            RL-2025-0633\nCustomer:            Cedar Point Wealth Advisors, LP\nPrepared by:         Treatment Agent (Agent 3)\nReviewed by:         Audit Agent (Agent 4) - 18-item review checklist\nStandard:            ASC 606, Revenue from Contracts with Customers\nRecognition status:  Cleared for recognition; open items to be resolved before period close\n==============================================================================\n\n1. PURPOSE AND SCOPE\n\n   This memorandum documents the revenue recognition analysis for the\n   arrangement identified above under ASC 606, Revenue from Contracts with\n   Customers, and records the accounting conclusion, the recognition\n   schedule, the journal entries, and the open items for follow-up.\n\n2. FACTS AND CIRCUMSTANCES\n\n   Cedar Point Wealth Advisors, LP has entered into a 12-month subscription\n   contract with a total transaction price of $15,000. This amount comprises\n   a fixed annual platform subscription fee of $12,000 and a one-time\n   implementation service fee of $3,000. The contract includes standard\n   support and updates as part of the subscription and contains no usage-\n   based fees or discounts. The contract is valid and enforceable with\n   defined terms, auto-renewal provisions, and no collectibility concerns.\n\n3. AUTHORITATIVE GUIDANCE\n\n   ASC 606-10-05-4               Revenue model — overview\n   ASC 606-10-55-42 to 55-45     Customer options / material right; Material rights — discounted renewals/options\n   ASC 606-10-25-14(b); 25-27    Subscription — single PO, ratable\n   ASC 606-10-25-19 to 25-21; 55-51  Onboarding — non-distinct by default\n\n   The paragraph references above point to the relevant provisions of ASC\n   606; the entity's revenue policy paraphrases those provisions and should\n   be read together with them.\n\n4. ANALYSIS\n\n   Identify the contract with the customer\n      The Company has concluded that a valid, enforceable contract exists.\n      We have concluded that a valid contract exists under ASC 606 as the\n      agreement specifies the subscription term, fees, renewal terms at then-\n      current list pricing, and enforceable termination provisions. There are no\n      indications of unconstrained cancellation rights or collectibility issues,\n      satisfying the criteria for contract identification.\n\n   Identify the performance obligations\n      1 performance obligation(s) were identified: core_subscription. On\n      onboarding, onboarding is not distinct and is combined into the\n      subscription.\n      The contract contains a single performance obligation, which is the\n      combined subscription service. The one-time implementation service is not\n      distinct because access to the platform is conditioned on completion of\n      implementation, and the implementation is integrated with the subscription\n      service. Therefore, the implementation service is combined with the\n      subscription into one performance obligation.\n\n   Determine the transaction price\n      The transaction price is $15,000.00. The arrangement includes no variable\n      consideration and no discount.\n      The transaction price is fixed at $15,000, consisting of the $12,000\n      annual subscription fee and the $3,000 implementation fee. There are no\n      variable consideration components, discounts, or material rights affecting\n      the transaction price. Renewal pricing is at then-current list prices and\n      does not confer a material right.\n\n   Allocate the transaction price to the performance obligations\n      A single performance obligation was identified; no allocation is required.\n      Since there is only one combined performance obligation, the entire\n      transaction price of $15,000 is allocated to that single obligation. No\n      allocation among multiple obligations is necessary.\n\n   Recognise revenue as performance obligations are satisfied\n      Revenue is recognised ratably over time over 12 months.\n      Revenue is recognised over time on a ratable basis over the 12-month\n      contract term. This reflects the continuous transfer of control of the\n      subscription service to the customer throughout the period. The\n      implementation service is included in this pattern of recognition as it is\n      not distinct.\n\n5. REVENUE RECOGNITION SCHEDULE\n\n   Mo  Period                            Billed       Revenue       Balance\n   ------------------------------------------------------------------------------\n   1   07/01/2025 - 07/31/2025       $15,000.00     $1,250.00    $13,750.00\n   2   08/01/2025 - 08/31/2025            $0.00     $1,250.00    $12,500.00\n   3   09/01/2025 - 09/30/2025            $0.00     $1,250.00    $11,250.00\n   4   10/01/2025 - 10/31/2025            $0.00     $1,250.00    $10,000.00\n   5   11/01/2025 - 11/30/2025            $0.00     $1,250.00     $8,750.00\n   6   12/01/2025 - 12/31/2025            $0.00     $1,250.00     $7,500.00\n   7   01/01/2026 - 01/31/2026            $0.00     $1,250.00     $6,250.00\n   8   02/01/2026 - 02/28/2026            $0.00     $1,250.00     $5,000.00\n   9   03/01/2026 - 03/31/2026            $0.00     $1,250.00     $3,750.00\n   10  04/01/2026 - 04/30/2026            $0.00     $1,250.00     $2,500.00\n   11  05/01/2026 - 05/31/2026            $0.00     $1,250.00     $1,250.00\n   12  06/01/2026 - 06/30/2026            $0.00     $1,250.00         $0.00\n   ------------------------------------------------------------------------------\n                                     $15,000.00    $15,000.00\n\n   Revenue account            4100 Subscription Revenue\n   Balance sheet account      Deferred revenue (contract liability), 2400 Deferred Revenue - Current\n\n   Revenue is recognised on a straight-line monthly basis. Partial first or\n   last months are not prorated by days; where the term starts mid-month this\n   affects the timing pattern only, not the total transaction price.\n\n6. JOURNAL ENTRIES\n\n   On invoice\n      Dr  1200 Accounts Receivable                         $15,000.00\n          Cr  2400 Deferred Revenue - Current              $15,000.00\n      Record the contract liability on billing in advance of performance.\n\n   Monthly, over the subscription term\n      Dr  2400 Deferred Revenue - Current                   $1,250.00\n          Cr  4100 Subscription Revenue                     $1,250.00\n      Release the contract liability as the subscription is delivered.\n\n7. OPEN ITEMS AND MATTERS FOR FOLLOW-UP\n\n   [MEDIUM] Bundled onboarding distinctness\n      Facts and circumstances:  separately priced onboarding fee of 3000.0 alongside subscription of 12000.0\n      Question:                 Is the onboarding customized to the customer and required before the customer can access the platform (suggesting it is not distinct and should be combined), or is it standardized, optional, and available elsewhere (suggesting a separate performance obligation)? Confirm whether the onboarding fee is being front-loaded rather than recognized over the service period.\n      Recommended procedure:    Document whether the onboarding is customised and required for platform access (combine into the subscription obligation) or standardised and optional (separate obligation). Retain the evidence relied on.\n      Timing:                   Before period close\n      Disposition:              open\n      The separately priced onboarding fee of $3,000 alongside the $12,000\n      subscription fee warrants documentation of whether the onboarding is\n      customised and required for platform access, which supports combining it\n      into the subscription performance obligation, or if it is standardised and\n      optional, which would support treating it as a separate obligation.\n      Evidence relied upon for this conclusion should be retained.\n\n8. MATTERS CONSIDERED AND CONCLUDED IMMATERIAL\n\n   No quantified matter was concluded immaterial on this contract.\n\n9. COMPLETENESS OF REVIEW\n\n   The 18-item review checklist was completed in full. Of the 18 matters, 1\n   is reported at section 7, 0 at section 8, and 17 were considered and\n   concluded not applicable to this contract on the facts. The completed\n   checklist, with the basis for each conclusion, is retained in the\n   structured review record.\n\n10. CONCLUSION\n\n   In summary, the contract with Cedar Point Wealth Advisors, LP represents a\n   single performance obligation comprising the subscription service and the\n   implementation service combined. The fixed transaction price of $15,000 is\n   allocated entirely to this obligation. Revenue is recognised ratably over\n   the 12-month term, consistent with the continuous transfer of control.\n   There are no variable consideration elements, discounts, or material\n   rights impacting the accounting. The contract is valid and enforceable\n   under ASC 606, and the revenue recognition approach aligns with the\n   guidance and relevant policies.\n\n   Recognition status: Cleared for recognition; open items to be resolved before period close\n\n   Scope and limitations: allocation of the transaction price across\n   performance obligations by relative standalone selling price is not\n   implemented; partial periods are not prorated by days; variable\n   consideration is excluded from the transaction price and recognised as\n   incurred.\n\n11. PREPARED BY / REVIEWED BY\n\n   Preparer sign-off ______________________  Date __________\n   Reviewer sign-off ______________________  Date __________\n=============================================================================="
+  }
+}

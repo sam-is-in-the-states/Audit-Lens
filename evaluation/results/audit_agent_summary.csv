@@ -1,0 +1,51 @@
+source_file,contract_id,expected_kb3_ids,retrieved_kb3_ids,matched_kb3_ids,missing_kb3_ids,unexpected_kb3_ids,recall,precision,f1
+C01_Brightwater.pdf,C01,,,,,,1.0,1.0,1.0
+C02_SummitRidge.pdf,C02,KB3_11,KB3_11,KB3_11,,,1.0,1.0,1.0
+C03_Fairmont.pdf,C03,KB3_12,KB3_12,KB3_12,,,1.0,1.0,1.0
+C04_Northgate.pdf,C04,KB3_13,,,KB3_13,,0.0,0.0,0.0
+C05_Birchwood.pdf,C05,,,,,,1.0,1.0,1.0
+C06_Clearwater.pdf,C06,,,,,,1.0,1.0,1.0
+C07_SterlingOak.pdf,C07,KB3_13,KB3_13,KB3_13,,,1.0,1.0,1.0
+C08_Riverstone.pdf,C08,KB3_11; KB3_12,KB3_11; KB3_12,KB3_11; KB3_12,,,1.0,1.0,1.0
+C09_Pinnacle.pdf,C09,,,,,,1.0,1.0,1.0
+C10_MapleGrove.pdf,C10,KB3_1,,,KB3_1,,0.0,0.0,0.0
+C11_CedarPoint.pdf,C11,KB3_1,KB3_1,KB3_1,,,1.0,1.0,1.0
+C12_Oakmont.pdf,C12,KB3_1,KB3_1,KB3_1,,,1.0,1.0,1.0
+C13_HighlandPark.pdf,C13,KB3_1; KB3_2,KB3_1; KB3_12; KB3_2,KB3_1; KB3_2,,KB3_12,1.0,0.6666666666666666,0.8
+C14_BeaconHill.pdf,C14,KB3_1; KB3_9,KB3_1,KB3_1,KB3_9,,0.5,1.0,0.6666666666666666
+C15_Crestview.pdf,C15,KB3_1,KB3_1,KB3_1,,,1.0,1.0,1.0
+C16_Windsor.pdf,C16,KB3_1,KB3_1; KB3_12,KB3_1,,KB3_12,1.0,0.5,0.6666666666666666
+C17_AspenTrail.pdf,C17,KB3_1,KB3_1,KB3_1,,,1.0,1.0,1.0
+C18_Stonebridge.pdf,C18,KB3_1; KB3_10,KB3_1; KB3_10,KB3_1; KB3_10,,,1.0,1.0,1.0
+C19_CobaltRidge.pdf,C19,KB3_1; KB3_11; KB3_12,KB3_1; KB3_11; KB3_12,KB3_1; KB3_11; KB3_12,,,1.0,1.0,1.0
+C20_Greenfield.pdf,C20,KB3_1,KB3_1,KB3_1,,,1.0,1.0,1.0
+C21_Meridian.pdf,C21,KB3_3,KB3_3,KB3_3,,,1.0,1.0,1.0
+C22_Tidewater.pdf,C22,KB3_3; KB3_4,KB3_3; KB3_4,KB3_3; KB3_4,,,1.0,1.0,1.0
+C23_QuantumLedger.pdf,C23,KB3_3; KB3_5,KB3_3; KB3_5,KB3_3; KB3_5,,,1.0,1.0,1.0
+C24_SequoiaCrest.pdf,C24,KB3_6,KB3_6,KB3_6,,,1.0,1.0,1.0
+C25_MarlinBay.pdf,C25,KB3_12; KB3_3,KB3_12; KB3_3,KB3_12; KB3_3,,,1.0,1.0,1.0
+C26_CedarFalls.pdf,C26,KB3_3,KB3_3,KB3_3,,,1.0,1.0,1.0
+C27_LighthousePoint.pdf,C27,KB3_4; KB3_5,KB3_11; KB3_3; KB3_4; KB3_5,KB3_4; KB3_5,,KB3_11; KB3_3,1.0,0.5,0.6666666666666666
+C28_Ironwood.pdf,C28,KB3_6,KB3_6,KB3_6,,,1.0,1.0,1.0
+C29_Sprout.pdf,C29,KB3_3,KB3_12; KB3_3,KB3_3,,KB3_12,1.0,0.5,0.6666666666666666
+C30_Solstice.pdf,C30,KB3_3; KB3_5,KB3_3; KB3_5,KB3_3; KB3_5,,,1.0,1.0,1.0
+C31_Lakeside.pdf,C31,KB3_7,KB3_7,KB3_7,,,1.0,1.0,1.0
+C32_Brookstone.pdf,C32,KB3_7,KB3_7,KB3_7,,,1.0,1.0,1.0
+C33_Marigold.pdf,C33,KB3_10,KB3_10,KB3_10,,,1.0,1.0,1.0
+C34_Halcyon.pdf,C34,KB3_10,KB3_1; KB3_10,KB3_10,,KB3_1,1.0,0.5,0.6666666666666666
+C35_AtlasSummit.pdf,C35,KB3_7; KB3_8; KB3_9,KB3_7; KB3_9,KB3_7; KB3_9,KB3_8,,0.6666666666666666,1.0,0.8
+C36_Redwood.pdf,C36,KB3_7,KB3_7,KB3_7,,,1.0,1.0,1.0
+C37_VantageHill.pdf,C37,KB3_8,KB3_8,KB3_8,,,1.0,1.0,1.0
+C38_CoralGables.pdf,C38,KB3_14,KB3_14,KB3_14,,,1.0,1.0,1.0
+C39_Thornfield.pdf,C39,KB3_10; KB3_7; KB3_9,KB3_1; KB3_10; KB3_7; KB3_9,KB3_10; KB3_7; KB3_9,,KB3_1,1.0,0.75,0.8571428571428571
+C40_Silvercrest.pdf,C40,KB3_12; KB3_7,KB3_12; KB3_7,KB3_12; KB3_7,,,1.0,1.0,1.0
+C41_GranitePeak.pdf,C41,KB3_16,KB3_16,KB3_16,,,1.0,1.0,1.0
+C42_Driftwood.pdf,C42,KB3_15,KB3_15,KB3_15,,,1.0,1.0,1.0
+C43_Foxglove.pdf,C43,KB3_17,KB3_1; KB3_12; KB3_17,KB3_17,,KB3_1; KB3_12,1.0,0.3333333333333333,0.5
+C44_CascadePoint.pdf,C44,KB3_5,KB3_3; KB3_5,KB3_5,,KB3_3,1.0,0.5,0.6666666666666666
+C45_Birchmere.pdf,C45,KB3_18,KB3_18,KB3_18,,,1.0,1.0,1.0
+C46_Harborview.pdf,C46,KB3_1; KB3_3,KB3_1; KB3_3,KB3_1; KB3_3,,,1.0,1.0,1.0
+C47_Northwind.pdf,C47,KB3_1; KB3_3; KB3_4,KB3_1; KB3_12; KB3_3; KB3_4,KB3_1; KB3_3; KB3_4,,KB3_12,1.0,0.75,0.8571428571428571
+C48_Castlerock.pdf,C48,KB3_1; KB3_6; KB3_7,KB3_1; KB3_6; KB3_7,KB3_1; KB3_6; KB3_7,,,1.0,1.0,1.0
+C49_Everwood.pdf,C49,KB3_1; KB3_10; KB3_3; KB3_9,KB3_1; KB3_10; KB3_3; KB3_9,KB3_1; KB3_10; KB3_3; KB3_9,,,1.0,1.0,1.0
+C50_Slateharbor.pdf,C50,KB3_1; KB3_3; KB3_5,KB3_1; KB3_11; KB3_3; KB3_4; KB3_5,KB3_1; KB3_3; KB3_5,,KB3_11; KB3_4,1.0,0.6,0.7499999999999999

@@ -99,12 +99,12 @@
     "customer_name": "Birchwood Capital Management, LLC",
     "term_months": 12,
     "start_date": "2025-04-01",
-    "billing": "quarterly_advance",
+    "billing": "annual_quarterly_in_advance",
     "annual_subscription": 36000,
     "onboarding_fee": 0,
     "onboarding_distinct": "n/a",
     "usage_model": "none",
-    "base_fee": 36000,
+    "base_fee": 0,
     "usage_rate": 0,
     "discount_amount": 0,
     "discount_type": "none",
@@ -207,7 +207,7 @@
     "material_right": false,
     "num_POs": 1,
     "po_list": [
-      "Platform Subscription (annual, enterprise tier)"
+      "core_subscription"
     ],
     "transaction_price": 120000,
     "recognition_method": "over_time_ratable",
@@ -253,16 +253,15 @@
     "discount_amount": 0,
     "discount_type": "none",
     "material_right": false,
-    "num_POs": 2,
+    "num_POs": 1,
     "po_list": [
-      "Platform Subscription",
-      "Implementation Services"
+      "core_subscription"
     ],
     "transaction_price": 15000,
     "recognition_method": "over_time_ratable",
     "recognition_period_months": 12,
-    "monthly_revenue": 1000,
-    "opening_deferred": 12000
+    "monthly_revenue": 1250,
+    "opening_deferred": 15000
   },
   "C12": {
     "customer_name": "Oakmont Wealth Strategies, LLC",
@@ -287,7 +286,7 @@
     "recognition_method": "over_time_ratable",
     "recognition_period_months": 12,
     "monthly_revenue": 1500,
-    "opening_deferred": 20000
+    "opening_deferred": 18000
   },
   "C13": {
     "customer_name": "Highland Park Capital, LLC",
@@ -355,14 +354,14 @@
     "material_right": false,
     "num_POs": 2,
     "po_list": [
-      "Platform Subscription",
-      "Data Migration"
+      "platform_subscription",
+      "data_migration"
     ],
     "transaction_price": 19500,
     "recognition_method": "over_time_ratable",
     "recognition_period_months": 12,
     "monthly_revenue": 1250,
-    "opening_deferred": 15000
+    "opening_deferred": 19500
   },
   "C16": {
     "customer_name": "Windsor Financial Partners, LLC",
@@ -373,7 +372,7 @@
     "onboarding_fee": 8000,
     "onboarding_distinct": "yes",
     "usage_model": "none",
-    "base_fee": 0,
+    "base_fee": 36000,
     "usage_rate": 0,
     "discount_amount": 0,
     "discount_type": "none",
@@ -405,7 +404,7 @@
     "material_right": false,
     "num_POs": 2,
     "po_list": [
-      "platform_subscription",
+      "core_subscription",
       "onboarding_training"
     ],
     "transaction_price": 11100,
@@ -443,20 +442,20 @@
     "customer_name": "Cobalt Ridge Advisors, LLC",
     "term_months": 12,
     "start_date": "2025-11-20",
-    "billing": "monthly_in_arrears",
+    "billing": "monthly_arrears",
     "annual_subscription": 14400,
     "onboarding_fee": 3600,
     "onboarding_distinct": "yes",
     "usage_model": "none",
-    "base_fee": 1500,
+    "base_fee": 0,
     "usage_rate": 0,
     "discount_amount": 0,
     "discount_type": "none",
     "material_right": false,
     "num_POs": 2,
     "po_list": [
-      "Platform Subscription",
-      "Implementation Services"
+      "platform_subscription",
+      "implementation_services"
     ],
     "transaction_price": 18000,
     "recognition_method": "over_time_ratable",
@@ -574,7 +573,7 @@
     "usage_rate": 0.15,
     "discount_amount": 0,
     "discount_type": "none",
-    "material_right": false,
+    "material_right": true,
     "num_POs": 1,
     "po_list": [
       "core_subscription"
@@ -622,7 +621,7 @@
     "usage_rate": 0.04,
     "discount_amount": 0,
     "discount_type": "none",
-    "material_right": true,
+    "material_right": false,
     "num_POs": 1,
     "po_list": [
       "core_subscription"
@@ -631,11 +630,7 @@
     "recognition_method": "over_time_ratable",
     "recognition_period_months": 12,
     "monthly_revenue": 1250,
-    "opening_deferred": 15000,
-    "overage_cap": 3000,
-    "overage_billing": "monthly_in_arrears",
-    "renewal_terms": "automatic_12_month_terms_with_30_days_notice",
-    "termination_terms": "30_days_notice_for_uncured_material_breach"
+    "opening_deferred": 15000
   },
   "C27": {
     "customer_name": "Lighthouse Point Advisors, LLC",
@@ -791,7 +786,7 @@
     "onboarding_fee": 0,
     "onboarding_distinct": "n/a",
     "usage_model": "none",
-    "base_fee": 24000,
+    "base_fee": 0,
     "usage_rate": 0,
     "discount_amount": 12000,
     "discount_type": "renewal_discount",
@@ -866,7 +861,7 @@
     "onboarding_fee": 0,
     "onboarding_distinct": "n/a",
     "usage_model": "none",
-    "base_fee": 0,
+    "base_fee": 60000,
     "usage_rate": 0,
     "discount_amount": 6000,
     "discount_type": "volume_discount",
@@ -895,7 +890,7 @@
     "usage_rate": 0,
     "discount_amount": 0,
     "discount_type": "none",
-    "material_right": true,
+    "material_right": false,
     "num_POs": 2,
     "po_list": [
       "platform_subscription",
@@ -947,8 +942,8 @@
     "material_right": true,
     "num_POs": 1,
     "po_list": [
-      "subscription",
-      "onboarding"
+      "core_subscription",
+      "onboarding_engagement"
     ],
     "transaction_price": 20500,
     "recognition_method": "over_time_ratable",
@@ -965,7 +960,7 @@
     "onboarding_fee": 4000,
     "onboarding_distinct": "yes",
     "usage_model": "none",
-    "base_fee": 0,
+    "base_fee": 36000,
     "usage_rate": 0,
     "discount_amount": 4000,
     "discount_type": "standard_platform_subscription_discount",
@@ -978,8 +973,8 @@
     "transaction_price": 40000,
     "recognition_method": "over_time_ratable",
     "recognition_period_months": 12,
-    "monthly_revenue": 3333.33,
-    "opening_deferred": 40000
+    "monthly_revenue": 3000,
+    "opening_deferred": 36000
   },
   "C41": {
     "customer_name": "Granite Peak Advisors, LLC",
@@ -990,7 +985,7 @@
     "onboarding_fee": 0,
     "onboarding_distinct": "n/a",
     "usage_model": "none",
-    "base_fee": 0,
+    "base_fee": 18000,
     "usage_rate": 0,
     "discount_amount": 0,
     "discount_type": "none",
@@ -1014,7 +1009,7 @@
     "onboarding_fee": 0,
     "onboarding_distinct": "n/a",
     "usage_model": "none",
-    "base_fee": 0,
+    "base_fee": 24000,
     "usage_rate": 0,
     "discount_amount": 0,
     "discount_type": "none",
@@ -1064,7 +1059,7 @@
     "onboarding_distinct": "n/a",
     "usage_model": "per_transaction_overage",
     "base_fee": 12000,
-    "usage_rate": "per transaction rate as per RevLens usage rate schedule (not specified)",
+    "usage_rate": "see RevLens usage rate schedule",
     "discount_amount": 0,
     "discount_type": "none",
     "material_right": true,
@@ -1087,7 +1082,7 @@
     "onboarding_fee": 0,
     "onboarding_distinct": "n/a",
     "usage_model": "none",
-    "base_fee": 20000,
+    "base_fee": 0,
     "usage_rate": 0,
     "discount_amount": 0,
     "discount_type": "none",
@@ -1124,8 +1119,8 @@
     "transaction_price": 30000,
     "recognition_method": "over_time_ratable",
     "recognition_period_months": 12,
-    "monthly_revenue": 2500,
-    "opening_deferred": 30000
+    "monthly_revenue": 2000,
+    "opening_deferred": 24000
   },
   "C47": {
     "customer_name": "Northwind Investment Group, LLC",
@@ -1141,10 +1136,9 @@
     "discount_amount": 0,
     "discount_type": "none",
     "material_right": false,
-    "num_POs": 2,
+    "num_POs": 1,
     "po_list": [
-      "core_subscription",
-      "onboarding_engagement"
+      "core_subscription"
     ],
     "transaction_price": 41000,
     "recognition_method": "over_time_ratable",
